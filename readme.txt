@@ -1,4 +1,5 @@
 === Woo Widget Product Slideshow ===
+
 Contributors: a3rev, A3 Revolution Software Development team
 Tags: WooCommerce widgets, WooCommerce, WooCommerce widget product slideshow, WooCommerce Product images, woothemes, wordpress ecommerce
 Requires at least: 3.3
@@ -7,7 +8,7 @@ Stable tag: 1.0.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-A beautifully lightweight WooCommerce widget product slideshow plugin that packs a powerful marketing punch!
+A beautifully lightweight WooCommerce widget product slideshow plugin that packs a powerful marketing punch
  
 == Description ==
 
