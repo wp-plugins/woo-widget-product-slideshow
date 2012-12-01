@@ -4,7 +4,7 @@ Contributors: a3rev, A3 Revolution Software Development team
 Tags: WooCommerce widgets, WooCommerce, WooCommerce widget product slideshow, WooCommerce Product images, woothemes, wordpress ecommerce
 Requires at least: 3.3
 Tested up to: 3.4.2
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -83,6 +83,10 @@ You can use this plugin only when you have installed the WooCommerce plugin.
 Support and access to this plugin documents are available from the [HELP tab](http://a3rev.com/products-page/woocommerce/woocommerce-widget-product-slideshow/#help) on the Pro Versions Home page.
 
 == Changelog ==
+
+= 1.0.1 - 2012/12/01 =
+
+* Fixed: Use Relative File Path of image instead of using Image URL's. This fix is for  servers that have disabled URL file-access in parameter of getimagesize function.
 
 
 = 1.0 - 2012/11/06 =

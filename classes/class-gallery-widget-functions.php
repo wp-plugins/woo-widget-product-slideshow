@@ -21,28 +21,41 @@ class WC_Gallery_Widget_Functions {
 	 * @param $file string filename
 	 * @return PATH to the file
 	 */
-	function get_template_image_file_url( $file = '' ) {
+	function get_template_image_file_info( $file = '' ) {
 		// If we're not looking for a file, do not proceed
 		if ( empty( $file ) )
 			return;
 	
 		// Look for file in stylesheet
+		$image_info = array();
 		if ( file_exists( get_stylesheet_directory() . '/images/' . $file ) ) {
 			$file_url = get_stylesheet_directory_uri() . '/images/' . $file;
-	
+			list($current_width, $current_height) = getimagesize(get_stylesheet_directory() . '/images/' . $file);
+			$image_info['url'] = $file_url;
+			$image_info['width'] = $current_width;
+			$image_info['height'] = $current_height;
 		// Look for file in template
 		} elseif ( file_exists( get_template_directory() . '/images/' . $file ) ) {
 			$file_url = get_template_directory_uri() . '/images/' . $file;
-	
+			list($current_width, $current_height) = getimagesize(get_template_directory() . '/images/' . $file);
+			$image_info['url'] = $file_url;
+			$image_info['width'] = $current_width;
+			$image_info['height'] = $current_height;
 		// Backwards compatibility
 		} else {
 			$file_url = woocommerce_placeholder_img_src();
+			list($current_width, $current_height) = getimagesize($file_url);
+			$image_info['url'] = $file_url;
+			$image_info['width'] = $current_width;
+			$image_info['height'] = $current_height;
 		}
 	
-		if ( is_ssl() )
+		if ( is_ssl() ) {
 			$file_url = str_replace('http://', 'https://', $file_url);
+			$image_info['url'] = $file_url;
+		}
 	
-		return $file_url;
+		return $image_info;
 	}
 	
 	function get_products_cat($catid = 0, $orderby='title menu_order', $number = -1, $offset = 0) {
@@ -72,7 +85,7 @@ class WC_Gallery_Widget_Functions {
 		}
 	}
 	
-	function get_image($id, $size = 'full') {
+	function get_image_info($id, $size = 'full') {
 		$thumbid = 0;
 		if ( has_post_thumbnail($id) ) {	
 			$thumbid = get_post_thumbnail_id($id);
@@ -86,15 +99,17 @@ class WC_Gallery_Widget_Functions {
 				}
 			}
 		}
-		
+		$image_info = array();
 		if ($thumbid > 0 ) {
 			$image_attribute = wp_get_attachment_image_src( $thumbid, $size);
-			$image_url = $image_attribute[0];	
+			$image_info['url'] = $image_attribute[0];
+			$image_info['width'] = $image_attribute[1];
+			$image_info['height'] = $image_attribute[2];	
 		} else {
-			$image_url = WC_Gallery_Widget_Functions::get_template_image_file_url('no-image.gif');
+			$image_info = WC_Gallery_Widget_Functions::get_template_image_file_info('no-image.gif');
 		}
 		
-		return $image_url;
+		return $image_info;
 	}
 	
 	function limit_words($str='',$len=100,$more=true) {

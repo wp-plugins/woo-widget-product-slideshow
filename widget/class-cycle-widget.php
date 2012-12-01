@@ -97,10 +97,12 @@ class WC_Gallery_Cycle_Widget extends WP_Widget {
 		} 
 		
 		foreach ($product_results as $product) {
-			$thumb_image_url = WC_Gallery_Widget_Functions::get_image($product->ID,  $image_size);
+			$thumb_image_info = WC_Gallery_Widget_Functions::get_image_info($product->ID,  $image_size);
+			$thumb_image_url = $thumb_image_info['url'];
 			$max_width = '';
-			if ( function_exists('getimagesize') ) {
-				list($current_width, $current_height) = getimagesize($thumb_image_url);
+			if ( is_array($thumb_image_info) ) {
+				$current_height = $thumb_image_info['height'];
+				$current_width = $thumb_image_info['width'];
 				if ($current_height > $image_height) {
 					$factor = ($current_height / $image_height);
 					$max_width = round($current_width / $factor);
