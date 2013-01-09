@@ -1,4 +1,4 @@
-=== Woo Widget Product Slideshow ===
+=== WooCommerce Widget Product Slideshow ===
 
 Contributors: a3rev, A3 Revolution Software Development team
 Tags: WooCommerce widgets, WooCommerce, WooCommerce widget product slideshow, WooCommerce Product images, woothemes, wordpress ecommerce
