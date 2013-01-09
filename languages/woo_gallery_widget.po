@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WooCommerce Widget Product Slideshow LITE\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-12 09:54+0700\n"
-"PO-Revision-Date: 2012-11-12 09:54+0700\n"
+"POT-Creation-Date: 2013-01-09 11:37+0700\n"
+"PO-Revision-Date: 2013-01-09 11:37+0700\n"
 "Last-Translator: Nguyen Tuan <mr.nguyencongtuan@gmail.com>\n"
 "Language-Team: a3rev\n"
 "MIME-Version: 1.0\n"
@@ -30,121 +30,121 @@ msgid "Woo Products Slideshow"
 msgstr ""
 
 #: widget/class-cycle-widget.php:26
-#: widget/class-cycle-widget.php:155
+#: widget/class-cycle-widget.php:157
 msgid "View this Product"
 msgstr ""
 
 #: widget/class-cycle-widget.php:27
-#: widget/class-cycle-widget.php:156
+#: widget/class-cycle-widget.php:158
 msgid "View All Products"
 msgstr ""
 
-#: widget/class-cycle-widget.php:125
+#: widget/class-cycle-widget.php:127
 msgid "Prev"
 msgstr ""
 
-#: widget/class-cycle-widget.php:125
+#: widget/class-cycle-widget.php:127
 msgid "Next"
 msgstr ""
 
-#: widget/class-cycle-widget.php:163
+#: widget/class-cycle-widget.php:165
 msgid "Title:"
 msgstr ""
 
-#: widget/class-cycle-widget.php:165
+#: widget/class-cycle-widget.php:167
 msgid "Category:"
 msgstr ""
 
-#: widget/class-cycle-widget.php:168
+#: widget/class-cycle-widget.php:170
 msgid "Image Tall:"
 msgstr ""
 
-#: widget/class-cycle-widget.php:170
+#: widget/class-cycle-widget.php:172
 msgid "Manual Scroll"
 msgstr ""
 
-#: widget/class-cycle-widget.php:171
+#: widget/class-cycle-widget.php:173
 msgid "Auto Scroll"
 msgstr ""
 
-#: widget/class-cycle-widget.php:173
+#: widget/class-cycle-widget.php:175
 msgid "Effect:"
 msgstr ""
 
-#: widget/class-cycle-widget.php:174
+#: widget/class-cycle-widget.php:176
 msgid "Scroll Up"
 msgstr ""
 
-#: widget/class-cycle-widget.php:175
+#: widget/class-cycle-widget.php:177
 msgid "Scroll Down"
 msgstr ""
 
-#: widget/class-cycle-widget.php:176
+#: widget/class-cycle-widget.php:178
 msgid "Scroll Left"
 msgstr ""
 
-#: widget/class-cycle-widget.php:177
+#: widget/class-cycle-widget.php:179
 msgid "Scroll Right"
 msgstr ""
 
-#: widget/class-cycle-widget.php:178
+#: widget/class-cycle-widget.php:180
 msgid "Fade"
 msgstr ""
 
-#: widget/class-cycle-widget.php:181
+#: widget/class-cycle-widget.php:183
 msgid "Upgrade to"
 msgstr ""
 
-#: widget/class-cycle-widget.php:181
+#: widget/class-cycle-widget.php:183
 msgid "Pro Version"
 msgstr ""
 
-#: widget/class-cycle-widget.php:181
+#: widget/class-cycle-widget.php:183
 msgid "to activate"
 msgstr ""
 
-#: widget/class-cycle-widget.php:183
+#: widget/class-cycle-widget.php:185
 msgid "Show Type:"
 msgstr ""
 
-#: widget/class-cycle-widget.php:184
+#: widget/class-cycle-widget.php:186
 msgid "Category"
 msgstr ""
 
-#: widget/class-cycle-widget.php:185
+#: widget/class-cycle-widget.php:187
 msgid "Tag"
 msgstr ""
 
-#: widget/class-cycle-widget.php:186
+#: widget/class-cycle-widget.php:188
 msgid "On Sale"
 msgstr ""
 
-#: widget/class-cycle-widget.php:188
+#: widget/class-cycle-widget.php:190
 msgid "Time between transitions:"
 msgstr ""
 
-#: widget/class-cycle-widget.php:188
-#: widget/class-cycle-widget.php:189
+#: widget/class-cycle-widget.php:190
+#: widget/class-cycle-widget.php:191
 msgid "seconds"
 msgstr ""
 
-#: widget/class-cycle-widget.php:189
+#: widget/class-cycle-widget.php:191
 msgid "Transition effect Speed:"
 msgstr ""
 
-#: widget/class-cycle-widget.php:190
+#: widget/class-cycle-widget.php:192
 msgid "Number of products to show:"
 msgstr ""
 
-#: widget/class-cycle-widget.php:190
+#: widget/class-cycle-widget.php:192
 msgid "Enter -1 to show all products of the Category or Tag or On Sale"
 msgstr ""
 
-#: widget/class-cycle-widget.php:192
+#: widget/class-cycle-widget.php:194
 msgid "View this Product Link Text:"
 msgstr ""
 
-#: widget/class-cycle-widget.php:193
+#: widget/class-cycle-widget.php:195
 msgid "Product Category Text Link:"
 msgstr ""
 

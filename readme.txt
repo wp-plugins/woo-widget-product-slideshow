@@ -3,8 +3,8 @@
 Contributors: a3rev, A3 Revolution Software Development team
 Tags: WooCommerce widgets, WooCommerce, WooCommerce widget product slideshow, WooCommerce Product images, woothemes, wordpress ecommerce
 Requires at least: 3.3
-Tested up to: 3.4.2
-Stable tag: 1.0.1
+Tested up to: 3.5
+Stable tag: 1.0.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -51,9 +51,9 @@ Please [Contact us](http://www.a3rev.com/contact/) if you'd like to provide a tr
 
 = Plugin Resources =
 
-[Home Page](http://a3rev.com/products-page/woocommerce/woocommerce-widget-product-slideshow/)
+[Home Page](http://a3rev.com/shop/woocommerce-widget-product-slideshow/)
 [Documentation](http://docs.a3rev.com/user-guides/woocommerce/woo-widget-product-slideshow/)
-[Support](http://a3rev.com/products-page/woocommerce/woocommerce-widget-product-slideshow/#help)
+[Support](http://a3rev.com/shop/woocommerce-widget-product-slideshow/#tab-reviews)
 
 == Screenshots ==
 
@@ -80,9 +80,14 @@ You can use this plugin only when you have installed the WooCommerce plugin.
  
 == Support ==
 
-Support and access to this plugin documents are available from the [HELP tab](http://a3rev.com/products-page/woocommerce/woocommerce-widget-product-slideshow/#help) on the Pro Versions Home page.
+Support and access to this plugin documents are available from the [HELP tab](http://a3rev.com/shop/woocommerce-widget-product-slideshow/#tab-reviews) on the Pro Versions Home page.
 
 == Changelog ==
+
+= 1.0.2 - 2013/01/09 = 
+
+* Tweak: Updated Support and Pro Version link URL's on wordpress.org description, plugins and plugins dashboard. Links were returning 404 errors since the launch of the all new a3rev.com mobile responsive site as the base e-commerce permalinks is changed.
+
 
 = 1.0.1 - 2012/12/01 =
 

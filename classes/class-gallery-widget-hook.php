@@ -16,7 +16,7 @@ class WC_Gallery_Widget_Hook_Filter {
 			return $links;
 		}
 		$links[] = '<a href="http://docs.a3rev.com/user-guides/woocommerce/woo-widget-product-slideshow/" target="_blank">'.__('Documentation', 'woo_gallery_widget').'</a>';
-		$links[] = '<a href="http://a3rev.com/products-page/woocommerce/woocommerce-widget-product-slideshow/#help" target="_blank">'.__('Support', 'woo_gallery_widget').'</a>';
+		$links[] = '<a href="http://a3rev.com/shop/woocommerce-widget-product-slideshow/#tab-reviews" target="_blank">'.__('Support', 'woo_gallery_widget').'</a>';
 		return $links;
 	}
 	
