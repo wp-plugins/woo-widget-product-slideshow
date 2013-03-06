@@ -1,7 +1,7 @@
 <?php
 /* "Copyright 2012 A3 Revolution Web Design" This software is distributed under the terms of GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007 */
 /**
- * WooCommerce Gallery Wiget Hook Filter
+ * WooCommerce Gallery Widget Hook Filter
  *
  * Hook anf Filter into woocommerce plugin
  *
@@ -9,6 +9,7 @@
  *
  *
  * plugin_extra_links()
+ * plugin_init()
  */
 class WC_Gallery_Widget_Hook_Filter {
 	function plugin_extra_links($links, $plugin_name) {
@@ -16,7 +17,7 @@ class WC_Gallery_Widget_Hook_Filter {
 			return $links;
 		}
 		$links[] = '<a href="http://docs.a3rev.com/user-guides/woocommerce/woo-widget-product-slideshow/" target="_blank">'.__('Documentation', 'woo_gallery_widget').'</a>';
-		$links[] = '<a href="http://a3rev.com/shop/woocommerce-widget-product-slideshow/#tab-reviews" target="_blank">'.__('Support', 'woo_gallery_widget').'</a>';
+		$links[] = '<a href="http://a3rev.com/shop/woocommerce-widget-product-slideshow/#help_tab" target="_blank">'.__('Support', 'woo_gallery_widget').'</a>';
 		return $links;
 	}
 	

@@ -14,7 +14,7 @@
 class WC_Gallery_Widget_Functions {
 	
 	/**
-	 * get_template_image_file_url( $file )
+	 * get_template_image_file_info( $file )
 	 *
 	 * @access public
 	 * @since 3.8

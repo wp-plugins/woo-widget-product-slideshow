@@ -96,7 +96,9 @@ class WC_Gallery_Cycle_Widget extends WP_Widget {
 			$image_size = 'shop_single';
 		} 
 		
+		$no_product = 0;
 		foreach ($product_results as $product) {
+			$no_product++;
 			$thumb_image_info = WC_Gallery_Widget_Functions::get_image_info($product->ID,  $image_size);
 			$thumb_image_url = $thumb_image_info['url'];
 			$max_width = '';
@@ -109,7 +111,7 @@ class WC_Gallery_Cycle_Widget extends WP_Widget {
 				}
 			}
 		?>
-			<div class="product_cycle_item">
+			<div class="product_cycle_item" <?php if($no_product == 1) { echo 'style="display:block"'; } ?>>
 				<div style="clear:both"></div><span class="product_cycle_item_title"><?php esc_attr_e($product->post_title); ?></span><div style="clear:both"></div>
 				<div class="content-slide-img content-slide-img_<?php echo $id; ?>">
                 	<div class="content-slide-img-center">

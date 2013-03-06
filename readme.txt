@@ -3,8 +3,8 @@
 Contributors: a3rev, A3 Revolution Software Development team
 Tags: WooCommerce widgets, WooCommerce, WooCommerce widget product slideshow, WooCommerce Product images, woothemes, wordpress ecommerce
 Requires at least: 3.3
-Tested up to: 3.5
-Stable tag: 1.0.2
+Tested up to: 3.5.1
+Stable tag: 1.0.3
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -19,7 +19,7 @@ WooCommerce Widget Product Slideshow enables you to create slick Product Slidesh
 * Creates an eye catching product slideshow in any widgetized area or sidebar.
 * Plugin has no setting - Just install and set the Slideshow widget in any widetized area or sidebar.
 * Auto scrolls though products from any category you set.
-* Optimized for all browsers including the notorious IE 7, 8, 9 and 10.
+* Optimized for all browsers including the notorious IE 7, 8, 9
 * 5 Different image transition effects.
 * Select auto slideshow start or manual scroll.
 * Set transition effect speed timing.
@@ -30,6 +30,12 @@ WooCommerce Widget Product Slideshow enables you to create slick Product Slidesh
 = View Demo Site =
 
 We have a demo site set up with an out of the box version of the Woothemes Canvas theme - [see it here](http://compare.a3rev.com/). For more detailed explanation of all the backend working of the plugin  visit the WooCommerce Widget Product Slideshow [documents](http://docs.a3rev.com/user-guides/woocommerce/woo-widget-product-slideshow/)
+
+= Support =
+
+If you have any problem with setting up the Free lite version please post your support request here on the WordPress support forum. PLEASE if you have a problem DO NOT just give the plugin a bad star rating and review without first requesting support. Giving the plugin a bagging without affording us the opportunity to help solve the issue is in our opinion just unfair.
+
+Once you have the plugin installed and activated please refer to the plugins [comprehensive Online Documentation](http://docs.a3rev.com/user-guides/woocommerce/woo-widget-product-slideshow/) and guide to setting up the WooCommerce Widget Product Slideshow plugin on your WooCommerce store.If you have questions - agin please post them to the support forum here.
 
 = Pro Version Upgrade =
 
@@ -53,7 +59,7 @@ Please [Contact us](http://www.a3rev.com/contact/) if you'd like to provide a tr
 
 [Home Page](http://a3rev.com/shop/woocommerce-widget-product-slideshow/)
 [Documentation](http://docs.a3rev.com/user-guides/woocommerce/woo-widget-product-slideshow/)
-[Support](http://a3rev.com/shop/woocommerce-widget-product-slideshow/#tab-reviews)
+[Support](http://a3rev.com/shop/woocommerce-widget-product-slideshow/#help_tab)
 
 == Screenshots ==
 
@@ -80,22 +86,22 @@ You can use this plugin only when you have installed the WooCommerce plugin.
  
 == Support ==
 
-Support and access to this plugin documents are available from the [HELP tab](http://a3rev.com/shop/woocommerce-widget-product-slideshow/#tab-reviews) on the Pro Versions Home page.
+Support and access to this plugin documents are available from the [HELP tab](http://a3rev.com/shop/woocommerce-widget-product-slideshow/#help_tab) on the Pro Versions Home page.
+
 
 == Changelog ==
 
-= 1.0.2 - 2013/01/09 = 
+= 1.0.3 - 2013/03/06 =
+* Feature: Updated plugins code so that it is 100% compatible with WooCommerce V2.0 and backwards.
 
+
+= 1.0.2 - 2013/01/09 = 
 * Tweak: Updated Support and Pro Version link URL's on wordpress.org description, plugins and plugins dashboard. Links were returning 404 errors since the launch of the all new a3rev.com mobile responsive site as the base e-commerce permalinks is changed.
 
 
 = 1.0.1 - 2012/12/01 =
-
 * Fixed: Use Relative File Path of image instead of using Image URL's. This fix is for  servers that have disabled URL file-access in parameter of getimagesize function.
 
 
 = 1.0 - 2012/11/06 =
-
 * Initial release.
-
-  
