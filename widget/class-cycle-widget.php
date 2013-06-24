@@ -9,7 +9,8 @@
  * update()
  * form()
  */
-class WC_Gallery_Cycle_Widget extends WP_Widget {
+class WC_Gallery_Cycle_Widget extends WP_Widget 
+{
 	function WC_Gallery_Cycle_Widget() {
 		$widget_ops = array('classname' => 'widget_product_cycle', 'description' => __( 'Add a scrolling Gallery of products. Set to show a slideshow of products from any Category, Tag or products that are currently marked down in price.', 'woo_gallery_widget') );
 		$this->WP_Widget('widget_product_cycle', __('Woo Products Slideshow', 'woo_gallery_widget'), $widget_ops);
@@ -18,6 +19,9 @@ class WC_Gallery_Cycle_Widget extends WP_Widget {
 
 	function widget( $args, $instance ) {
 		extract($args);
+		
+		$instance = wp_parse_args( (array) $instance, array( 'title' => '', 'category_id' => 0, 'image_height' => 140, 'auto_scroll' => 'no', 'effect' => 'scrollLeft' ) );
+		
 		$title = apply_filters('widget_title', empty($instance['title']) ? '' : $instance['title'], $instance, $this->id_base);
 		$category_id = $instance['category_id'];
 		$image_height = intval($instance['image_height']);
@@ -45,7 +49,7 @@ class WC_Gallery_Cycle_Widget extends WP_Widget {
 		$shop_page_id = 1;
 		if (function_exists( 'woocommerce_get_page_id' ) ) $shop_page_id = woocommerce_get_page_id('shop');
 				
-		add_action( 'wp_footer', array('WC_Gallery_Cycle_Widget', 'product_cycle_script') );
+		add_action( 'wp_footer', array('WC_Gallery_Widget_Hook_Filter', 'product_cycle_script') );
 		
 		$timeout = 4000;
 		$effect_speed = 1000;
@@ -77,10 +81,6 @@ class WC_Gallery_Cycle_Widget extends WP_Widget {
 			jQuery('.w_next_prev_<?php echo $id;?>').fadeIn("slow");
 		}
         </script>
-		<style>
-		.product_cycle_item .content-slide-img_<?php echo $id; ?>{height: <?php echo $image_height; ?>px }
-		.product_cycle_item .content-slide-img_<?php echo $id; ?> .content-slide-img-center{height: <?php echo $image_height; ?>px }
-        </style>
         <?php ob_start(); ?>
 		<div style="clear:both"></div>
 		<div class="product_cycle_widget_container product_cycle_widget_container_<?php echo $id; ?>"><div class="product_cycle_widgets" id="product_cycle_<?php echo $id; ?>">
@@ -113,8 +113,8 @@ class WC_Gallery_Cycle_Widget extends WP_Widget {
 		?>
 			<div class="product_cycle_item" <?php if($no_product == 1) { echo 'style="display:block"'; } ?>>
 				<div style="clear:both"></div><span class="product_cycle_item_title"><?php esc_attr_e($product->post_title); ?></span><div style="clear:both"></div>
-				<div class="content-slide-img content-slide-img_<?php echo $id; ?>">
-                	<div class="content-slide-img-center">
+				<div class="content-slide-img content-slide-img_<?php echo $id; ?>" style="height: <?php echo $image_height; ?>px;">
+                	<div class="content-slide-img-center" style="height: <?php echo $image_height; ?>px;">
                     	<a class="product_cycle_image_a" href="<?php echo get_permalink($product->ID); ?>">
                         	<img src="<?php echo $thumb_image_url; ?>" class="product_cycle_image" alt="" style="max-height:<?php echo $image_height; ?>px !important; <?php if(trim($max_width) != '') echo 'max-width:'.$max_width.'px !important;'; ?>" />
 						</a>
@@ -147,7 +147,7 @@ class WC_Gallery_Cycle_Widget extends WP_Widget {
 	}
 
 	function form( $instance ) {
-		$instance = wp_parse_args( (array) $instance, array( 'title' => '', 'image_height' => 140, 'auto_scroll' => 'no', 'effect' => 'scrollLeft' ) );
+		$instance = wp_parse_args( (array) $instance, array( 'title' => '', 'category_id' => 0, 'image_height' => 140, 'auto_scroll' => 'no', 'effect' => 'scrollLeft' ) );
 		
 		$widget_id = str_replace('widget_product_cycle-','',$this->id);
 		
@@ -172,14 +172,14 @@ class WC_Gallery_Cycle_Widget extends WP_Widget {
             <p><label for="<?php echo $this->get_field_id('image_height'); ?>"><?php _e('Image Tall:', 'woo_gallery_widget'); ?></label> <input class="" id="<?php echo $this->get_field_id('image_height'); ?>" name="<?php echo $this->get_field_name('image_height'); ?>" type="text" value="<?php echo $image_height; ?>" size="3" /> px</p>
             
             <p><input type="radio" id="<?php echo $this->get_field_id('auto_scroll'); ?>1" name="<?php echo $this->get_field_name('auto_scroll'); ?>" value="no" checked="checked" /> <label for="<?php echo $this->get_field_id('auto_scroll'); ?>1"><?php _e('Manual Scroll', 'woo_gallery_widget'); ?></label></p>
-            <p><input type="radio" id="<?php echo $this->get_field_id('auto_scroll'); ?>2" name="<?php echo $this->get_field_name('auto_scroll'); ?>" value="yes" <?php if($auto_scroll == 'yes'){ echo 'checked="checked"'; } ?> /> <label for="<?php echo $this->get_field_id('auto_scroll'); ?>2"><?php _e('Auto Scroll', 'woo_gallery_widget'); ?></label></p>
+            <p><input type="radio" id="<?php echo $this->get_field_id('auto_scroll'); ?>2" name="<?php echo $this->get_field_name('auto_scroll'); ?>" value="yes" <?php checked($auto_scroll, 'yes'); ?> /> <label for="<?php echo $this->get_field_id('auto_scroll'); ?>2"><?php _e('Auto Scroll', 'woo_gallery_widget'); ?></label></p>
             
             <p><label for=""><strong><?php _e('Effect:', 'woo_gallery_widget'); ?></strong></label><br />
-            <input type="radio" id="<?php echo $this->get_field_id('effect'); ?>1" name="<?php echo $this->get_field_name('effect'); ?>" value="scrollUp" <?php if($effect == 'scrollUp'){ echo 'checked="checked"'; } ?> /> <label for="<?php echo $this->get_field_id('effect'); ?>1"><?php _e('Scroll Up', 'woo_gallery_widget'); ?></label><br />
-            <input type="radio" id="<?php echo $this->get_field_id('effect'); ?>2" name="<?php echo $this->get_field_name('effect'); ?>" value="scrollDown" <?php if($effect == 'scrollDown'){ echo 'checked="checked"'; } ?> /> <label for="<?php echo $this->get_field_id('effect'); ?>2"><?php _e('Scroll Down', 'woo_gallery_widget'); ?></label><br />
-            <input type="radio" id="<?php echo $this->get_field_id('effect'); ?>3" name="<?php echo $this->get_field_name('effect'); ?>" value="scrollLeft" <?php if($effect == 'scrollLeft'){ echo 'checked="checked"'; } ?> /> <label for="<?php echo $this->get_field_id('effect'); ?>3"><?php _e('Scroll Left', 'woo_gallery_widget'); ?></label><br />
-            <input type="radio" id="<?php echo $this->get_field_id('effect'); ?>4" name="<?php echo $this->get_field_name('effect'); ?>" value="scrollRight" <?php if($effect == 'scrollRight'){ echo 'checked="checked"'; } ?> /> <label for="<?php echo $this->get_field_id('effect'); ?>4"><?php _e('Scroll Right', 'woo_gallery_widget'); ?></label><br />
-            <input type="radio" id="<?php echo $this->get_field_id('effect'); ?>5" name="<?php echo $this->get_field_name('effect'); ?>" value="fade" <?php if($effect == 'fade'){ echo 'checked="checked"'; } ?> /> <label for="<?php echo $this->get_field_id('effect'); ?>5"><?php _e('Fade', 'woo_gallery_widget'); ?></label><br />
+            <input type="radio" id="<?php echo $this->get_field_id('effect'); ?>1" name="<?php echo $this->get_field_name('effect'); ?>" value="scrollUp" <?php checked($effect, 'scrollUp'); ?> /> <label for="<?php echo $this->get_field_id('effect'); ?>1"><?php _e('Scroll Up', 'woo_gallery_widget'); ?></label><br />
+            <input type="radio" id="<?php echo $this->get_field_id('effect'); ?>2" name="<?php echo $this->get_field_name('effect'); ?>" value="scrollDown" <?php checked($effect, 'scrollDown'); ?> /> <label for="<?php echo $this->get_field_id('effect'); ?>2"><?php _e('Scroll Down', 'woo_gallery_widget'); ?></label><br />
+            <input type="radio" id="<?php echo $this->get_field_id('effect'); ?>3" name="<?php echo $this->get_field_name('effect'); ?>" value="scrollLeft" <?php checked($effect, 'scrollLeft'); ?> /> <label for="<?php echo $this->get_field_id('effect'); ?>3"><?php _e('Scroll Left', 'woo_gallery_widget'); ?></label><br />
+            <input type="radio" id="<?php echo $this->get_field_id('effect'); ?>4" name="<?php echo $this->get_field_name('effect'); ?>" value="scrollRight" <?php checked($effect, 'scrollRight'); ?> /> <label for="<?php echo $this->get_field_id('effect'); ?>4"><?php _e('Scroll Right', 'woo_gallery_widget'); ?></label><br />
+            <input type="radio" id="<?php echo $this->get_field_id('effect'); ?>5" name="<?php echo $this->get_field_name('effect'); ?>" value="fade" <?php checked($effect, 'fade'); ?> /> <label for="<?php echo $this->get_field_id('effect'); ?>5"><?php _e('Fade', 'woo_gallery_widget'); ?></label><br />
             </p>
             
             <fieldset id="woo_gallery_widget_upgrade_area"><legend><?php _e('Upgrade to','woo_gallery_widget'); ?> <a href="<?php echo WC_GALLERY_WIDGET_AUTHOR_URI; ?>" target="_blank"><?php _e('Pro Version', 'woo_gallery_widget'); ?></a> <?php _e('to activate', 'woo_gallery_widget'); ?></legend>
@@ -191,18 +191,13 @@ class WC_Gallery_Cycle_Widget extends WP_Widget {
             </p>
             <p><label for="timeout<?php echo $widget_id; ?>"><?php _e('Time between transitions:', 'woo_gallery_widget'); ?></label> <input class="" id="timeout<?php echo $widget_id; ?>" name="timeout<?php echo $widget_id; ?>" type="text" value="4" size="1" disabled="disabled" /> <?php _e('seconds', 'woo_gallery_widget'); ?></p>
             <p><label for="effect_speed<?php echo $widget_id; ?>"><?php _e('Transition effect Speed:', 'woo_gallery_widget'); ?></label> <input class="" id="effect_speed<?php echo $widget_id; ?>" name="effect_speed<?php echo $widget_id; ?>" type="text" value="1" size="1" disabled="disabled" /> <?php _e('seconds', 'woo_gallery_widget'); ?></p>
-            <p><label for="number_products<?php echo $widget_id; ?>"><?php _e('Number of products to show:', 'woo_gallery_widget'); ?></label> <input class="" id="number_products<?php echo $widget_id; ?>" name="number_products<?php echo $widget_id; ?>" type="text" value="6" size="2" disabled="disabled" /><br /><span class="description"><?php _e('Enter -1 to show all products of the Category or Tag or On Sale', 'woo_gallery_widget'); ?></span></p>
+            <p><label for="number_products<?php echo $widget_id; ?>"><?php _e('Number of products to show:', 'woo_gallery_widget'); ?></label> <input class="" id="number_products<?php echo $widget_id; ?>" name="number_products<?php echo $widget_id; ?>" type="text" value="6" size="2" disabled="disabled" /><br /><span class="description"><?php _e('Maximum is 10 items', 'woo_gallery_widget'); ?></span></p>
             
             <p><label for="item_text<?php echo $widget_id; ?>"><?php _e('View this Product Link Text:', 'woo_gallery_widget'); ?></label> <input class="widefat" id="item_text<?php echo $widget_id; ?>" name="item_text<?php echo $widget_id; ?>" type="text" value="<?php echo $item_text; ?>" disabled="disabled" /></p>
             <p><label for="category_text<?php echo $widget_id; ?>"><?php _e('Product Category Text Link:', 'woo_gallery_widget'); ?></label> <input class="widefat" id="category_text<?php echo $widget_id; ?>" name="category_text<?php echo $widget_id; ?>" type="text" value="<?php echo $category_text; ?>" disabled="disabled" /></p>
             
             </fieldset>
 <?php
-	}
-	
-	function product_cycle_script() {
-		wp_enqueue_style( 'woo-product-cycle-style', WC_GALLERY_WIDGET_CSS_URL . '/product_cycle_widget.css' );
-		wp_enqueue_script( 'a3-cycle-script', WC_GALLERY_WIDGET_JS_URL . '/jquery.cycle.all.js', array(), false, true );
 	}
 }
 ?>

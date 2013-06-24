@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WooCommerce Widget Product Slideshow LITE\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-06 17:28+0700\n"
-"PO-Revision-Date: 2013-03-06 17:28+0700\n"
+"POT-Creation-Date: 2013-06-24 12:26+0700\n"
+"PO-Revision-Date: 2013-06-24 12:26+0700\n"
 "Last-Translator: Nguyen Tuan <mr.nguyencongtuan@gmail.com>\n"
 "Language-Team: a3rev\n"
 "MIME-Version: 1.0\n"
@@ -13,28 +13,28 @@ msgstr ""
 "X-Poedit-Basepath: ../\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: classes/class-gallery-widget-hook.php:19
+#: classes/class-gallery-widget-hook.php:21
 msgid "Documentation"
 msgstr ""
 
-#: classes/class-gallery-widget-hook.php:20
+#: classes/class-gallery-widget-hook.php:22
 msgid "Support"
 msgstr ""
 
-#: widget/class-cycle-widget.php:14
+#: widget/class-cycle-widget.php:15
 msgid "Add a scrolling Gallery of products. Set to show a slideshow of products from any Category, Tag or products that are currently marked down in price."
 msgstr ""
 
-#: widget/class-cycle-widget.php:15
+#: widget/class-cycle-widget.php:16
 msgid "Woo Products Slideshow"
 msgstr ""
 
-#: widget/class-cycle-widget.php:26
+#: widget/class-cycle-widget.php:30
 #: widget/class-cycle-widget.php:159
 msgid "View this Product"
 msgstr ""
 
-#: widget/class-cycle-widget.php:27
+#: widget/class-cycle-widget.php:31
 #: widget/class-cycle-widget.php:160
 msgid "View All Products"
 msgstr ""
@@ -137,7 +137,7 @@ msgid "Number of products to show:"
 msgstr ""
 
 #: widget/class-cycle-widget.php:194
-msgid "Enter -1 to show all products of the Category or Tag or On Sale"
+msgid "Maximum is 10 items"
 msgstr ""
 
 #: widget/class-cycle-widget.php:196

@@ -11,7 +11,8 @@
  * plugins_loaded()
  * create_page()
  */
-class WC_Gallery_Widget_Functions {
+class WC_Gallery_Widget_Functions
+{
 	
 	/**
 	 * get_template_image_file_info( $file )
@@ -21,7 +22,7 @@ class WC_Gallery_Widget_Functions {
 	 * @param $file string filename
 	 * @return PATH to the file
 	 */
-	function get_template_image_file_info( $file = '' ) {
+	public static function get_template_image_file_info( $file = '' ) {
 		// If we're not looking for a file, do not proceed
 		if ( empty( $file ) )
 			return;
@@ -58,7 +59,7 @@ class WC_Gallery_Widget_Functions {
 		return $image_info;
 	}
 	
-	function get_products_cat($catid = 0, $orderby='title menu_order', $number = -1, $offset = 0) {
+	public static function get_products_cat($catid = 0, $orderby='title menu_order', $number = -1, $offset = 0) {
 		$args = array(
 			'numberposts'	=> $number,
 			'offset'		=> $offset,
@@ -85,7 +86,7 @@ class WC_Gallery_Widget_Functions {
 		}
 	}
 	
-	function get_image_info($id, $size = 'full') {
+	public static function get_image_info($id, $size = 'full') {
 		$thumbid = 0;
 		if ( has_post_thumbnail($id) ) {	
 			$thumbid = get_post_thumbnail_id($id);
@@ -112,7 +113,7 @@ class WC_Gallery_Widget_Functions {
 		return $image_info;
 	}
 	
-	function limit_words($str='',$len=100,$more=true) {
+	public static function limit_words($str='',$len=100,$more=true) {
 		if (trim($len) == '' || $len < 0) $len = 100;
 	   if ( $str=="" || $str==NULL ) return $str;
 	   if ( is_array($str) ) return $str;
