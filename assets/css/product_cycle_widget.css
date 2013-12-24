@@ -8,9 +8,10 @@
 	margin: 0 0px;
     z-index: 2;
 	overflow:hidden;
+	width:100% !important;
 }
 .product_cycle_item {
-	width:100%;	
+	width:100% !important;	
 	display:none;
 }
 .product_cycle_item_title {

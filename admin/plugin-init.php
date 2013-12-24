@@ -4,7 +4,7 @@
  * Install Database, settings option
  */
 function woo_gallery_widget_install(){
-	update_option('woo_gallery_widget_version', '1.0.4');
+	update_option('woo_gallery_widget_lite_version', '1.0.5');
 }
 
 update_option('woo_gallery_widget_plugin', 'woo_gallery_widget');
@@ -24,5 +24,11 @@ add_action( 'get_header', array('WC_Gallery_Widget_Hook_Filter', 'product_cycle_
 // Registry Widgets
 add_action( 'widgets_init', create_function('', 'return register_widget("WC_Gallery_Cycle_Widget");') );
 
-update_option('woo_gallery_widget_version', '1.0.4');
+// Check upgrade functions
+add_action('plugins_loaded', 'wc_gallery_widget_upgrade_plugin');
+function wc_gallery_widget_upgrade_plugin () {
+	
+	update_option('woo_gallery_widget_lite_version', '1.0.5');
+
+}
 ?>
