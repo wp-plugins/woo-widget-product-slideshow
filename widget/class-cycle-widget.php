@@ -87,14 +87,18 @@ class WC_Gallery_Cycle_Widget extends WP_Widget
 		<?php
 		$image_size = 'full';
 		
-		$shop_catalog_height = get_option('woocommerce_catalog_image_height');
-		$shop_single_height = get_option('woocommerce_single_image_width');
+		$woocommerce_db_version = get_option( 'woocommerce_db_version', null );
+		global $woocommerce;
+		$shop_catalog = ( ( version_compare( $woocommerce_db_version, '2.1', '<' ) ) ? $woocommerce->get_image_size( 'shop_catalog' ) : wc_get_image_size( 'shop_catalog' ) );
+		$shop_single = ( ( version_compare( $woocommerce_db_version, '2.1', '<' ) ) ? $woocommerce->get_image_size( 'shop_single' ) : wc_get_image_size( 'shop_single' ) );
+		$shop_catalog_height = $shop_catalog['height'];
+		$shop_single_height = $shop_single['height'];
 		
 		if ($image_height <= $shop_catalog_height ) {
 			$image_size = 'shop_catalog';
 		} elseif ($image_height <= $shop_single_height ) {
 			$image_size = 'shop_single';
-		} 
+		}
 		
 		$no_product = 0;
 		foreach ($product_results as $product) {

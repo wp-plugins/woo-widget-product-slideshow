@@ -3,8 +3,8 @@
 Contributors: a3rev, A3 Revolution Software Development team
 Tags: WooCommerce widgets, WooCommerce, WooCommerce widget product slideshow, WooCommerce Product images, woothemes, wordpress ecommerce
 Requires at least: 3.5
-Tested up to: 3.8.0
-Stable tag: 1.0.5
+Tested up to: 3.8.1
+Stable tag: 1.0.5.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -92,6 +92,12 @@ Support and access to this plugin documents are available from the [Support tab]
 
 == Changelog ==
 
+= 1.0.5.1 - 2014/01/28 =
+* Tweak - Upgraded for 100% compatibility with soon to be released WooCommerce Version 2.1 with backward compatibility to Version 2.0
+* Tweak - Added all required code so plugin can work with WooCommerce Version 2.1 refactored code.
+* Tweak - Tested for compatibility with WordPress version 3.8.1
+* Tweak - Full WP_DEBUG ran, all uncaught exceptions, errors, warnings, notices and php strict standard notices fixed.
+
 = 1.0.5 - 2013/12/24 =
 * Feature - Slideshow widget 100% mobile and tablet responsive, portrait and landscape viewing
 * Tweak - Tested 100% compatible with WP 3.8.0
@@ -116,6 +122,9 @@ Support and access to this plugin documents are available from the [Support tab]
 * Initial release.
 
 == Upgrade Notice ==
+
+= 1.0.5.1 =
+Upgrade now for full compatibility with WooCommerce Version 2.1 and WordPress version 3.8.1. Includes full backward compatibly with WooCommerce versions 2.0 to 2.0.20.
 
 = 1.0.5 =
 Major Upgrade – Full compatibility with WordPress version 3.8.0, WooCommerce 2.0.20 and backwards. Plus Mobile and Tablet display enhancement.

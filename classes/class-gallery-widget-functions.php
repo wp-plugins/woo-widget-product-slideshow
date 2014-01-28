@@ -44,7 +44,8 @@ class WC_Gallery_Widget_Functions
 			$image_info['height'] = $current_height;
 		// Backwards compatibility
 		} else {
-			$file_url = woocommerce_placeholder_img_src();
+			$woocommerce_db_version = get_option( 'woocommerce_db_version', null );
+			$file_url = ( ( version_compare( $woocommerce_db_version, '2.1', '<' ) ) ? woocommerce_placeholder_img_src() : wc_placeholder_img_src() );
 			list($current_width, $current_height) = getimagesize($file_url);
 			$image_info['url'] = $file_url;
 			$image_info['width'] = $current_width;

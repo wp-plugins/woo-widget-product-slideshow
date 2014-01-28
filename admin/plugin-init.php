@@ -4,7 +4,7 @@
  * Install Database, settings option
  */
 function woo_gallery_widget_install(){
-	update_option('woo_gallery_widget_lite_version', '1.0.5');
+	update_option('woo_gallery_widget_lite_version', '1.0.5.1');
 }
 
 update_option('woo_gallery_widget_plugin', 'woo_gallery_widget');
@@ -28,7 +28,7 @@ add_action( 'widgets_init', create_function('', 'return register_widget("WC_Gall
 add_action('plugins_loaded', 'wc_gallery_widget_upgrade_plugin');
 function wc_gallery_widget_upgrade_plugin () {
 	
-	update_option('woo_gallery_widget_lite_version', '1.0.5');
+	update_option('woo_gallery_widget_lite_version', '1.0.5.1');
 
 }
 ?>
