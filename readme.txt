@@ -69,6 +69,7 @@ As a Lite Version user please post all support requests to the plugins WordPress
 This plugin has 3 Pro version upgrades available. You will see all of the available upgrade features on the widget admin panel. Each version adds extra functionality and the once only Lifetime fee is set accordingly. Each Pro version has a 5 day Free Trail evaluation period.
 
 [WooCommerce Widget Product Slider Pro](http://a3rev.com/shop/woocommerce-widget-product-slider/)
+
 * 5 day Free Evaluation trial
 * Product Card Skin - Show products in the slider as product cards
 * Full complement of settings to create your own custom product card for sliders.
@@ -77,6 +78,7 @@ This plugin has 3 Pro version upgrades available. You will see all of the availa
 * Create Sliders from Featured products.
 
 [WooCommerce Product Slider](http://a3rev.com/shop/woocommerce-product-slider/)
+
 * 5 day Free Evaluation trial
 * Mobile Touch Skin - Create a visually stunning skin for the touch mobile effect
 * Shortcode. Embed sliders by shortcode in any post, custom post type or page via the Product Slider shortcode button.
@@ -91,6 +93,7 @@ This plugin has 3 Pro version upgrades available. You will see all of the availa
 * Create Sliders from Featured products.
 
 [WooCommerce Carousel and Slider](http://a3rev.com/shop/woocommerce-carousel-slider/)
+
 * 5 day Free Evaluation trial
 * Activates the WooCommerce Carousel feature.
 * Add product Carousels by Widget or shortcode.
