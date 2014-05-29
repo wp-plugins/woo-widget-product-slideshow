@@ -112,15 +112,26 @@ class WC_Product_Slider_Hook_Filter
 		$html .= '<h3>'.__('Thanks for choosing the WooCommerce Widget Product Slider.', 'wc_product_slider').'</h3>';
 		$html .= '<p>'.__('All of that plugins features have been activated and are ready for you to use.', 'wc_product_slider').':</p>';
 		$html .= '<h3>'.__('What is the Yellow border sections about?', 'wc_product_slider').'</h3>';
-		$html .= '<p>'.__('Inside the Yellow border you will see the settings for the WooCommerce Product Slider and WooCommerce Carousel and Slider upgrade version plugins. You can see the settings but they are not active.', 'wc_product_slider' ).'</p>';
+		$html .= '<p>'.__('Inside the Yellow border you will see the settings for the 3 available upgrade versions for the lite version. You can see the settings but they are not active.', 'wc_product_slider' ).'</p>';
 		
-		$html .= '<h3>'.__('Try an upgrade Version for FREE.', 'wc_product_slider').'</h3>';
-		$html .= '<p>'.sprintf( __('<a href="%s" target="_blank">WooCommerce Product Slider</a>', 'wc_product_slider'), WC_PRODUCT_SLIDER_VERSION_URI ) .' - '.__( '5 day Free Trail', 'wc_product_slider' ).'<br />';
+		$html .= '<h3>'.__('Upgrades Available For more Functionality', 'wc_product_slider').'</h3>';
+		
+		$html .= '<p><strong>'.__('WooCommerce Widget Product Slider Pro', 'wc_product_slider' ).'</strong><br />';
+		$html .= '* '.sprintf( __('Trail this <a href="%s" target="_blank">upgrade version for Free</a>', 'wc_product_slider'), WC_WIDGET_PRODUCT_SLIDER_VERSION_URI ).'<br />';
+		$html .= '* '.__('Activates the beautiful Product Card Skin.', 'wc_product_slider' ).'<br />';
+		$html .= '* '.__('Create Sliders from Product tags.', 'wc_product_slider' ).'<br />';
+		$html .= '* '.__('Create Sliders from ON-SALE feature.', 'wc_product_slider' ).'<br />';
+		$html .= '* '.__('Create Sliders from Featured products.', 'wc_product_slider' );
+		$html .= '</p>';
+		
+		$html .= '<p><strong>'.__('WooCommerce Product Slider', 'wc_product_slider' ).'</strong><br />';
+		$html .= '* '.sprintf( __('Trail this <a href="%s" target="_blank">upgrade version for Free</a>', 'wc_product_slider'), WC_PRODUCT_SLIDER_VERSION_URI ).'<br />';
 		$html .= '* '.__('Activates Touch Mobile Skin.', 'wc_product_slider' ).'<br />';
 		$html .= '* '.__('Activates adding sliders by shortcode.', 'wc_product_slider' );
 		$html .= '</p>';
 		
-		$html .= '<p>'.sprintf( __('<a href="%s" target="_blank">WooCommerce Carousel and Slider</a>', 'wc_product_slider'), WC_CAROUSEL_SLIDER_VERSION_URI ) .' - '.__( '5 day Free Trail', 'wc_product_slider' ).'<br />';
+		$html .= '<p><strong>'.__('WooCommerce Carousel and Slider', 'wc_product_slider' ).'</strong><br />';
+		$html .= '* '.sprintf( __('Trail this <a href="%s" target="_blank">top of the range version for Free</a>', 'wc_product_slider'), WC_CAROUSEL_SLIDER_VERSION_URI ).'<br />';
 		$html .= '* '.__('Activates Touch Mobile Skin.', 'wc_product_slider' ).'<br />';
 		$html .= '* '.__('Activates adding sliders by shortcode.', 'wc_product_slider' ).'<br />';
 		$html .= '* '.__('Activates the Product Carousel feature.', 'wc_product_slider' );
@@ -136,11 +147,16 @@ class WC_Product_Slider_Hook_Filter
 		$html .= '</ul>';
 		$html .= '</p>';
 		
-		$html .= '<h3>'.__('NO RISK FREE TRIALS', 'wc_product_slider').'</h3>';
-		$html .= '<p>'. sprintf( __('All of our software is available for FREE evaluation before purchase at <a href="%s" target="_blank">a3rev.com</a>. The system is all automated which makes it really easy to try all of our software any time you think it might solve a problem for you or add a much needed feature.', 'wc_product_slider'), 'http://a3rev.com/product-category/woocommerce/' ).'</p>';
-		
-		$html .= '<p>&nbsp;</p><p>'.__("Thank you and all the best.", 'wc_product_slider').'</p>';
-		$html .= '<p>'.__("Steve and the team @ a3rev.", 'wc_product_slider').'</p>';
+		$html .= '<h3>'.__('a3rev Free Trial Evaluations', 'wc_product_slider').'</h3>';
+		$html .= '<p>';
+		$html .= '<ul style="padding-left:10px;">';
+		$html .= '<li>* '.__('Try any full Pro Version for free', 'wc_product_slider').'</li>';
+		$html .= '<li>* '.__('a3rev try before you buy', 'wc_product_slider').'</li>';
+		$html .= '<li>* '.__('No credit card required.', 'wc_product_slider').'</li>';
+		$html .= '<li>* '.__('60 day no questions asked money back guarantee on all licenses upgraded from trail to Lifetime Licenses.', 'wc_product_slider').'</li>';
+		$html .= '<li>* '.sprintf( __('Immediate access to developer support from the plugins <a href="%s" target="_blank">a3rev support forum</a>', 'wc_product_slider'), 'https://a3rev.com/forums/' ) .'</li>';
+		$html .= '</ul>';
+		$html .= '</p>';
 		
 		return $html;
 	}
