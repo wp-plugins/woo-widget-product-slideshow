@@ -116,25 +116,26 @@ class WC_Product_Slider_Hook_Filter
 		
 		$html .= '<h3>'.__('Upgrades Available For more Functionality', 'wc_product_slider').'</h3>';
 		
-		$html .= '<p><strong>'.__('WooCommerce Widget Product Slider Pro', 'wc_product_slider' ).'</strong><br />';
-		$html .= '* '.sprintf( __('Trail this <a href="%s" target="_blank">upgrade version for Free</a>', 'wc_product_slider'), WC_WIDGET_PRODUCT_SLIDER_VERSION_URI ).'<br />';
+		$html .= '<p><strong><a href="'.WC_WIDGET_PRODUCT_SLIDER_VERSION_URI.'" target="_blank">'.__('WooCommerce Widget Product Slider', 'wc_product_slider' ).'</a></strong><br />';
 		$html .= '* '.__('Activates the beautiful Product Card Skin.', 'wc_product_slider' ).'<br />';
 		$html .= '* '.__('Create Sliders from Product tags.', 'wc_product_slider' ).'<br />';
 		$html .= '* '.__('Create Sliders from ON-SALE feature.', 'wc_product_slider' ).'<br />';
 		$html .= '* '.__('Create Sliders from Featured products.', 'wc_product_slider' );
 		$html .= '</p>';
 		
-		$html .= '<p><strong>'.__('WooCommerce Product Slider', 'wc_product_slider' ).'</strong><br />';
-		$html .= '* '.sprintf( __('Trail this <a href="%s" target="_blank">upgrade version for Free</a>', 'wc_product_slider'), WC_PRODUCT_SLIDER_VERSION_URI ).'<br />';
+		$html .= '<p><strong><a href="'.WC_PRODUCT_SLIDER_VERSION_URI.'" target="_blank">'.__('WooCommerce Product Slider', 'wc_product_slider' ).'</a></strong><br />';
+		$html .= '* '.__('Includes all the features of lesser versions.', 'wc_product_slider' ).'<br />';
 		$html .= '* '.__('Activates Touch Mobile Skin.', 'wc_product_slider' ).'<br />';
+		$html .= '* '.__('Superb presentation on mobile devices.', 'wc_product_slider' ).'<br />';
 		$html .= '* '.__('Activates adding sliders by shortcode.', 'wc_product_slider' );
 		$html .= '</p>';
 		
-		$html .= '<p><strong>'.__('WooCommerce Carousel and Slider', 'wc_product_slider' ).'</strong><br />';
-		$html .= '* '.sprintf( __('Trail this <a href="%s" target="_blank">top of the range version for Free</a>', 'wc_product_slider'), WC_CAROUSEL_SLIDER_VERSION_URI ).'<br />';
-		$html .= '* '.__('Activates Touch Mobile Skin.', 'wc_product_slider' ).'<br />';
-		$html .= '* '.__('Activates adding sliders by shortcode.', 'wc_product_slider' ).'<br />';
-		$html .= '* '.__('Activates the Product Carousel feature.', 'wc_product_slider' );
+		$html .= '<p><strong><a href="'.WC_CAROUSEL_SLIDER_VERSION_URI.'" target="_blank">'.__('WooCommerce Carousel and Slider', 'wc_product_slider' ).'</a></strong><br />';
+		$html .= '* '.__('Top of the range with all features.', 'wc_product_slider' ).'<br />';
+		$html .= '* '.__('Activates the Product Carousel feature.', 'wc_product_slider' ).'<br />';
+		$html .= '* '.__('Insert Product Carousels by widget.', 'wc_product_slider' ).'<br />';
+		$html .= '* '.__('Insert Product carousels by shortcode.', 'wc_product_slider' ).'<br />';
+		$html .= '* '.__('Fully mobile responsive Carousel sliders.', 'wc_product_slider' );
 		$html .= '</p>';
 		
 		$html .= '<h3>'.__('Important!', 'wc_product_slider').'</h3>';
@@ -147,14 +148,24 @@ class WC_Product_Slider_Hook_Filter
 		$html .= '</ul>';
 		$html .= '</p>';
 		
-		$html .= '<h3>'.__('a3rev Free Trial Evaluations', 'wc_product_slider').'</h3>';
+		$html .= '<h3>'.__('More FREE a3rev WooCommerce Plugins', 'wc_product_slider').'</h3>';
 		$html .= '<p>';
 		$html .= '<ul style="padding-left:10px;">';
-		$html .= '<li>* '.__('Try any full Pro Version for free', 'wc_product_slider').'</li>';
-		$html .= '<li>* '.__('a3rev try before you buy', 'wc_product_slider').'</li>';
-		$html .= '<li>* '.__('No credit card required.', 'wc_product_slider').'</li>';
-		$html .= '<li>* '.__('60 day no questions asked money back guarantee on all licenses upgraded from trail to Lifetime Licenses.', 'wc_product_slider').'</li>';
-		$html .= '<li>* '.sprintf( __('Immediate access to developer support from the plugins <a href="%s" target="_blank">a3rev support forum</a>', 'wc_product_slider'), 'https://a3rev.com/forums/' ) .'</li>';
+		$html .= '<li>* <a href="http://wordpress.org/plugins/woocommerce-product-sort-and-display/" target="_blank">'.__('WooCommerce Product Sort & Display', 'wc_product_slider').'</a></li>';
+		$html .= '<li>* <a href="http://wordpress.org/plugins/woocommerce-products-quick-view/" target="_blank">'.__('WooCommerce Products Quick View', 'wc_product_slider').'</a></li>';
+		$html .= '<li>* <a href="http://wordpress.org/plugins/woocommerce-dynamic-gallery/" target="_blank">'.__('WooCommerce Dynamic Products Gallery', 'wc_product_slider').'</a></li>';
+		$html .= '<li>* <a href="http://wordpress.org/plugins/woocommerce-compare-products/" target="_blank">'.__('WooCommerce Compare Products', 'wc_product_slider').'</a></li>';
+		$html .= '<li>* <a href="http://wordpress.org/plugins/woocommerce-predictive-search/" target="_blank">'.__('WooCommerce Predictive Search', 'wc_product_slider').'</a></li>';
+		$html .= '<li>* <a href="http://wordpress.org/plugins/woocommerce-email-inquiry-cart-options/" target="_blank">'.__('WooCommerce Email Inquiry & Cart Options', 'wc_product_slider').'</a></li>';
+		$html .= '</ul>';
+		$html .= '</p>';
+		$html .= '<h3>'.__('FREE a3rev WordPress Plugins', 'wc_product_slider').'</h3>';
+		$html .= '<p>';
+		$html .= '<ul style="padding-left:10px;">';
+		$html .= '<li>* <a href="http://wordpress.org/plugins/a3-responsive-slider/" target="_blank">'.__('a3 Responsive Slider', 'wc_product_slider').'</a>&nbsp;&nbsp;&nbsp;'.__( 'New Release!' , 'wc_product_slider' ).'</li>';
+		$html .= '<li>* <a href="http://wordpress.org/plugins/contact-us-page-contact-people/" target="_blank">'.__('Contact Us Page - Contact People', 'wc_product_slider').'</a></li>';
+		$html .= '<li>* <a href="http://wordpress.org/plugins/wp-email-template/" target="_blank">'.__('WordPress Email Template', 'wc_product_slider').'</a></li>';
+		$html .= '<li>* <a href="http://wordpress.org/plugins/page-views-count/" target="_blank">'.__('Page View Count', 'wc_product_slider').'</a></li>';
 		$html .= '</ul>';
 		$html .= '</p>';
 		

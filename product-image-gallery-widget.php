@@ -2,7 +2,7 @@
 /*
 Plugin Name: WooCommerce Widget Product Slider LITE
 Description: Adds visually stunning WooCommerce product sliders to any widgeted area. Fully customizable, Widget Skin. Fully mobile responsive. Show any number of products from a selected product category.
-Version: 1.0.6.1
+Version: 1.0.6.2
 Author: A3 Revolution
 Author URI: http://www.a3rev.com/
 Requires at least: 3.7

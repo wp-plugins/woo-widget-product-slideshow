@@ -4,7 +4,7 @@ Contributors: a3rev, A3 Revolution Software Development team
 Tags: WooCommerce widgets, WooCommerce, WooCommerce widget product slideshow, WooCommerce Product images, woothemes, wordpress ecommerce
 Requires at least: 3.7
 Tested up to: 3.9.1
-Stable tag: 1.0.6.1
+Stable tag: 1.0.6.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -62,41 +62,28 @@ See the WooCommerce Widget Product Slider in action on the [a3rev.com](http://a3
 * The Pro Version settings are all active on the admin panels But do not save and are not applied to the front end.
 * Upgrading to the Pro version activates all the Pro version Features and Settings and removes the Yellow side bar and borders.
 
-= Lite Version Support =
-
-* As a Lite Version user please post all support requests to the plugins WordPress Support forum.
-* We do not watch that forum and posting there you will be relying on another user for support, not an a3rev team member.
-* Upgrading to a Pro Version Trail Licence gives 'write' access to the a3rev support forum.
-
-= Pro Version Upgrade =
-
-Upgrading to a Pro Version of this plugin gives you all of the features that you get on the Shop page with the Lite Version applied to Product Categories, Subcategories and Product tag pages - plus more:
-
-= a3rev Free Trial Evaluations =
-
-* Try any full Pro Version for free
-* a3rev try before you buy
-* No credit card required.
-* 60 day no qusetions asked money back guarantee on all licenses upgraded from trail to Lifetime Licenses.
-* Immediate access to developer support from the plugins a3rev support forum.
-
+>= Premium Support = 
+>
+>The a3rev team does not provide support for the WooCommerce Widget Product Slider plugin on the WordPress.org forums. One on one developer support is available via the plugins a3rev [support forum](https://a3rev.com/forums/forum/woocommerce-plugins/widget-product-slider/) to people who have purchased a [WooCommerce Widget product Slider Pro](http://a3rev.com/shop/woocommerce-widget-product-slider/) plugin Lifetime License. 
+>
+>The Pro Version has lots of extra features that coupled with developer support might be well worth your investment!
 
 = 3 x Pro Version Upgrades Available =
 
-This plugin has 3 Pro version upgrades available. You will see all of the available upgrade features on the widget admin panel. Each version adds extra functionality and the once only Lifetime fee is set accordingly. 
+This plugin has 3 Pro version upgrades available. You will see all of the available upgrade features on the widget admin panel. Each version adds extra functionality and the once only Lifetime License fee is set accordingly. 
 
-= WooCommerce Widget Product Slider Pro Additional Features =
+= WooCommerce Widget Product Slider Pro Features =
 
-* Try the [WooCommerce Widget Product Slider Pro for Free](http://a3rev.com/shop/woocommerce-widget-product-slider/)
+* [View this Version on a3rev](http://a3rev.com/shop/woocommerce-widget-product-slider/)
 * Product Card Skin - Show products in the slider as product cards
 * Full complement of settings to create your own custom product card for sliders.
 * Create Sliders from Product tags.
 * Create Sliders from ON-SALE feature. This feature is auto, As products come on-sale and go off they are added or removed from the slider.
 * Create Sliders from Featured products.
 
-= WooCommerce Product Slider Additonal Features =
+= WooCommerce Product Slider Features =
 
-* Try the [WooCommerce Product Slider for Free](http://a3rev.com/shop/woocommerce-product-slider/)
+* [View this Version on a3rev](http://a3rev.com/shop/woocommerce-product-slider/)
 * Mobile Touch Skin - Create a visually stunning skin for the touch mobile effect
 * Shortcode. Embed sliders by shortcode in any post, custom post type or page via the Product Slider shortcode button.
 * Shortcode embed pop-up with all of the same settings as the widget admin panel.
@@ -109,9 +96,9 @@ This plugin has 3 Pro version upgrades available. You will see all of the availa
 * Create Sliders from ON-SALE feature. This feature is auto, as products come on-sale and go off they are added or removed from the slider.
 * Create Sliders from Featured products.
 
-= WooCommerce Carousel and Slider Additional Features =
+= WooCommerce Carousel and Slider Features =
 
-* Try the [WooCommerce Carousel and Slider for Free](http://a3rev.com/shop/woocommerce-carousel-slider/)
+* [View this Version on a3rev](http://a3rev.com/shop/woocommerce-carousel-slider/)
 * Activates the WooCommerce Carousel feature.
 * Add product Carousels by Widget or shortcode.
 * Carousel is fully mobile responsive.
@@ -161,11 +148,13 @@ This plugin has 3 Pro version upgrades available. You will see all of the availa
 
 You can use this plugin only when you have installed the WooCommerce plugin.
  
-== Support ==
-
-Support and access to this plugin documents are available from the [Support tab](http://wordpress.org/support/plugin/woo-widget-product-slideshow/) on the Wordpress plugin page.
 
 == Changelog ==
+
+= 1.0.6.2 - 2014/06/17 =
+* Tweak - Updated chosen js script to latest version 1.0.1 on the a3rev Plugin Framework
+* Tweak - Plugins description on wordpress.org and the admin panel yellow sidebar information.
+* Tweak - Tested 100% compatible with WooCommerce version 2.1.11
 
 = 1.0.6.1 - 2014/05/29 =
 * Tweak - Changed add_filter( 'gettext', array( $this, 'change_button_text' ), null, 2 ); to add_filter( 'gettext', array( $this, 'change_button_text' ), null, 3 );
@@ -227,6 +216,9 @@ Support and access to this plugin documents are available from the [Support tab]
 * Initial release.
 
 == Upgrade Notice ==
+
+= 1.0.6.2 =
+Upgrade now for a framework code tweak that makes your plugin fully compatible with WooCommerce version 2.1.11
 
 = 1.0.6.1 =
 Update now for 3 framework code tweaks and full compatibility with WooCommerce version 2.1.9 and WordPress version 3.9.1

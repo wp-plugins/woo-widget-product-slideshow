@@ -4,7 +4,7 @@
  * Install Database, settings option
  */
 function wc_product_slider_activated(){
-	update_option('woo_gallery_widget_lite_version', '1.0.6.1');
+	update_option('woo_gallery_widget_lite_version', '1.0.6.2');
 	
 	// Set Settings Default from Admin Init
 	global $wc_product_slider_admin_init;
@@ -60,6 +60,6 @@ if ( in_array( basename( $_SERVER['PHP_SELF'] ), array( 'widgets.php' ) ) ) {
 	add_action( 'admin_footer', array( 'WC_Product_Slider_Hook_Filter', 'include_admin_script' ) );
 }
 
-update_option('woo_gallery_widget_lite_version', '1.0.6.1');
+update_option('woo_gallery_widget_lite_version', '1.0.6.2');
 
 ?>
