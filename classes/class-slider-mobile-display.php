@@ -1,25 +1,39 @@
 <?php
 class WC_Product_Slider_Mobile_Display
 {	
-	public static function mobile_dispay_slider( $slide_items = array(), $is_used_mobile_skin = false , $slider_settings = array(), $category_link = '', $tag_link = '' ) {
+	public static function mobile_dispay_slider( $slider_id = '', $is_used_mobile_skin = false , $slider_settings = array(), $category_link = '', $tag_link = '' ) {
 					
 		global $wc_product_slider_a3_mobile_skin_title_settings;
 		global $wc_product_slider_a3_mobile_skin_category_tag_link_settings;
 		
-		$woocommerce_db_version = get_option( 'woocommerce_db_version', null );
+		// slider id
+		$slider_query_string = base64_decode( $slider_id );
+		$slider_data = array();
+		parse_str( $slider_query_string, $slider_data );
+		$slider_data['show_type'] = 'mobile';
+		unset( $slider_data['widget_effect'] );
+		$slider_id = '';
+		$command = '';
+		foreach ( $slider_data as $key => $value ) {
+			$slider_id .= $command.$key.'='.$value;
+			$command = '&';
+		}
+		$slider_id = base64_encode( $slider_id );
 		
+		$slider_settings['skin_type'] = 'mobile';
+		$slider_settings['is_used_mobile_skin'] = $is_used_mobile_skin;
+		$slider_settings['category_link'] = $category_link;
+		$slider_settings['tag_link'] = $tag_link;
+				
 		add_action( 'wp_footer', array( 'WC_Product_Slider_Hook_Filter', 'include_slider_mobile_scripts' ) );
 		
 		extract( $wc_product_slider_a3_mobile_skin_title_settings );
 		extract( $wc_product_slider_a3_mobile_skin_category_tag_link_settings );
 		
-		// Return empty if it does not have any slides
-		if ( ! is_array( $slide_items ) || count( $slide_items ) < 1 ) return '';
-				
 		$caption_fx_out = 'fadeOut';
 		$caption_fx_in = 'fadeIn';
 		
-		$unique_id = rand( 100, 1000 );
+		$unique_id = rand( 1, 100 );
 				
 		$overlay_class = '#cycle-mobile-skin-overlay-' . $unique_id;
 		
@@ -30,8 +44,8 @@ class WC_Product_Slider_Mobile_Display
     <div style="clear:both;"></div>
     <div class="wc-product-slider-mobile-skin-container wc-product-slider-basic-mobile-skin-container">
     
-    <div id="wc-product-slider-container-<?php echo $unique_id; ?>" class="wc-product-slider-container wc-product-slider-mobile-skin">
-    	<div id="wc-product-slider-<?php echo $unique_id; ?>" class="cycle-slideshow wc-product-slider"
+    <div id="wc-product-slider-container-<?php echo $unique_id; ?>" class="wc-product-slider-container wc-product-slider-mobile-skin" data-slider-id="<?php echo $slider_id; ?>" data-slider-settings="<?php echo esc_attr( json_encode( $slider_settings ) ); ?>" data-slider-skin-type="mobile" >
+    	<div id="wc-product-slider-<?php echo $unique_id; ?>" class="wc-product-slider"
         	data-cycle-fx="<?php echo $fx; ?>"
             data-cycle-paused=true
             data-cycle-auto-height=container
@@ -54,43 +68,6 @@ class WC_Product_Slider_Mobile_Display
                 </div>
             </div>
             
-		<?php $number_products = 0; ?>
-		<?php foreach ( $slide_items as $product_id => $item ) { ?>
-        <?php
-				if ( trim( $item['img_url'] ) == '' ) continue;
-				
-				$number_products++;
-				
-				$item_title = '';
-				if ( $enable_slider_title == 1 && trim( $item['item_title'] ) != '' ) {
-					$item_title = '<div class="cycle-product-name"><a href="'. trim( $item['item_link'] ) .'">'. trim( stripslashes( $item['item_title'] ) ) .'</a></div>';
-				}
-				
-				if ( version_compare( $woocommerce_db_version, '2.0', '<' ) && null !== $woocommerce_db_version ) {
-					$product_data = new WC_Product( $product_id ); 
-				} else {
-					$product_data = get_product( $product_id );
-				}
-				
-				$product_price = $product_data->get_price_html();
-			
-				$item_price = '';
-				if ( trim( $product_price ) != '' )
-					$item_price = '<div class="cycle-product-price">'. trim( $product_price ) .'</div>';
-					
-				$item_title .= $item_price;
-				
-				$category_tag_link = '';
-				if ( $enable_category_link == 1 && trim( $category_link ) != '' ) {
-					$category_tag_link = '<div class="cycle-mobile-skin-category-linked-container"><a class="cycle-category-linked" href="'.esc_attr( $category_link ).'">'. trim( $category_link_text ).'</a></div>';
-				} elseif ( $enable_tag_link == 1 && trim( $tag_link ) != '' ) {
-					$category_tag_link = '<div class="cycle-mobile-skin-tag-linked-container"><a class="cycle-tag-linked" href="'.esc_attr( $tag_link ).'">'. trim( $tag_link_text ).'</a></div>';
-				}
-				
-		?>
-                <img src="<?php echo esc_attr( $item['img_url'] ); ?>" title="<?php echo esc_attr( $item_title ); ?>" alt="" style=" <?php if ( $number_products > 1 ) { echo 'display:none;'; } ?> " />
-            
-        <?php } ?>
         </div>
     	<div class="wc-product-slider-bg"></div>
     </div>

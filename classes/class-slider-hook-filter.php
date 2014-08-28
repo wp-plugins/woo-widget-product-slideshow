@@ -13,7 +13,6 @@
  * include_slider_card_scripts()
  * include_slider_mobile_scripts()
  * add_google_fonts()
- * include_customized_style()
  * a3_wp_admin()
  * admin_sidebar_menu_css()
  * plugin_extra_links()
@@ -87,11 +86,7 @@ class WC_Product_Slider_Hook_Filter
 		
 		if ( count( $google_fonts ) > 0 ) $wc_product_slider_fonts_face->generate_google_webfonts( $google_fonts );
 	}
-	
-	public static function include_customized_style() { 
-		include( WC_PRODUCT_SLIDER_DIR. '/includes/customized_style.php' );
-	}
-	
+		
 	public static function include_admin_script() {
 		wp_enqueue_script( 'jquery' );
 				
@@ -139,7 +134,7 @@ class WC_Product_Slider_Hook_Filter
 		$html .= '</p>';
 		
 		$html .= '<h3>'.__('Important!', 'wc_product_slider').'</h3>';
-		$html .= '<p>'.__("If you are trailing one of the other versions of this plugin you must:", 'wc_product_slider').'<br />';
+		$html .= '<p>'.__("If you are upgrading to any of the Pro Versions you will need to:", 'wc_product_slider').'<br />';
 		$html .= '<ul style="padding-left:10px;">';
 		$html .= '<li>1. '.__('DEACTIVATE this plugin BEFORE installing and activating another version.', 'wc_product_slider').'</li>';
 		$html .= '<li>2. '.__("If you don't you will get a FATAL ERROR.", 'wc_product_slider').'</li>';

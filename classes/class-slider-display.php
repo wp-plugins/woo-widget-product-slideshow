@@ -16,16 +16,14 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 class WC_Product_Slider_Display
 {	
 	
-	public static function dispay_slider_widget( $slide_items = array(), $slider_settings = array(), $category_link = '', $tag_link = '' ) {
+	public static function dispay_slider_widget( $slider_id = '', $slider_settings = array(), $category_link = '', $tag_link = '' ) {
 	
 		global $wc_product_slider_a3_widget_skin_global_settings;
 		global $wc_product_slider_a3_widget_skin_dimensions_settings;
 		global $wc_product_slider_a3_widget_skin_title_settings;
 		global $wc_product_slider_a3_widget_skin_product_link_settings;
 		global $wc_product_slider_a3_widget_skin_category_tag_link_settings;
-		
-		$woocommerce_db_version = get_option( 'woocommerce_db_version', null );
-		
+				
 		extract( $wc_product_slider_a3_widget_skin_global_settings );
 		// Detect the slider is viewing on Mobile, if True then Show Slider for Mobile 
 		if ( $enable_slider_touch == 1 ) {
@@ -35,7 +33,7 @@ class WC_Product_Slider_Display
 				$is_used_mobile_skin = false;
 				
 				require_once WC_PRODUCT_SLIDER_DIR . '/classes/class-slider-mobile-display.php';
-				return WC_Product_Slider_Mobile_Display::mobile_dispay_slider( $slide_items, $is_used_mobile_skin , $slider_settings, $category_link, $tag_link );
+				return WC_Product_Slider_Mobile_Display::mobile_dispay_slider( $slider_id, $is_used_mobile_skin , $slider_settings, $category_link, $tag_link );
 			}
 		}
 		
@@ -43,7 +41,7 @@ class WC_Product_Slider_Display
 		//if ( $is_used_mobile_skin == 1 ) $is_used_mobile_skin = true;
 		//else  $is_used_mobile_skin = false;
 		//require_once WC_PRODUCT_SLIDER_DIR . '/classes/class-slider-mobile-display.php';
-		//return WC_Product_Slider_Mobile_Display::mobile_dispay_slider( $slide_items, $is_used_mobile_skin , $slider_settings, $category_link, $tag_link );
+		//return WC_Product_Slider_Mobile_Display::mobile_dispay_slider( $slider_id, $is_used_mobile_skin , $slider_settings, $category_link, $tag_link );
 		
 		add_action( 'wp_footer', array( 'WC_Product_Slider_Hook_Filter', 'include_slider_widget_scripts' ) );
 		
@@ -51,14 +49,11 @@ class WC_Product_Slider_Display
 		extract( $wc_product_slider_a3_widget_skin_title_settings );
 		extract( $wc_product_slider_a3_widget_skin_product_link_settings );
 		extract( $wc_product_slider_a3_widget_skin_category_tag_link_settings );
-		
-		// Return empty if it does not have any slides
-		if ( ! is_array( $slide_items ) || count( $slide_items ) < 1 ) return '';
-				
+						
 		$caption_fx_out = 'fadeOut';
 		$caption_fx_in = 'fadeIn';
 		
-		$unique_id = rand( 100, 1000 );
+		$unique_id = rand( 1, 100 );
 				
 		$caption_class = '#cycle-widget-skin-caption-' . $unique_id;
 		$overlay_class = '#cycle-widget-skin-overlay-' . $unique_id;
@@ -79,8 +74,8 @@ class WC_Product_Slider_Display
     <div class="wc-product-slider-widget-skin-container">
     <?php if ( $title_position == 'above' ) self::get_title_widget_skin( $unique_id ); ?>
         
-    <div id="wc-product-slider-container-<?php echo $unique_id; ?>" class="wc-product-slider-container wc-product-slider-widget-skin">
-    	<div style=" <?php if ( $is_slider_tall_dynamic == 0 ) { echo 'height:'.$slider_height_fixed. 'px'; } ?>" id="wc-product-slider-<?php echo $unique_id; ?>" class="cycle-slideshow wc-product-slider <?php if ( $is_slider_tall_dynamic == 1 ) { ?>wc-product-slider-dynamic-tall<?php } ?>"
+    <div id="wc-product-slider-container-<?php echo $unique_id; ?>" class="wc-product-slider-container wc-product-slider-widget-skin" data-slider-id="<?php echo $slider_id; ?>" data-slider-settings="<?php echo esc_attr( json_encode( $slider_settings ) ); ?>" data-slider-skin-type="widget" >
+    	<div style=" <?php if ( $is_slider_tall_dynamic == 0 ) { echo 'height:'.$slider_height_fixed. 'px'; } ?>" id="wc-product-slider-<?php echo $unique_id; ?>" class="wc-product-slider <?php if ( $is_slider_tall_dynamic == 1 ) { ?>wc-product-slider-dynamic-tall<?php } ?>"
         	data-cycle-fx="<?php echo $fx; ?>"
             <?php echo $transition_attributes; ?>
             
@@ -128,45 +123,6 @@ class WC_Product_Slider_Display
                 </div>
             </div>
         
-        <?php $number_products = 0; ?>
-		<?php foreach ( $slide_items as $product_id => $item ) { ?>
-		<?php
-				if ( trim( $item['img_url'] ) == '' ) continue;
-				
-				$number_products++;
-				
-				$item_title = '';
-				if ( $enable_slider_title == 1 && trim( $item['item_title'] ) != '' ) {
-					$item_title = '<div class="cycle-product-name"><a href="'. trim( $item['item_link'] ) .'">'. trim( stripslashes( $item['item_title'] ) ) .'</a></div>';
-				}
-				
-				if ( version_compare( $woocommerce_db_version, '2.0', '<' ) && null !== $woocommerce_db_version ) {
-					$product_data = new WC_Product( $product_id ); 
-				} else {
-					$product_data = get_product( $product_id );
-				}
-				
-				$product_price = $product_data->get_price_html();
-			
-				$item_price = '';
-				if ( trim( $product_price ) != '' )
-					$item_price = '<div class="cycle-product-price">'. trim( $product_price ) .'</div>';
-					
-				$item_title .= $item_price;
-				
-				$item_linked_view = '';
-				if ( $enable_product_link == 1 ) 
-					$item_linked_view = '<a class="cycle-product-linked" href="'. trim( $item['item_link'] ) .'">' . trim( $product_link_text ) . '</a>';
-		?>
-        	<img src="<?php echo esc_attr( $item['img_url'] ); ?>" name="<?php echo esc_attr( $item_title ); ?>" title="" data-cycle-desc="<?php echo esc_attr( $item_linked_view ); ?>" 
-            style=" <?php if ( $number_products > 1 ) { echo 'display:none;'; } ?> "
-            <?php
-				if ( $fx == 'random' ) {
-					echo WC_Product_Slider_Functions::get_transition_random( $slider_settings );
-				}
-			?>
-            />
-        <?php } ?>
         </div>
     
     </div>

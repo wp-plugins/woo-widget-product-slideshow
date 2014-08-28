@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WooCommerce Widget Product Slider\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-06-17 16:56+0700\n"
-"PO-Revision-Date: 2014-06-17 16:56+0700\n"
+"POT-Creation-Date: 2014-08-28 15:21+0700\n"
+"PO-Revision-Date: 2014-08-28 15:21+0700\n"
 "Last-Translator: Nguyen Cong Tuan <mr.nguyencongtuan@gmail.com>\n"
 "Language-Team: a3rev\n"
 "Language: en\n"
@@ -84,8 +84,8 @@ msgstr ""
 msgid "Outset"
 msgstr ""
 
-#: admin/admin-interface.php:1354 admin/admin-interface.php:1444
-#: admin/admin-interface.php:1473
+#: admin/admin-interface.php:1358 admin/admin-interface.php:1448
+#: admin/admin-interface.php:1477
 #: admin/settings/card-skin/card-layout-settings.php:237
 #: admin/settings/card-skin/card-layout-settings.php:255
 #: admin/settings/card-skin/card-layout-settings.php:261
@@ -166,8 +166,8 @@ msgstr ""
 msgid "ON"
 msgstr ""
 
-#: admin/admin-interface.php:1355 admin/admin-interface.php:1445
-#: admin/admin-interface.php:1474
+#: admin/admin-interface.php:1359 admin/admin-interface.php:1449
+#: admin/admin-interface.php:1478
 #: admin/settings/card-skin/card-layout-settings.php:238
 #: admin/settings/card-skin/card-layout-settings.php:256
 #: admin/settings/card-skin/card-layout-settings.php:262
@@ -248,105 +248,105 @@ msgstr ""
 msgid "OFF"
 msgstr ""
 
-#: admin/admin-interface.php:1515
+#: admin/admin-interface.php:1519
 msgid "Width"
 msgstr ""
 
-#: admin/admin-interface.php:1517
+#: admin/admin-interface.php:1521
 #: admin/settings/card-skin/card-layout-settings.php:217
 #: admin/settings/widget-skin/dimensions-settings.php:201
 msgid "Height"
 msgstr ""
 
-#: admin/admin-interface.php:1519
+#: admin/admin-interface.php:1523
 msgid "Hard Crop"
 msgstr ""
 
-#: admin/admin-interface.php:1596
+#: admin/admin-interface.php:1600
 msgid "-- Default Fonts --"
 msgstr ""
 
-#: admin/admin-interface.php:1607
+#: admin/admin-interface.php:1611
 msgid "-- Google Fonts --"
 msgstr ""
 
-#: admin/admin-interface.php:1648
+#: admin/admin-interface.php:1652
 msgid "Preview your customized typography settings"
 msgstr ""
 
-#: admin/admin-interface.php:1782 admin/admin-interface.php:2041
+#: admin/admin-interface.php:1786 admin/admin-interface.php:2045
 msgid "Preview your customized border settings"
 msgstr ""
 
-#: admin/admin-interface.php:1791 admin/admin-interface.php:2032
+#: admin/admin-interface.php:1795 admin/admin-interface.php:2036
 msgid "Rounded"
 msgstr ""
 
-#: admin/admin-interface.php:1792 admin/admin-interface.php:2033
+#: admin/admin-interface.php:1796 admin/admin-interface.php:2037
 msgid "Square"
 msgstr ""
 
-#: admin/admin-interface.php:1802 admin/admin-interface.php:2046
+#: admin/admin-interface.php:1806 admin/admin-interface.php:2050
 msgid "Top Left Corner"
 msgstr ""
 
-#: admin/admin-interface.php:1822 admin/admin-interface.php:2066
+#: admin/admin-interface.php:1826 admin/admin-interface.php:2070
 msgid "Top Right Corner"
 msgstr ""
 
-#: admin/admin-interface.php:1842 admin/admin-interface.php:2086
+#: admin/admin-interface.php:1846 admin/admin-interface.php:2090
 msgid "Bottom Right Corner"
 msgstr ""
 
-#: admin/admin-interface.php:1862 admin/admin-interface.php:2106
+#: admin/admin-interface.php:1866 admin/admin-interface.php:2110
 msgid "Bottom Left Corner"
 msgstr ""
 
-#: admin/admin-interface.php:1955
+#: admin/admin-interface.php:1959
 msgid "Preview your customized border styles settings"
 msgstr ""
 
-#: admin/admin-interface.php:2167
+#: admin/admin-interface.php:2171
 msgid "YES"
 msgstr ""
 
-#: admin/admin-interface.php:2168
+#: admin/admin-interface.php:2172
 msgid "NO"
 msgstr ""
 
-#: admin/admin-interface.php:2182
+#: admin/admin-interface.php:2186
 msgid "Horizontal Shadow"
 msgstr ""
 
-#: admin/admin-interface.php:2200
+#: admin/admin-interface.php:2204
 msgid "Vertical Shadow"
 msgstr ""
 
-#: admin/admin-interface.php:2218
+#: admin/admin-interface.php:2222
 msgid "Blur Distance"
 msgstr ""
 
-#: admin/admin-interface.php:2236
+#: admin/admin-interface.php:2240
 msgid "Spread Size"
 msgstr ""
 
-#: admin/admin-interface.php:2254
+#: admin/admin-interface.php:2258
 msgid "INNER"
 msgstr ""
 
-#: admin/admin-interface.php:2255
+#: admin/admin-interface.php:2259
 msgid "OUTER"
 msgstr ""
 
-#: admin/admin-interface.php:2273
+#: admin/admin-interface.php:2277
 msgid "Preview your customized box shadow settings"
 msgstr ""
 
-#: admin/admin-interface.php:2509
+#: admin/admin-interface.php:2513
 msgid "Save changes"
 msgstr ""
 
-#: admin/admin-interface.php:2510
+#: admin/admin-interface.php:2514
 msgid "Reset Settings"
 msgstr ""
 
@@ -399,8 +399,8 @@ msgstr ""
 #: admin/admin-ui.php:141
 #, php-format
 msgid ""
-"Trail the <a href=\"%s\" target=\"_blank\">%s</a> for Free to activate these "
-"settings."
+"Upgrading to the <a href=\"%s\" target=\"_blank\">%s</a> plugin activates "
+"these settings."
 msgstr ""
 
 #: admin/admin-ui.php:143 admin/admin-ui.php:145
@@ -1034,7 +1034,7 @@ msgstr ""
 #: admin/settings/carousel/pager-settings.php:254
 #: admin/settings/mobile-skin/pager-settings.php:222
 #: admin/settings/widget-skin/pager-settings.php:239
-#: classes/class-slider-functions.php:206
+#: classes/class-slider-functions.php:152
 msgid "Top Left"
 msgstr ""
 
@@ -1042,7 +1042,7 @@ msgstr ""
 #: admin/settings/carousel/pager-settings.php:255
 #: admin/settings/mobile-skin/pager-settings.php:223
 #: admin/settings/widget-skin/pager-settings.php:240
-#: classes/class-slider-functions.php:207
+#: classes/class-slider-functions.php:153
 msgid "Top Center"
 msgstr ""
 
@@ -1050,7 +1050,7 @@ msgstr ""
 #: admin/settings/carousel/pager-settings.php:256
 #: admin/settings/mobile-skin/pager-settings.php:224
 #: admin/settings/widget-skin/pager-settings.php:241
-#: classes/class-slider-functions.php:208
+#: classes/class-slider-functions.php:154
 msgid "Top Right"
 msgstr ""
 
@@ -1058,7 +1058,7 @@ msgstr ""
 #: admin/settings/carousel/pager-settings.php:257
 #: admin/settings/mobile-skin/pager-settings.php:225
 #: admin/settings/widget-skin/pager-settings.php:242
-#: classes/class-slider-functions.php:212
+#: classes/class-slider-functions.php:158
 msgid "Bottom Left"
 msgstr ""
 
@@ -1066,7 +1066,7 @@ msgstr ""
 #: admin/settings/carousel/pager-settings.php:258
 #: admin/settings/mobile-skin/pager-settings.php:226
 #: admin/settings/widget-skin/pager-settings.php:243
-#: classes/class-slider-functions.php:213
+#: classes/class-slider-functions.php:159
 msgid "Bottom Center"
 msgstr ""
 
@@ -1074,7 +1074,7 @@ msgstr ""
 #: admin/settings/carousel/pager-settings.php:259
 #: admin/settings/mobile-skin/pager-settings.php:227
 #: admin/settings/widget-skin/pager-settings.php:244
-#: classes/class-slider-functions.php:214
+#: classes/class-slider-functions.php:160
 msgid "Bottom Right"
 msgstr ""
 
@@ -1678,247 +1678,247 @@ msgstr ""
 msgid "Description"
 msgstr ""
 
-#: classes/class-slider-display.php:118
+#: classes/class-slider-display.php:113
 msgid "Prev"
 msgstr ""
 
-#: classes/class-slider-display.php:119
+#: classes/class-slider-display.php:114
 msgid "Next"
 msgstr ""
 
-#: classes/class-slider-display.php:120
+#: classes/class-slider-display.php:115
 msgid "Pause"
 msgstr ""
 
-#: classes/class-slider-display.php:121
+#: classes/class-slider-display.php:116
 msgid "Play"
 msgstr ""
 
-#: classes/class-slider-functions.php:141
+#: classes/class-slider-functions.php:87
 #: shortcodes/class-slider-shortcodes.php:145
 msgid "None"
 msgstr ""
 
-#: classes/class-slider-functions.php:142
-#: classes/class-slider-functions.php:205
+#: classes/class-slider-functions.php:88
+#: classes/class-slider-functions.php:151
 msgid "Random"
 msgstr ""
 
-#: classes/class-slider-functions.php:143
-#: classes/class-slider-functions.php:156
+#: classes/class-slider-functions.php:89
+#: classes/class-slider-functions.php:102
 msgid "Fade"
 msgstr ""
 
-#: classes/class-slider-functions.php:144
-#: classes/class-slider-functions.php:157
+#: classes/class-slider-functions.php:90
+#: classes/class-slider-functions.php:103
 msgid "Fade Out"
 msgstr ""
 
-#: classes/class-slider-functions.php:145
-#: classes/class-slider-functions.php:158
+#: classes/class-slider-functions.php:91
+#: classes/class-slider-functions.php:104
 msgid "Scroll Horizontal"
 msgstr ""
 
-#: classes/class-slider-functions.php:146
-#: classes/class-slider-functions.php:159
+#: classes/class-slider-functions.php:92
+#: classes/class-slider-functions.php:105
 msgid "Scroll Vertical"
 msgstr ""
 
-#: classes/class-slider-functions.php:147
+#: classes/class-slider-functions.php:93
 msgid "Flip Horizontal"
 msgstr ""
 
-#: classes/class-slider-functions.php:148
+#: classes/class-slider-functions.php:94
 msgid "Flip Vertical"
 msgstr ""
 
-#: classes/class-slider-functions.php:209
+#: classes/class-slider-functions.php:155
 msgid "Center Left"
 msgstr ""
 
-#: classes/class-slider-functions.php:210
+#: classes/class-slider-functions.php:156
 msgid "Center Center"
 msgstr ""
 
-#: classes/class-slider-functions.php:211
+#: classes/class-slider-functions.php:157
 msgid "Center Right"
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:112
+#: classes/class-slider-hook-filter.php:107
 msgid "Thanks for choosing the WooCommerce Widget Product Slider."
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:113
+#: classes/class-slider-hook-filter.php:108
 msgid ""
 "All of that plugins features have been activated and are ready for you to "
 "use."
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:114
+#: classes/class-slider-hook-filter.php:109
 msgid "What is the Yellow border sections about?"
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:115
+#: classes/class-slider-hook-filter.php:110
 msgid ""
 "Inside the Yellow border you will see the settings for the 3 available "
 "upgrade versions for the lite version. You can see the settings but they are "
 "not active."
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:117
+#: classes/class-slider-hook-filter.php:112
 msgid "Upgrades Available For more Functionality"
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:119
+#: classes/class-slider-hook-filter.php:114
 msgid "WooCommerce Widget Product Slider"
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:120
+#: classes/class-slider-hook-filter.php:115
 msgid "Activates the beautiful Product Card Skin."
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:121
+#: classes/class-slider-hook-filter.php:116
 msgid "Create Sliders from Product tags."
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:122
+#: classes/class-slider-hook-filter.php:117
 msgid "Create Sliders from ON-SALE feature."
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:123
+#: classes/class-slider-hook-filter.php:118
 msgid "Create Sliders from Featured products."
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:126
+#: classes/class-slider-hook-filter.php:121
 msgid "WooCommerce Product Slider"
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:127
+#: classes/class-slider-hook-filter.php:122
 msgid "Includes all the features of lesser versions."
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:128
+#: classes/class-slider-hook-filter.php:123
 msgid "Activates Touch Mobile Skin."
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:129
+#: classes/class-slider-hook-filter.php:124
 msgid "Superb presentation on mobile devices."
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:130
+#: classes/class-slider-hook-filter.php:125
 msgid "Activates adding sliders by shortcode."
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:133
+#: classes/class-slider-hook-filter.php:128
 msgid "WooCommerce Carousel and Slider"
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:134
+#: classes/class-slider-hook-filter.php:129
 msgid "Top of the range with all features."
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:135
+#: classes/class-slider-hook-filter.php:130
 msgid "Activates the Product Carousel feature."
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:136
+#: classes/class-slider-hook-filter.php:131
 msgid "Insert Product Carousels by widget."
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:137
+#: classes/class-slider-hook-filter.php:132
 msgid "Insert Product carousels by shortcode."
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:138
+#: classes/class-slider-hook-filter.php:133
 msgid "Fully mobile responsive Carousel sliders."
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:141
+#: classes/class-slider-hook-filter.php:136
 msgid "Important!"
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:142
-msgid "If you are trailing one of the other versions of this plugin you must:"
+#: classes/class-slider-hook-filter.php:137
+msgid "If you are upgrading to any of the Pro Versions you will need to:"
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:144
+#: classes/class-slider-hook-filter.php:139
 msgid ""
 "DEACTIVATE this plugin BEFORE installing and activating another version."
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:145
+#: classes/class-slider-hook-filter.php:140
 msgid "If you don't you will get a FATAL ERROR."
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:146
+#: classes/class-slider-hook-filter.php:141
 msgid ""
 "All data - sliders, settings and activations will be present in the newly "
 "activated version."
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:147
+#: classes/class-slider-hook-filter.php:142
 msgid ""
 "WARNING - If you DELETE this plugin BEFORE you activate another version of "
 "the slider, all slider settings will be lost."
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:151
+#: classes/class-slider-hook-filter.php:146
 msgid "More FREE a3rev WooCommerce Plugins"
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:154
+#: classes/class-slider-hook-filter.php:149
 msgid "WooCommerce Product Sort & Display"
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:155
+#: classes/class-slider-hook-filter.php:150
 msgid "WooCommerce Products Quick View"
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:156
+#: classes/class-slider-hook-filter.php:151
 msgid "WooCommerce Dynamic Products Gallery"
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:157
+#: classes/class-slider-hook-filter.php:152
 msgid "WooCommerce Compare Products"
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:158
+#: classes/class-slider-hook-filter.php:153
 msgid "WooCommerce Predictive Search"
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:159
+#: classes/class-slider-hook-filter.php:154
 msgid "WooCommerce Email Inquiry & Cart Options"
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:162
+#: classes/class-slider-hook-filter.php:157
 msgid "FREE a3rev WordPress Plugins"
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:165
+#: classes/class-slider-hook-filter.php:160
 msgid "a3 Responsive Slider"
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:165
+#: classes/class-slider-hook-filter.php:160
 msgid "New Release!"
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:166
+#: classes/class-slider-hook-filter.php:161
 msgid "Contact Us Page - Contact People"
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:167
+#: classes/class-slider-hook-filter.php:162
 msgid "WordPress Email Template"
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:168
+#: classes/class-slider-hook-filter.php:163
 msgid "Page View Count"
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:179
+#: classes/class-slider-hook-filter.php:174
 msgid "Documentation"
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:180
+#: classes/class-slider-hook-filter.php:175
 msgid "Support"
 msgstr ""
 
@@ -1932,8 +1932,8 @@ msgstr ""
 
 #: shortcodes/class-slider-shortcodes.php:42
 #: shortcodes/class-slider-shortcodes.php:71
-#: widget/class-carousel-widget.php:62 widget/class-slider-widget.php:126
-#: widget/class-slider-widget.php:153 widget/class-slider-widget.php:196
+#: widget/class-carousel-widget.php:62 widget/class-slider-widget.php:107
+#: widget/class-slider-widget.php:134 widget/class-slider-widget.php:177
 msgid "Upgrade to"
 msgstr ""
 
@@ -1943,43 +1943,43 @@ msgstr ""
 
 #: shortcodes/class-slider-shortcodes.php:42
 #: shortcodes/class-slider-shortcodes.php:71
-#: widget/class-carousel-widget.php:62 widget/class-slider-widget.php:126
-#: widget/class-slider-widget.php:153 widget/class-slider-widget.php:196
+#: widget/class-carousel-widget.php:62 widget/class-slider-widget.php:107
+#: widget/class-slider-widget.php:134 widget/class-slider-widget.php:177
 msgid "to activate"
 msgstr ""
 
 #: shortcodes/class-slider-shortcodes.php:45
-#: widget/class-carousel-widget.php:66 widget/class-slider-widget.php:128
+#: widget/class-carousel-widget.php:66 widget/class-slider-widget.php:109
 msgid "Show Type:"
 msgstr ""
 
 #: shortcodes/class-slider-shortcodes.php:47
-#: widget/class-carousel-widget.php:68 widget/class-slider-widget.php:130
+#: widget/class-carousel-widget.php:68 widget/class-slider-widget.php:111
 msgid "Category"
 msgstr ""
 
 #: shortcodes/class-slider-shortcodes.php:48
-#: widget/class-carousel-widget.php:69 widget/class-slider-widget.php:131
+#: widget/class-carousel-widget.php:69 widget/class-slider-widget.php:112
 msgid "Tag"
 msgstr ""
 
 #: shortcodes/class-slider-shortcodes.php:49
-#: widget/class-carousel-widget.php:70 widget/class-slider-widget.php:132
+#: widget/class-carousel-widget.php:70 widget/class-slider-widget.php:113
 msgid "Featured"
 msgstr ""
 
 #: shortcodes/class-slider-shortcodes.php:50
-#: widget/class-carousel-widget.php:71 widget/class-slider-widget.php:133
+#: widget/class-carousel-widget.php:71 widget/class-slider-widget.php:114
 msgid "On Sale"
 msgstr ""
 
 #: shortcodes/class-slider-shortcodes.php:55
-#: widget/class-carousel-widget.php:76 widget/class-slider-widget.php:148
+#: widget/class-carousel-widget.php:76 widget/class-slider-widget.php:129
 msgid "Category:"
 msgstr ""
 
 #: shortcodes/class-slider-shortcodes.php:60
-#: widget/class-carousel-widget.php:81 widget/class-slider-widget.php:138
+#: widget/class-carousel-widget.php:81 widget/class-slider-widget.php:119
 msgid "Tag:"
 msgstr ""
 
@@ -1988,7 +1988,7 @@ msgid "Number of products:"
 msgstr ""
 
 #: shortcodes/class-slider-shortcodes.php:65
-#: widget/class-carousel-widget.php:86 widget/class-slider-widget.php:143
+#: widget/class-carousel-widget.php:86 widget/class-slider-widget.php:124
 msgid ""
 "Important! Set -1 to show all products. Warning - Setting large numbers "
 "(unlimited) could / will have an  impact on page load speed on some sites."
@@ -2036,43 +2036,43 @@ msgid "Number of slides to be displayed in the carousel."
 msgstr ""
 
 #: shortcodes/class-slider-shortcodes.php:90
-#: widget/class-slider-widget.php:154
+#: widget/class-slider-widget.php:135
 msgid "Skin Type:"
 msgstr ""
 
 #: shortcodes/class-slider-shortcodes.php:91
-#: widget/class-slider-widget.php:155
+#: widget/class-slider-widget.php:136
 msgid "WIDGET"
 msgstr ""
 
 #: shortcodes/class-slider-shortcodes.php:92
-#: widget/class-slider-widget.php:156
+#: widget/class-slider-widget.php:137
 msgid "CARD"
 msgstr ""
 
 #: shortcodes/class-slider-shortcodes.php:96
 #: shortcodes/class-slider-shortcodes.php:111
-#: widget/class-slider-widget.php:160 widget/class-slider-widget.php:176
+#: widget/class-slider-widget.php:141 widget/class-slider-widget.php:157
 msgid "Effects Type:"
 msgstr ""
 
 #: shortcodes/class-slider-shortcodes.php:128
-#: widget/class-carousel-widget.php:98 widget/class-slider-widget.php:190
+#: widget/class-carousel-widget.php:98 widget/class-slider-widget.php:171
 msgid "Transition Method:"
 msgstr ""
 
 #: shortcodes/class-slider-shortcodes.php:129
-#: widget/class-carousel-widget.php:99 widget/class-slider-widget.php:191
+#: widget/class-carousel-widget.php:99 widget/class-slider-widget.php:172
 msgid "MANUAL"
 msgstr ""
 
 #: shortcodes/class-slider-shortcodes.php:130
-#: widget/class-carousel-widget.php:100 widget/class-slider-widget.php:192
+#: widget/class-carousel-widget.php:100 widget/class-slider-widget.php:173
 msgid "AUTO"
 msgstr ""
 
 #: shortcodes/class-slider-shortcodes.php:134
-#: widget/class-carousel-widget.php:104 widget/class-slider-widget.php:198
+#: widget/class-carousel-widget.php:104 widget/class-slider-widget.php:179
 msgid "Auto Start Delay:"
 msgstr ""
 
@@ -2080,18 +2080,18 @@ msgstr ""
 #: shortcodes/class-slider-shortcodes.php:137
 #: shortcodes/class-slider-shortcodes.php:138
 #: widget/class-carousel-widget.php:104 widget/class-carousel-widget.php:107
-#: widget/class-carousel-widget.php:109 widget/class-slider-widget.php:198
-#: widget/class-slider-widget.php:201 widget/class-slider-widget.php:202
+#: widget/class-carousel-widget.php:109 widget/class-slider-widget.php:179
+#: widget/class-slider-widget.php:182 widget/class-slider-widget.php:183
 msgid "seconds"
 msgstr ""
 
 #: shortcodes/class-slider-shortcodes.php:137
-#: widget/class-carousel-widget.php:107 widget/class-slider-widget.php:201
+#: widget/class-carousel-widget.php:107 widget/class-slider-widget.php:182
 msgid "Time Between Transitions:"
 msgstr ""
 
 #: shortcodes/class-slider-shortcodes.php:138
-#: widget/class-carousel-widget.php:109 widget/class-slider-widget.php:202
+#: widget/class-carousel-widget.php:109 widget/class-slider-widget.php:183
 msgid "Transition Effect Speed:"
 msgstr ""
 
@@ -2151,11 +2151,11 @@ msgstr ""
 msgid "Woo Products Carousel"
 msgstr ""
 
-#: widget/class-carousel-widget.php:63 widget/class-slider-widget.php:123
+#: widget/class-carousel-widget.php:63 widget/class-slider-widget.php:104
 msgid "Title:"
 msgstr ""
 
-#: widget/class-carousel-widget.php:85 widget/class-slider-widget.php:142
+#: widget/class-carousel-widget.php:85 widget/class-slider-widget.php:123
 msgid "Number of products to show:"
 msgstr ""
 
@@ -2175,7 +2175,7 @@ msgstr ""
 msgid "Woo Products Slider"
 msgstr ""
 
-#: widget/class-slider-widget.php:126 widget/class-slider-widget.php:153
-#: widget/class-slider-widget.php:196
+#: widget/class-slider-widget.php:107 widget/class-slider-widget.php:134
+#: widget/class-slider-widget.php:177
 msgid "Widget Product Slider Version"
 msgstr ""

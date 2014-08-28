@@ -2,9 +2,9 @@
 
 Contributors: a3rev, A3 Revolution Software Development team
 Tags: WooCommerce widgets, WooCommerce, WooCommerce widget product slideshow, WooCommerce Product images, woothemes, wordpress ecommerce
-Requires at least: 3.7
+Requires at least: 3.8
 Tested up to: 3.9.1
-Stable tag: 1.0.6.2
+Stable tag: 1.1.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -14,6 +14,16 @@ Beautifully lightweight, mobile & tablet responsive WooCommerce Widget product s
 
 WooCommerce Widget Product Slider enables you to create slick Product Sliders in any sidebar or widgetized area on your site. Home page, Footer, multiple sidebars.
 
+>= New Generation WooCommerce Extension =
+>
+> backbone.js, Sass and WooCommerce API make the a3rev WooCommerce Product sliders the most advanced WooCommerce plugins in the world.
+>
+>* All front end functions build with [backbone.js](http://backbonejs.org/)
+>* Front end Widget Sliders built with [Sass](http://sass-lang.com/) #dynamic {Stylesheets}
+>* Full automatic integration with [WooCommerce JSON RESTful API](https://github.com/woothemes/woocommerce/issues/5942).
+
+> Welcome to a new generation of WooCommerce plugins that are - <em>'Lightweight, fast and powerful'</em>
+ 
 = Key Features =
 
 * Creates an eye catching product slideshow in any widgetized area or sidebar.
@@ -24,11 +34,14 @@ WooCommerce Widget Product Slider enables you to create slick Product Sliders in
 * Touch swipe slider images in mobiles.
 * 7 different image transition effect plus random.
 * Image transition effects timing controls.
-* Optimized for all browsers including the notorious IE8, IE9, IE10, IE11 
+* Optimized for all browsers including the notorious IE9, IE10, IE11 
+* Lightweight,fast and powerful.
 
 = Widget Skin Features =
 
-On the wp-admin dashboard look for the a3 Product Slider menu item. From the drop down choose - Widget Skin to see all the settings for the Fully Customizable Widget Skin. The settings enable you to create a beautiful slider product display to match your theme.
+On the wp-admin dashboard look for the a3 Product Slider menu item. From the drop down choose - Widget Skin to see all the Sass #dynamic {stylesheets} settings for the Fully Customizable Sass Widget Skin. 
+
+The settings enable you to create a beautiful widget slider product display to match your theme in Sass which is the most mature, stable, and powerful professional grade CSS extension language in the world.
 
 * Widget Skin - Turn ON Touch Swipe and the feature is auto activated when slider is viewed in a mobile. 
 * Widget Skin - Set fixed slider height or set to dynamic.
@@ -48,7 +61,7 @@ Use the Woo Product Slider on your widget menu to add Product Sliders to any wid
 * Select the Image transition effect (8 effects to choose from plus random).
 * Set Slider transition Method, Auto or Manual.
 * If set at Auto start, then set auto start delay in seconds.
-* Set time between each transition in seconds ( how long each product is visible in the slider)
+* Set time between each transition in seconds (how long each product is visible in the slider)
 * Set the speed of the transition.
 
 = View the Slider in Action =
@@ -121,7 +134,7 @@ This plugin has 3 Pro version upgrades available. You will see all of the availa
 
 = Plugin Resources =
 
-[Pro Version Free Trail](http://a3rev.com/shop/woocommerce-widget-product-slider/)
+[Pro Version](http://a3rev.com/shop/woocommerce-widget-product-slider/)
 [Documentation](http://docs.a3rev.com/user-guides/woocommerce/woo-widget-product-slider/)
 [Lite Version Support](http://wordpress.org/support/plugin/woo-widget-product-slideshow/)
 
@@ -140,7 +153,11 @@ This plugin has 3 Pro version upgrades available. You will see all of the availa
 
 4. Place and configure as many Product Slideshow widgets as you want.
 
-5. Have fun.
+5. Go to WP-admin > Product Slider > Widget Skin
+
+6. Use the Sass #dynamic {stylesheet} setting to create your unique Widget skin layout and style.
+
+7. Have fun.
 
 == Frequently Asked Questions ==
 
@@ -150,6 +167,17 @@ You can use this plugin only when you have installed the WooCommerce plugin.
  
 
 == Changelog ==
+
+= 1.1.0 - 2014/08/29 = 
+* Feature - Converted all front end CSS #dynamic {stylesheets} to Sass #dynamic {stylesheets} for faster slider loading.
+* Feature - Convert all back end CSS to Sass.
+* Feature - Complete rebuild of the Widget Product slider front end in backbone.js 
+* Feature - Backbone.js / WooCommerce API reduces the plugins resource call on the host server by a massive +50%.
+* Feature - Added Underscore.js script as template for Backbone.js for rendering template display on frontend
+* Feature - Added Backbone.localStorage.js to cache the widget slider on users local machine.
+* Tweak - Register Legacy API  '/wc_product_slider_legacy_api' for plugin to use with Backbone.js
+* Tweak - Updated google font face in plugin framework.
+* Tweak - Update Cycle2 script from 2.1.2 to latest version 2.1.5
 
 = 1.0.6.2 - 2014/06/17 =
 * Tweak - Updated chosen js script to latest version 1.0.1 on the a3rev Plugin Framework
@@ -216,6 +244,9 @@ You can use this plugin only when you have installed the WooCommerce plugin.
 * Initial release.
 
 == Upgrade Notice ==
+
+= 1.1.0 =
+Upgrade to version 1.1.0 - full conversion of Widget Product Slider front end display with Sass, backbone.js and WooCommerce API.
 
 = 1.0.6.2 =
 Upgrade now for a framework code tweak that makes your plugin fully compatible with WooCommerce version 2.1.11

@@ -4,12 +4,16 @@
  * Install Database, settings option
  */
 function wc_product_slider_activated(){
-	update_option('woo_gallery_widget_lite_version', '1.0.6.2');
+	update_option('woo_gallery_widget_lite_version', '1.1.0');
 	
 	// Set Settings Default from Admin Init
 	global $wc_product_slider_admin_init;
 	$wc_product_slider_admin_init->set_default_settings();
 	
+	// Build sass
+	global $wc_product_slider_less;
+	$wc_product_slider_less->plugin_build_sass();
+		
 	update_option('a3_wc_widget_product_slider_just_installed', true);
 }
 
@@ -47,8 +51,6 @@ add_action( 'wp_head', array( 'WC_Product_Slider_Hook_Filter', 'frontend_scripts
 // Include google fonts into header
 add_action( 'wp_head', array( 'WC_Product_Slider_Hook_Filter', 'add_google_fonts'), 10 );
 	
-// Add Custom style on frontend
-add_action( 'wp_head', array( 'WC_Product_Slider_Hook_Filter', 'include_customized_style'), 11 );
 
 $GLOBALS['wc_product_slider_shortcode'] = new WC_Product_Slider_Shortcode();
 
@@ -60,6 +62,17 @@ if ( in_array( basename( $_SERVER['PHP_SELF'] ), array( 'widgets.php' ) ) ) {
 	add_action( 'admin_footer', array( 'WC_Product_Slider_Hook_Filter', 'include_admin_script' ) );
 }
 
-update_option('woo_gallery_widget_lite_version', '1.0.6.2');
+// Check upgrade functions
+add_action( 'init', 'wc_product_slider_lite_upgrade_plugin' );
+function wc_product_slider_lite_upgrade_plugin () {
+	if( version_compare(get_option('woo_gallery_widget_lite_version'), '1.1.0') === -1 ){
+		// Build sass
+		global $wc_product_slider_less;
+		$wc_product_slider_less->plugin_build_sass();
+		update_option('woo_gallery_widget_lite_version', '1.1.0');
+	}
+	
+	update_option('woo_gallery_widget_lite_version', '1.1.0');
+}
 
 ?>

@@ -138,7 +138,7 @@ class WC_Product_Slider_Admin_UI
 		$upgrade_top_message = sprintf( '<div class="pro_feature_top_message">' 
 			. __( 'Settings inside this yellow border are %s Features.', 'wc_product_slider' ) 
 			. '<br />' 
-			. __( 'Trail the <a href="%s" target="_blank">%s</a> for Free to activate these settings.', 'wc_product_slider' ) 
+			. __( 'Upgrading to the <a href="%s" target="_blank">%s</a> plugin activates these settings.', 'wc_product_slider' ) 
 			. '</div>'
 			, apply_filters( $this->plugin_name . '_' . $setting_id . '_pro_version_name', apply_filters( $this->plugin_name . '_pro_version_name', __( 'Widget Product Slider Pro Version', 'wc_product_slider' ) ) )
 			, apply_filters( $this->plugin_name . '_' . $setting_id . '_pro_plugin_page_url', apply_filters( $this->plugin_name . '_pro_plugin_page_url', $this->pro_plugin_page_url ) )

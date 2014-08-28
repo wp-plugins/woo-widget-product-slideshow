@@ -25,12 +25,15 @@ class WC_Product_Slider_Widget extends WP_Widget
 			'category_id' 			=> 0, 
 			'widget_effect'			=> 'fade',
 			'slider_auto_scroll'	=> 'no',
+			
+		) );
+		
+		$instance = wp_parse_args( array( 
 			'effect_delay'			=> 1,
 			'effect_timeout'		=> 4,
 			'effect_speed'			=> 2,
 			
-			'number_products' => 6 
-		) );
+		), $instance );
 		
 		$title = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
 		
@@ -45,43 +48,32 @@ class WC_Product_Slider_Widget extends WP_Widget
 		
 		$output = '';
 		
+		// slider id
+		$slider_id = 'plugin=wc_product_slider';
+		
+		
 		$category_id 		= $slider_settings['category_id'];
 		
 		$widget_effect 		= $slider_settings['widget_effect'];
-		$slider_auto_scroll = $slider_settings['slider_auto_scroll'];
-		$effect_delay 		= intval( $slider_settings['effect_delay'] ) * 1000;
-		$effect_timeout 	= intval( $slider_settings['effect_timeout'] ) * 1000;
-		$effect_speed 		= intval( $slider_settings['effect_speed'] ) * 1000;
-		
-		$number_products 	= intval( $slider_settings['number_products'] );
-		if ( $number_products < 0 ) $number_products = -1;
 		
 		$tag_link = '';
 		$category_link = '';
 		
+		$slider_id .= '&show_type=category';
 		
 		if ( $category_id < 1) return;
+		$slider_id .= '&category_id='.$category_id;
 		$category_link = get_term_link( (int) $category_id, 'product_cat');
-		$product_results = WC_Product_Slider_Functions::get_products_cat( $category_id, 'title menu_order', $number_products, 0 );
 		
-		if ( count( $product_results ) < 1 ) return;
-		
-		$slide_items = array();
-		$image_size = 'full';
-				
-		foreach ( $product_results as $product ) {
-			
-			$thumb_image_info = WC_Product_Slider_Functions::get_image_info( $product->ID,  $image_size );
-			$thumb_image_url = $thumb_image_info['url'];
-			
-			$slide_items[$product->ID] = array(
-				'item_title'		=> $product->post_title,
-				'item_link'			=> get_permalink( $product->ID ),
-				'img_url'			=> $thumb_image_url,
-			);
-		}
+		$slider_id .= '&skin_type=widget';
+		$slider_id .= '&number_products=6';
 
-		$output = WC_Product_Slider_Display::dispay_slider_widget( $slide_items, $slider_settings, $category_link, $tag_link );
+		
+		if ( $widget_effect == 'random' ) $slider_id .= '&widget_effect='.$widget_effect;
+		$slider_id = base64_encode( $slider_id );
+		$output = WC_Product_Slider_Display::dispay_slider_widget( $slider_id, $slider_settings, $category_link, $tag_link );
+		
+
 		
 		return $output;
 	}
@@ -90,10 +82,6 @@ class WC_Product_Slider_Widget extends WP_Widget
 		
 		$instance = array_merge( $old_instance, $new_instance );
 		$instance['title'] 					= esc_attr( $new_instance['title'] );
-		
-		$number_products = intval( $new_instance['number_products'] );
-		if ( $number_products < 0 ) $number_products = -1;
-		$instance['number_products'] 		= $number_products;
 		
 		return $instance;
 	}
@@ -104,11 +92,6 @@ class WC_Product_Slider_Widget extends WP_Widget
 			'category_id' 			=> 0, 
 			'widget_effect'			=> 'fade',
 			'slider_auto_scroll'	=> 'no',
-			'effect_delay'			=> 1,
-			'effect_timeout'		=> 4,
-			'effect_speed'			=> 2,
-			
-			'number_products' => 6 
 		) );
 		
 		$widget_id = str_replace('widget_product_cycle-','',$this->id);
@@ -116,8 +99,6 @@ class WC_Product_Slider_Widget extends WP_Widget
 		extract( $instance );
 		
 		$title = esc_attr( $title );
-		$number_products = intval( $number_products );
-		if ( $number_products < 0 ) $number_products = -1;
 		
 ?>
 <p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e( 'Title:', 'wc_product_slider' ); ?></label> <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" /></p>
@@ -163,7 +144,7 @@ class WC_Product_Slider_Widget extends WP_Widget
         $transitions_list = WC_Product_Slider_Functions::card_slider_transitions_list();
         foreach ( $transitions_list as $effect_key => $effect_name ) {
         ?>
-            <option value="<?php echo $effect_key; ?>" <?php selected( $effect_key, $card_effect ); ?>><?php echo $effect_name; ?></option>
+            <option value="<?php echo $effect_key; ?>"><?php echo $effect_name; ?></option>
         <?php
         }
         ?>

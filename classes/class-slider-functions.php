@@ -59,61 +59,7 @@ class WC_Product_Slider_Functions
 	
 		return $image_info;
 	}
-	
-	public static function get_products_cat($catid = 0, $orderby='title menu_order', $number = -1, $offset = 0) {
-		$args = array(
-			'numberposts'	=> $number,
-			'offset'		=> $offset,
-			'orderby'		=> $orderby,
-			'order'			=> 'ASC',
-			'post_type'		=> 'product',
-			'post_status'	=> 'publish'
-		);
-		if ($catid > 0) {
-			$args['tax_query'] = array(
-						array(
-							'taxonomy'			=> 'product_cat',
-							'field'				=> 'id',
-							'terms'				=> $catid,
-							'include_children'	=> false
-						)
-			);
-		}
-		$results = get_posts($args);
-		if ( $results && is_array($results) && count($results) > 0) {
-			return $results;
-		} else {
-			return array();
-		}
-	}
-	
-	public static function get_image_info( $id, $size = 'full' ) {
-		$thumbid = 0;
-		if ( has_post_thumbnail($id) ) {	
-			$thumbid = get_post_thumbnail_id($id);
-		} else {
-			$args = array( 'post_parent' => $id ,'numberposts' => 1, 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => 'DESC', 'orderby' => 'ID', 'post_status' => null); 
-			$attachments = get_posts($args);
-			if ($attachments) {
-				foreach ( $attachments as $attachment ) {
-					$thumbid = $attachment->ID;
-					break;
-				}
-			}
-		}
-		$image_info = array();
-		if ( $thumbid > 0 ) {
-			$image_attribute = wp_get_attachment_image_src( $thumbid, $size);
-			$image_info['url'] = $image_attribute[0];
-			$image_info['width'] = $image_attribute[1];
-			$image_info['height'] = $image_attribute[2];	
-		} else {
-			$image_info = WC_Product_Slider_Functions::get_template_image_file_info('no-image.gif');
-		}
-		
-		return $image_info;
-	}
-	
+						
 	public static function limit_words($str='',$len=100,$more=true) {
 		if (trim($len) == '' || $len < 0) $len = 100;
 	   if ( $str=="" || $str==NULL ) return $str;
