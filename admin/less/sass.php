@@ -32,8 +32,9 @@ class WC_Product_Slider_Less
 		$this->plugin_compile_less_mincss( $sass );
 	}
 	
-	public function plugin_compile_less_mincss( $sass )
+	public function plugin_compile_less_mincss( $sass, $css_file_name = '' )
     {
+		@ini_set( 'display_errors', false );
         $_upload_dir = wp_upload_dir();
         @chmod($_upload_dir['basedir'], 0777);
         if (!is_dir($_upload_dir['basedir'] . '/sass')) {
@@ -41,14 +42,16 @@ class WC_Product_Slider_Less
         } else {
             @chmod($_upload_dir['basedir'] . '/sass', 0777);
         }
+		
+		if ( trim( $css_file_name ) == '' ) $css_file_name = $this->css_file_name;
         
-        if ($this->css_file_name == '')
+        if ( $css_file_name == '' )
             return;
 			
-		if ($this->plugin_folder == '')
+		if ( $this->plugin_folder == '' )
             return;
         
-        $filename = $this->css_file_name;
+        $filename = $css_file_name;
         
         if (!file_exists($_upload_dir['basedir'] . '/sass/' . $filename . '.less')) {
             @file_put_contents($_upload_dir['basedir'] . '/sass/' . $filename . '.less', '');

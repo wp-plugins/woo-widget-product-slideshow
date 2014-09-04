@@ -70,8 +70,10 @@ class WC_Product_Slider_Legacy_API {
 				$product_id = $product->ID;
 				if ( version_compare( $woocommerce_db_version, '2.0', '<' ) && null !== $woocommerce_db_version ) {
 					$product_data = new WC_Product( $product_id ); 
-				} else {
+				} elseif ( version_compare( WC()->version, '2.2.0', '<' ) ) {
 					$product_data = get_product( $product_id );
+				} else {
+					$product_data = wc_get_product( $product_id );
 				}
 				
 				$product_price = $product_data->get_price_html();

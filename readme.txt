@@ -4,7 +4,7 @@ Contributors: a3rev, A3 Revolution Software Development team
 Tags: WooCommerce widgets, WooCommerce, WooCommerce widget product slideshow, WooCommerce Product images, woothemes, wordpress ecommerce
 Requires at least: 3.8
 Tested up to: 3.9.1
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -168,6 +168,12 @@ You can use this plugin only when you have installed the WooCommerce plugin.
 
 == Changelog ==
 
+= 1.1.1 - 2014/09/04 =
+* Tweak - Tested 100% compatible with WooCommerce Version 2.2 and backwards to v2.1
+* Tweak - Use wc_get_product() function instead of get_product() function when site is using WooCommerce Version 2.2
+* Tweak - Updated Sass script in plugin framework.
+* Tweak - Removed '//# sourceMappingURL=jquery.cycle2.js.map' comment in cycle2 script The Chrome browser read comment and find jquery.cycle2.js.map file from server
+
 = 1.1.0 - 2014/08/29 = 
 * Feature - Converted all front end CSS #dynamic {stylesheets} to Sass #dynamic {stylesheets} for faster slider loading.
 * Feature - Convert all back end CSS to Sass.
@@ -244,6 +250,9 @@ You can use this plugin only when you have installed the WooCommerce plugin.
 * Initial release.
 
 == Upgrade Notice ==
+
+= 1.1.1 =
+Upgrade now and your plugin will be 100% compatible with the new WooCommerce Version 2.2 when it is released.
 
 = 1.1.0 =
 Upgrade to version 1.1.0 - full conversion of Widget Product Slider front end display with Sass, backbone.js and WooCommerce API.
