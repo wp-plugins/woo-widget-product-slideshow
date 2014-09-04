@@ -1,16 +1,15 @@
 <?php
 /*
-Plugin Name: WooCommerce Widget Product Slideshow LITE
-Plugin URI: http://a3rev.com/shop/woocommerce-widget-product-slideshow/
-Description: Add a scrolling Gallery Slideshow of products to any widgetized area on your site. Options to show a slideshow of products from any Category or any Tag or set to show a dynamic gallery of all products that are currently marked down in price. All setting are on each widget you set up.
-Version: 1.0.5.1
+Plugin Name: WooCommerce Widget Product Slider LITE
+Description: Adds visually stunning WooCommerce product sliders to any widgeted area. Fully customizable, Widget Skin. Fully mobile responsive. Show any number of products from a selected product category.
+Version: 1.1.0
 Author: A3 Revolution
 Author URI: http://www.a3rev.com/
-Requires at least: 3.5
-Tested up to: 3.8.1
+Requires at least: 3.7
+Tested up to: 3.9.1
 License: GPLv2 or later
 
-	WooCommerce Widget Product Slideshow LITE plugin.
+	WooCommerce Widget Product Slider Lite plugin.
 	Copyright © 2011 A3 Revolution Software Development team
 
 	A3 Revolution Software Development team
@@ -21,28 +20,56 @@ License: GPLv2 or later
 */
 ?>
 <?php
-define( 'WC_GALLERY_WIDGET_FILE_PATH', dirname( __FILE__ ) );
-define( 'WC_GALLERY_WIDGET_DIR_NAME', basename( WC_GALLERY_WIDGET_FILE_PATH ) );
-define( 'WC_GALLERY_WIDGET_FOLDER', dirname( plugin_basename( __FILE__ ) ) );
-define(	'WC_GALLERY_WIDGET_NAME', plugin_basename(__FILE__) );
-define( 'WC_GALLERY_WIDGET_URL', untrailingslashit( plugins_url( '/', __FILE__ ) ) );
-define( 'WC_GALLERY_WIDGET_DIR', WP_CONTENT_DIR . '/plugins/' . WC_GALLERY_WIDGET_FOLDER );
-define( 'WC_GALLERY_WIDGET_IMAGES_URL',  WC_GALLERY_WIDGET_URL . '/assets/images' );
-define( 'WC_GALLERY_WIDGET_JS_URL',  WC_GALLERY_WIDGET_URL . '/assets/js' );
-define( 'WC_GALLERY_WIDGET_CSS_URL',  WC_GALLERY_WIDGET_URL . '/assets/css' );
-if(!defined("WC_GALLERY_WIDGET_AUTHOR_URI"))
-    define("WC_GALLERY_WIDGET_AUTHOR_URI", "http://a3rev.com/shop/woocommerce-widget-product-slideshow/");
+define( 'WC_PRODUCT_SLIDER_FILE_PATH', dirname( __FILE__ ) );
+define( 'WC_PRODUCT_SLIDER_DIR_NAME', basename( WC_PRODUCT_SLIDER_FILE_PATH ) );
+define( 'WC_PRODUCT_SLIDER_FOLDER', dirname( plugin_basename( __FILE__ ) ) );
+define(	'WC_PRODUCT_SLIDER_NAME', plugin_basename(__FILE__) );
+define( 'WC_PRODUCT_SLIDER_URL', untrailingslashit( plugins_url( '/', __FILE__ ) ) );
+define( 'WC_PRODUCT_SLIDER_DIR', WP_CONTENT_DIR . '/plugins/' . WC_PRODUCT_SLIDER_FOLDER );
+define( 'WC_PRODUCT_SLIDER_IMAGES_URL',  WC_PRODUCT_SLIDER_URL . '/assets/images' );
+define( 'WC_PRODUCT_SLIDER_JS_URL',  WC_PRODUCT_SLIDER_URL . '/assets/js' );
+define( 'WC_PRODUCT_SLIDER_EXTENSION_JS_URL',  WC_PRODUCT_SLIDER_JS_URL . '/cycle2-extensions' );
+define( 'WC_PRODUCT_SLIDER_CSS_URL',  WC_PRODUCT_SLIDER_URL . '/assets/css' );
+define( 'WC_PRODUCT_SLIDER_WP_TESTED', '3.9.1' );
+	
+if(!defined("WC_PRODUCT_SLIDER_DOCS_URI"))
+    define("WC_PRODUCT_SLIDER_DOCS_URI", "http://docs.a3rev.com/user-guides/woocommerce/woo-widget-product-slideshow/");
+if(!defined("WC_WIDGET_PRODUCT_SLIDER_VERSION_URI"))
+    define("WC_WIDGET_PRODUCT_SLIDER_VERSION_URI", "http://a3rev.com/shop/woocommerce-widget-product-slider/");
+if(!defined("WC_PRODUCT_SLIDER_VERSION_URI"))
+    define("WC_PRODUCT_SLIDER_VERSION_URI", "http://a3rev.com/shop/woocommerce-product-slider/");
+if(!defined("WC_CAROUSEL_SLIDER_VERSION_URI"))
+    define("WC_CAROUSEL_SLIDER_VERSION_URI", "http://a3rev.com/shop/woocommerce-carousel-slider/");
 
-include 'classes/class-gallery-widget-functions.php';
-include 'classes/class-gallery-widget-hook.php';
+// Product Slider API
+include('includes/class-legacy-api.php');
 
-include 'widget/class-cycle-widget.php';
+include( 'admin/admin-ui.php' );
+include( 'admin/admin-interface.php' );
+
+include('admin/admin-pages/admin-widget-skin-page.php');
+include('admin/admin-pages/admin-card-skin-page.php');
+include('admin/admin-pages/admin-mobile-skin-page.php');
+include('admin/admin-pages/admin-carousel-page.php');
+
+include( 'admin/admin-init.php' );
+include( 'admin/less/sass.php' );
+
+include 'classes/class-slider-display.php';
+include 'classes/class-slider-functions.php';
+include 'classes/class-slider-hook-filter.php';
+
+include 'shortcodes/class-slider-shortcodes.php';
+
+include 'classes/class-slider-backbone.php';
+
+include 'widget/class-slider-widget.php';
+include 'widget/class-carousel-widget.php';
 
 include 'admin/plugin-init.php';
 
 /**
  * Call when the plugin is activated
  */
-register_activation_hook(__FILE__,'woo_gallery_widget_install');
-
+register_activation_hook(__FILE__,'wc_product_slider_activated');
 ?>
