@@ -4,16 +4,16 @@
  * Install Database, settings option
  */
 function wc_product_slider_activated(){
-	update_option('woo_gallery_widget_lite_version', '1.1.1');
-	
+	update_option('woo_gallery_widget_lite_version', '1.1.2');
+
 	// Set Settings Default from Admin Init
 	global $wc_product_slider_admin_init;
 	$wc_product_slider_admin_init->set_default_settings();
-	
+
 	// Build sass
 	global $wc_product_slider_less;
 	$wc_product_slider_less->plugin_build_sass();
-		
+
 	update_option('a3_wc_widget_product_slider_just_installed', true);
 }
 
@@ -25,7 +25,7 @@ function wc_product_slider_init() {
 		wp_redirect( admin_url( 'admin.php?page=wc-product-slider-widget-skin-page', 'relative' ) );
 		exit;
 	}
-		
+
 	load_plugin_textdomain( 'wc_product_slider', false, WC_PRODUCT_SLIDER_FOLDER.'/languages' );
 }
 
@@ -50,7 +50,7 @@ add_action( 'wp_head', array( 'WC_Product_Slider_Hook_Filter', 'frontend_scripts
 
 // Include google fonts into header
 add_action( 'wp_head', array( 'WC_Product_Slider_Hook_Filter', 'add_google_fonts'), 10 );
-	
+
 
 $GLOBALS['wc_product_slider_shortcode'] = new WC_Product_Slider_Shortcode();
 
@@ -71,8 +71,8 @@ function wc_product_slider_lite_upgrade_plugin () {
 		$wc_product_slider_less->plugin_build_sass();
 		update_option('woo_gallery_widget_lite_version', '1.1.0');
 	}
-	
-	update_option('woo_gallery_widget_lite_version', '1.1.1');
+
+	update_option('woo_gallery_widget_lite_version', '1.1.2');
 }
 
 ?>

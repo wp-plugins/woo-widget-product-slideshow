@@ -3,13 +3,13 @@
 Contributors: a3rev, A3 Revolution Software Development team
 Tags: WooCommerce widgets, WooCommerce, WooCommerce widget product slideshow, WooCommerce Product images, woothemes, wordpress ecommerce
 Requires at least: 3.8
-Tested up to: 3.9.1
-Stable tag: 1.1.1
+Tested up to: 4.0
+Stable tag: 1.1.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 Beautifully lightweight, mobile & tablet responsive WooCommerce Widget product slider plugin that packs a powerful marketing punch
- 
+
 == Description ==
 
 WooCommerce Widget Product Slider enables you to create slick Product Sliders in any sidebar or widgetized area on your site. Home page, Footer, multiple sidebars.
@@ -23,7 +23,7 @@ WooCommerce Widget Product Slider enables you to create slick Product Sliders in
 >* Full automatic integration with [WooCommerce JSON RESTful API](https://github.com/woothemes/woocommerce/issues/5942).
 
 > Welcome to a new generation of WooCommerce plugins that are - <em>'Lightweight, fast and powerful'</em>
- 
+
 = Key Features =
 
 * Creates an eye catching product slideshow in any widgetized area or sidebar.
@@ -34,16 +34,16 @@ WooCommerce Widget Product Slider enables you to create slick Product Sliders in
 * Touch swipe slider images in mobiles.
 * 7 different image transition effect plus random.
 * Image transition effects timing controls.
-* Optimized for all browsers including the notorious IE9, IE10, IE11 
+* Optimized for all browsers including the notorious IE9, IE10, IE11
 * Lightweight,fast and powerful.
 
 = Widget Skin Features =
 
-On the wp-admin dashboard look for the a3 Product Slider menu item. From the drop down choose - Widget Skin to see all the Sass #dynamic {stylesheets} settings for the Fully Customizable Sass Widget Skin. 
+On the wp-admin dashboard look for the a3 Product Slider menu item. From the drop down choose - Widget Skin to see all the Sass #dynamic {stylesheets} settings for the Fully Customizable Sass Widget Skin.
 
 The settings enable you to create a beautiful widget slider product display to match your theme in Sass which is the most mature, stable, and powerful professional grade CSS extension language in the world.
 
-* Widget Skin - Turn ON Touch Swipe and the feature is auto activated when slider is viewed in a mobile. 
+* Widget Skin - Turn ON Touch Swipe and the feature is auto activated when slider is viewed in a mobile.
 * Widget Skin - Set fixed slider height or set to dynamic.
 * Widget Skin - Slider controls, ON | OFF and upload custom control icons if desired.
 * Widget Skin - Slider Pager controls, ON | OFF, position and style settings.
@@ -66,7 +66,7 @@ Use the Woo Product Slider on your widget menu to add Product Sliders to any wid
 
 = View the Slider in Action =
 
-See the WooCommerce Widget Product Slider in action on the [a3rev.com](http://a3rev.com/shop/woocommerce-widget-product-slider/) site.  
+See the WooCommerce Widget Product Slider in action on the [a3rev.com](http://a3rev.com/shop/woocommerce-widget-product-slider/) site.
 
 = a3rev Plugins Lite & Pro Version Admin Interface =
 
@@ -75,15 +75,15 @@ See the WooCommerce Widget Product Slider in action on the [a3rev.com](http://a3
 * The Pro Version settings are all active on the admin panels But do not save and are not applied to the front end.
 * Upgrading to the Pro version activates all the Pro version Features and Settings and removes the Yellow side bar and borders.
 
->= Premium Support = 
+>= Premium Support =
 >
->The a3rev team does not provide support for the WooCommerce Widget Product Slider plugin on the WordPress.org forums. One on one developer support is available via the plugins a3rev [support forum](https://a3rev.com/forums/forum/woocommerce-plugins/widget-product-slider/) to people who have purchased a [WooCommerce Widget product Slider Pro](http://a3rev.com/shop/woocommerce-widget-product-slider/) plugin Lifetime License. 
+>The a3rev team does not provide support for the WooCommerce Widget Product Slider plugin on the WordPress.org forums. One on one developer support is available via the plugins a3rev [support forum](https://a3rev.com/forums/forum/woocommerce-plugins/widget-product-slider/) to people who have purchased a [WooCommerce Widget product Slider Pro](http://a3rev.com/shop/woocommerce-widget-product-slider/) plugin Lifetime License.
 >
 >The Pro Version has lots of extra features that coupled with developer support might be well worth your investment!
 
 = 3 x Pro Version Upgrades Available =
 
-This plugin has 3 Pro version upgrades available. You will see all of the available upgrade features on the widget admin panel. Each version adds extra functionality and the once only Lifetime License fee is set accordingly. 
+This plugin has 3 Pro version upgrades available. You will see all of the available upgrade features on the widget admin panel. Each version adds extra functionality and the once only Lifetime License fee is set accordingly.
 
 = WooCommerce Widget Product Slider Pro Features =
 
@@ -140,7 +140,7 @@ This plugin has 3 Pro version upgrades available. You will see all of the availa
 
 == Screenshots ==
 
-1. Screenshot shows the Sidebar widget control panel on the left and the image on the right is how it looks on the front end. 
+1. Screenshot shows the Sidebar widget control panel on the left and the image on the right is how it looks on the front end.
 
 
 == Usage ==
@@ -164,9 +164,15 @@ This plugin has 3 Pro version upgrades available. You will see all of the availa
 = When can I use this plugin? =
 
 You can use this plugin only when you have installed the WooCommerce plugin.
- 
+
 
 == Changelog ==
+
+= 1.1.2 - 2014/09/12 =
+* Tweak - Tested 100% compatible with WooCommerce 2.2.2
+* Tweak - Tested 100% compatible with WordPress Version 4.0
+* Tweak - Added WordPress plugin icon
+* Fix - Changed __DIR__ to dirname( __FILE__ ) for Sass script so that on some server __DIR___ is not defined
 
 = 1.1.1 - 2014/09/04 =
 * Tweak - Tested 100% compatible with WooCommerce Version 2.2 and backwards to v2.1
@@ -174,10 +180,10 @@ You can use this plugin only when you have installed the WooCommerce plugin.
 * Tweak - Updated Sass script in plugin framework.
 * Tweak - Removed '//# sourceMappingURL=jquery.cycle2.js.map' comment in cycle2 script The Chrome browser read comment and find jquery.cycle2.js.map file from server
 
-= 1.1.0 - 2014/08/29 = 
+= 1.1.0 - 2014/08/29 =
 * Feature - Converted all front end CSS #dynamic {stylesheets} to Sass #dynamic {stylesheets} for faster slider loading.
 * Feature - Convert all back end CSS to Sass.
-* Feature - Complete rebuild of the Widget Product slider front end in backbone.js 
+* Feature - Complete rebuild of the Widget Product slider front end in backbone.js
 * Feature - Backbone.js / WooCommerce API reduces the plugins resource call on the host server by a massive +50%.
 * Feature - Added Underscore.js script as template for Backbone.js for rendering template display on frontend
 * Feature - Added Backbone.localStorage.js to cache the widget slider on users local machine.
@@ -201,7 +207,7 @@ You can use this plugin only when you have installed the WooCommerce plugin.
 
 = 1.0.6 - 2014/05/03 =
 * Feature - Added Plugins dashboard to wp-admin dashboard menu - a3 Product Slider
-* Feature - Added fully customizable slider skins each with its own sub menu. Widget Skin | Card Skin | Touch Mobile Skin 
+* Feature - Added fully customizable slider skins each with its own sub menu. Widget Skin | Card Skin | Touch Mobile Skin
 * Feature - Skins all support Mobile Touch Swipe feature with ON | OFF option.
 * Feature - Skins, Set Fixed slider Tall or Dynamic
 * Feature - Skins Slider controls, ON | OFF and upload custom control icons.
@@ -209,16 +215,16 @@ You can use this plugin only when you have installed the WooCommerce plugin.
 * Feature - Skins Product Name ON | OFF settings, plus position and style settings
 * Feature - Skins Product Price ON | OFF settings, plus a3rev font style editor
 * Feature - Widget Skin - View Product and View all Products container, font and hyperlink style settings
-* Feature - If activated Slider images show in mobile with touch swipe.  
+* Feature - If activated Slider images show in mobile with touch swipe.
 * Feature - Widget Settings, Widget Skins, 5 new transition effects, Flip horizontal, Flip Vertical, Random, Fade Out and None.
 * Tweak - Removed the plugins limit on the number of items that can be shown in the slider.
 * Tweak - Added Performance warning text on Widget and Shortcode pop-up about adding lots of items to the sliders.
 * Tweak - Widget Admin panel complete Widget UI redesign.
 * Tweak - Widget admin panel - View this Product Link Text and View All Products Link Text removed from Widget. Now set on Skins.
 * Tweak - Changed the plugins name from WooCommerce Widget Product Slideshow to WooCommerce Widget Product Slider.
-* Tweak - Updated the plugins readme file. 
+* Tweak - Updated the plugins readme file.
 * Tweak - Tested for Full compatibility with WooCommerce Version 2.1.8 and backwards.
-* Tweak - Tested for full compatibility with WordPress Version 3.9 
+* Tweak - Tested for full compatibility with WordPress Version 3.9
 
 = 1.0.5.1 - 2014/01/28 =
 * Tweak - Upgraded for 100% compatibility with soon to be released WooCommerce Version 2.1 with backward compatibility to Version 2.0
@@ -240,7 +246,7 @@ You can use this plugin only when you have installed the WooCommerce plugin.
 = 1.0.3 - 2013/03/06 =
 * Tweak - Updated plugins code so that it is 100% compatible with WooCommerce V2.0 and backwards.
 
-= 1.0.2 - 2013/01/09 = 
+= 1.0.2 - 2013/01/09 =
 * Tweak - Updated Support and Pro Version link URL's on wordpress.org description, plugins and plugins dashboard. Links were returning 404 errors since the launch of the all new a3rev.com mobile responsive site as the base e-commerce permalinks is changed.
 
 = 1.0.1 - 2012/12/01 =
@@ -250,6 +256,9 @@ You can use this plugin only when you have installed the WooCommerce plugin.
 * Initial release.
 
 == Upgrade Notice ==
+
+= 1.1.2 =
+Upgrade now for 1 Sass bug fix and full compatibility with WooCommerce Version 2.2.2 and WordPress 4.0
 
 = 1.1.1 =
 Upgrade now and your plugin will be 100% compatible with the new WooCommerce Version 2.2 when it is released.
