@@ -3,8 +3,8 @@
 Contributors: a3rev, A3 Revolution Software Development team
 Tags: WooCommerce widgets, WooCommerce, WooCommerce widget product slideshow, WooCommerce Product images, woothemes, wordpress ecommerce
 Requires at least: 3.8
-Tested up to: 4.0
-Stable tag: 1.1.2
+Tested up to: 4.1
+Stable tag: 1.1.3
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -168,6 +168,16 @@ You can use this plugin only when you have installed the WooCommerce plugin.
 
 == Changelog ==
 
+= 1.1.3 - 2015/01/12 =
+* Tweak - Audit, test and tweak for 100% compatibility with WooCommerce 2.2.10
+* Tweak - Audit, test and tweak for 100% compatibility with WordPress Version 4.1
+* Tweak - Only load backbone scripts on the post and page where product slider widget is active.
+* Tweak - Only load plugin assets on post and page where product slider widget is active.
+* Tweak - Only load assets on page that are required for slider effects - not all plugin js assets.
+* Tweak - Only load slider mobile assets when load in mobile screen.
+* Tweak - Added a3 lazy Load and a3 Portfolios to the admin yellow box list of free plugins.
+* Fix - Show the new plugin version on the Core Update page. Feature stopped working with WordPress version 4.1
+
 = 1.1.2 - 2014/09/12 =
 * Tweak - Tested 100% compatible with WooCommerce 2.2.2
 * Tweak - Tested 100% compatible with WordPress Version 4.0
@@ -256,6 +266,9 @@ You can use this plugin only when you have installed the WooCommerce plugin.
 * Initial release.
 
 == Upgrade Notice ==
+
+= 1.1.3 =
+Upgrade now for full compatibility with WooCommerce 2.2.10 and WordPress version 4.1. Upgrade has 6 performance related code tweaks and 1 bug fix.
 
 = 1.1.2 =
 Upgrade now for 1 Sass bug fix and full compatibility with WooCommerce Version 2.2.2 and WordPress 4.0

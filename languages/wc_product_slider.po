@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WooCommerce Widget Product Slider\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-28 15:21+0700\n"
-"PO-Revision-Date: 2014-08-28 15:21+0700\n"
+"POT-Creation-Date: 2015-01-12 17:15+0700\n"
+"PO-Revision-Date: 2015-01-12 17:15+0700\n"
 "Last-Translator: Nguyen Cong Tuan <mr.nguyencongtuan@gmail.com>\n"
 "Language-Team: a3rev\n"
 "Language: en\n"
@@ -1678,19 +1678,19 @@ msgstr ""
 msgid "Description"
 msgstr ""
 
-#: classes/class-slider-display.php:113
+#: classes/class-slider-display.php:115
 msgid "Prev"
 msgstr ""
 
-#: classes/class-slider-display.php:114
+#: classes/class-slider-display.php:116
 msgid "Next"
 msgstr ""
 
-#: classes/class-slider-display.php:115
+#: classes/class-slider-display.php:117
 msgid "Pause"
 msgstr ""
 
-#: classes/class-slider-display.php:116
+#: classes/class-slider-display.php:118
 msgid "Play"
 msgstr ""
 
@@ -1744,181 +1744,193 @@ msgstr ""
 msgid "Center Right"
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:107
+#: classes/class-slider-hook-filter.php:123
 msgid "Thanks for choosing the WooCommerce Widget Product Slider."
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:108
+#: classes/class-slider-hook-filter.php:124
 msgid ""
 "All of that plugins features have been activated and are ready for you to "
 "use."
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:109
+#: classes/class-slider-hook-filter.php:125
 msgid "What is the Yellow border sections about?"
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:110
+#: classes/class-slider-hook-filter.php:126
 msgid ""
 "Inside the Yellow border you will see the settings for the 3 available "
 "upgrade versions for the lite version. You can see the settings but they are "
 "not active."
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:112
+#: classes/class-slider-hook-filter.php:128
 msgid "Upgrades Available For more Functionality"
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:114
+#: classes/class-slider-hook-filter.php:130
 msgid "WooCommerce Widget Product Slider"
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:115
+#: classes/class-slider-hook-filter.php:131
 msgid "Activates the beautiful Product Card Skin."
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:116
+#: classes/class-slider-hook-filter.php:132
 msgid "Create Sliders from Product tags."
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:117
+#: classes/class-slider-hook-filter.php:133
 msgid "Create Sliders from ON-SALE feature."
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:118
+#: classes/class-slider-hook-filter.php:134
 msgid "Create Sliders from Featured products."
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:121
+#: classes/class-slider-hook-filter.php:137
 msgid "WooCommerce Product Slider"
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:122
+#: classes/class-slider-hook-filter.php:138
 msgid "Includes all the features of lesser versions."
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:123
+#: classes/class-slider-hook-filter.php:139
 msgid "Activates Touch Mobile Skin."
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:124
+#: classes/class-slider-hook-filter.php:140
 msgid "Superb presentation on mobile devices."
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:125
+#: classes/class-slider-hook-filter.php:141
 msgid "Activates adding sliders by shortcode."
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:128
+#: classes/class-slider-hook-filter.php:144
 msgid "WooCommerce Carousel and Slider"
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:129
+#: classes/class-slider-hook-filter.php:145
 msgid "Top of the range with all features."
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:130
+#: classes/class-slider-hook-filter.php:146
 msgid "Activates the Product Carousel feature."
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:131
+#: classes/class-slider-hook-filter.php:147
 msgid "Insert Product Carousels by widget."
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:132
+#: classes/class-slider-hook-filter.php:148
 msgid "Insert Product carousels by shortcode."
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:133
+#: classes/class-slider-hook-filter.php:149
 msgid "Fully mobile responsive Carousel sliders."
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:136
+#: classes/class-slider-hook-filter.php:152
 msgid "Important!"
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:137
+#: classes/class-slider-hook-filter.php:153
 msgid "If you are upgrading to any of the Pro Versions you will need to:"
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:139
+#: classes/class-slider-hook-filter.php:155
 msgid ""
 "DEACTIVATE this plugin BEFORE installing and activating another version."
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:140
+#: classes/class-slider-hook-filter.php:156
 msgid "If you don't you will get a FATAL ERROR."
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:141
+#: classes/class-slider-hook-filter.php:157
 msgid ""
 "All data - sliders, settings and activations will be present in the newly "
 "activated version."
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:142
+#: classes/class-slider-hook-filter.php:158
 msgid ""
 "WARNING - If you DELETE this plugin BEFORE you activate another version of "
 "the slider, all slider settings will be lost."
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:146
+#: classes/class-slider-hook-filter.php:162
 msgid "More FREE a3rev WooCommerce Plugins"
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:149
+#: classes/class-slider-hook-filter.php:165
 msgid "WooCommerce Product Sort & Display"
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:150
+#: classes/class-slider-hook-filter.php:166
 msgid "WooCommerce Products Quick View"
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:151
+#: classes/class-slider-hook-filter.php:167
 msgid "WooCommerce Dynamic Products Gallery"
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:152
+#: classes/class-slider-hook-filter.php:168
 msgid "WooCommerce Compare Products"
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:153
+#: classes/class-slider-hook-filter.php:169
 msgid "WooCommerce Predictive Search"
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:154
+#: classes/class-slider-hook-filter.php:170
 msgid "WooCommerce Email Inquiry & Cart Options"
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:157
+#: classes/class-slider-hook-filter.php:173
 msgid "FREE a3rev WordPress Plugins"
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:160
+#: classes/class-slider-hook-filter.php:176
+msgid "a3 Lazy Load"
+msgstr ""
+
+#: classes/class-slider-hook-filter.php:176
+msgid "WooCommerce Compatible"
+msgstr ""
+
+#: classes/class-slider-hook-filter.php:177
+msgid "a3 Portfolio"
+msgstr ""
+
+#: classes/class-slider-hook-filter.php:178
 msgid "a3 Responsive Slider"
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:160
+#: classes/class-slider-hook-filter.php:178
 msgid "New Release!"
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:161
+#: classes/class-slider-hook-filter.php:179
 msgid "Contact Us Page - Contact People"
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:162
+#: classes/class-slider-hook-filter.php:180
 msgid "WordPress Email Template"
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:163
+#: classes/class-slider-hook-filter.php:181
 msgid "Page View Count"
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:174
+#: classes/class-slider-hook-filter.php:192
 msgid "Documentation"
 msgstr ""
 
-#: classes/class-slider-hook-filter.php:175
+#: classes/class-slider-hook-filter.php:193
 msgid "Support"
 msgstr ""
 

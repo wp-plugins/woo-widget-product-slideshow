@@ -10,15 +10,32 @@
 class WC_Product_Slider_Hook_Backbone
 {
 	public function __construct() {
-		
-		add_action( 'wp_head', array( $this, 'register_plugin_scripts' ) );
+
+		add_action( 'wp_head', array( $this, 'add_underscore_scripts' ) );
+		add_action( 'wp_head', array( $this, 'register_plugin_scripts' ), 9 );
 		add_action( 'wp_footer', array( $this, 'include_scripts_footer' ), 100 );
 	}
-	
+
 	public function register_plugin_scripts() {
+		wp_register_script( 'backbone.localStorage', WC_PRODUCT_SLIDER_JS_URL . '/backbone/backbone.localStorage.js', array() , '1.1.9', true );
+		wp_register_script( 'wc-product-sliders-app', WC_PRODUCT_SLIDER_JS_URL . '/backbone/product_sliders_app.js', array(), '1.0.0', true );
+		wp_enqueue_script( 'underscore' );
+		wp_enqueue_script( 'backbone' );
+	}
+
+	public function enqueue_plugin_scripts() {
+		wp_enqueue_script( 'backbone.localStorage' );
+		wp_enqueue_script( 'wc-product-slider-backbone', WC_PRODUCT_SLIDER_JS_URL . '/backbone/product_slider.backbone.js', array( 'wc-product-sliders-app' ), '1.0.0', true );
+
+		global $wc_product_slider_legacy_api;
+		$legacy_api_url = $wc_product_slider_legacy_api->get_legacy_api_url();
+		wp_localize_script( 'wc-product-slider-backbone', 'wc_product_slider_vars', array( 'legacy_api_url' => $legacy_api_url ) );
+	}
+
+	public function add_underscore_scripts() {
 		global $wc_product_slider_a3_widget_skin_title_settings;
 		global $wc_product_slider_a3_widget_skin_product_link_settings;
-		
+
 		global $wc_product_slider_a3_mobile_skin_title_settings;
 		global $wc_product_slider_a3_mobile_skin_category_tag_link_settings;
 		
@@ -38,17 +55,17 @@ class WC_Product_Slider_Hook_Backbone
 		<?php if ( $wc_product_slider_a3_widget_skin_product_link_settings['enable_product_link'] == 1 ) { ?>
 		{{ var cycle_desc = '<a class="cycle-product-linked" href="' + item_link + '"><?php echo trim( $wc_product_slider_a3_widget_skin_product_link_settings['product_link_text'] ) ; ?></a>'; }}
 		<?php } ?>
-		<img 
-			data-cycle-number="{{= index_product }}" 
-			src="{{= img_url }}" 
-			name="{{- item_title_html }}" 
-			title="" 
-			data-cycle-desc="{{ if ( item_link != '' ) { }} {{- cycle_desc }}{{ } }}" 
+		<img
+			data-cycle-number="{{= index_product }}"
+			src="{{= img_url }}"
+			name="{{- item_title_html }}"
+			title=""
+			data-cycle-desc="{{ if ( item_link != '' ) { }} {{- cycle_desc }}{{ } }}"
             style=" {{ if ( index_product > 1 ) { }} display:none; {{ } }} "
             {{ if ( typeof extra_attributes !== 'undefined' && extra_attributes != '' ) { }} {{= extra_attributes }} {{ } }}
 		/>
 	</script>
-    
+
     <script type="text/template" id="wc_product_slider_mobile_item_tpl">
 		{{ var item_title_html = ''; }}
 		<?php if ( $wc_product_slider_a3_mobile_skin_title_settings['enable_slider_title'] == 1 ) { ?>
@@ -71,42 +88,33 @@ class WC_Product_Slider_Hook_Backbone
 		{{ } }}
 		<?php } ?>
 		{{ if ( is_used_mobile_skin == 'true' ) { }}
-			<img 
-				src="{{= img_url }}" 
-				title="{{- item_title_html }}" 
-				data-cycle-desc="{{- category_tag_link }}" 
+			<img
+				src="{{= img_url }}"
+				title="{{- item_title_html }}"
+				data-cycle-desc="{{- category_tag_link }}"
 				style=" {{ if ( index_product > 1 ) { }} display:none; {{ } }} "
 			/>
 		{{ } else { }}
-			<img 
-				src="{{= img_url }}" 
-				title="{{- item_title_html }}" 
-				alt="" 
+			<img
+				src="{{= img_url }}"
+				title="{{- item_title_html }}"
+				alt=""
 				style=" {{ if ( index_product > 1 ) { }} display:none; {{ } }} "
 			/>
 		{{ } }}
 	</script>
     
     <?php
-		wp_register_script( 'backbone.localStorage', WC_PRODUCT_SLIDER_JS_URL . '/backbone/backbone.localStorage.js', array() , '1.1.9', true );
-		wp_register_script( 'wc-product-sliders-app', WC_PRODUCT_SLIDER_JS_URL . '/backbone/product_sliders_app.js', array(), '1.0.0', true );
-		wp_enqueue_script( 'jquery' );
-		wp_enqueue_script( 'underscore' );
-		wp_enqueue_script( 'backbone' );
-		wp_enqueue_script( 'backbone.localStorage' );
-		wp_enqueue_script( 'wc-product-slider-backbone', WC_PRODUCT_SLIDER_JS_URL . '/backbone/product_slider.backbone.js', array( 'wc-product-sliders-app' ), '1.0.0', true );
-		
-		global $wc_product_slider_legacy_api;
-		$legacy_api_url = $wc_product_slider_legacy_api->get_legacy_api_url();
-		wp_localize_script( 'wc-product-slider-backbone', 'wc_product_slider_vars', array( 'legacy_api_url' => $legacy_api_url ) );
 	}
-	
+
 	public function include_scripts_footer() {
 	?>
     	<script type="text/javascript">
 		(function($) {
 		$(function(){
-			wc_product_sliders_app.start();
+			if( typeof(wc_product_sliders_app) !== 'undefined' ) {
+				wc_product_sliders_app.start();
+			}
 		});
 		})(jQuery);
 		</script>
@@ -114,5 +122,6 @@ class WC_Product_Slider_Hook_Backbone
 	}
 }
 
-new WC_Product_Slider_Hook_Backbone();
+global $wc_product_slider_hook_backbone;
+$wc_product_slider_hook_backbone = new WC_Product_Slider_Hook_Backbone();
 ?>

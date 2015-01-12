@@ -1,11 +1,8 @@
 <?php
 class WC_Product_Slider_Mobile_Display
-{	
+{
 	public static function mobile_dispay_slider( $slider_id = '', $is_used_mobile_skin = false , $slider_settings = array(), $category_link = '', $tag_link = '' ) {
-					
-		global $wc_product_slider_a3_mobile_skin_title_settings;
-		global $wc_product_slider_a3_mobile_skin_category_tag_link_settings;
-		
+
 		// slider id
 		$slider_query_string = base64_decode( $slider_id );
 		$slider_data = array();
@@ -19,45 +16,42 @@ class WC_Product_Slider_Mobile_Display
 			$command = '&';
 		}
 		$slider_id = base64_encode( $slider_id );
-		
+
 		$slider_settings['skin_type'] = 'mobile';
 		$slider_settings['is_used_mobile_skin'] = $is_used_mobile_skin;
 		$slider_settings['category_link'] = $category_link;
 		$slider_settings['tag_link'] = $tag_link;
-				
+
 		add_action( 'wp_footer', array( 'WC_Product_Slider_Hook_Filter', 'include_slider_mobile_scripts' ) );
-		
-		extract( $wc_product_slider_a3_mobile_skin_title_settings );
-		extract( $wc_product_slider_a3_mobile_skin_category_tag_link_settings );
-		
+
 		$caption_fx_out = 'fadeOut';
 		$caption_fx_in = 'fadeIn';
-		
+
 		$unique_id = rand( 1, 100 );
-				
+
 		$overlay_class = '#cycle-mobile-skin-overlay-' . $unique_id;
-		
+
 		$fx 							= 'scrollHorz';
-						
 		ob_start();
+
 	?>
     <div style="clear:both;"></div>
     <div class="wc-product-slider-mobile-skin-container wc-product-slider-basic-mobile-skin-container">
-    
+
     <div id="wc-product-slider-container-<?php echo $unique_id; ?>" class="wc-product-slider-container wc-product-slider-mobile-skin" data-slider-id="<?php echo $slider_id; ?>" data-slider-settings="<?php echo esc_attr( json_encode( $slider_settings ) ); ?>" data-slider-skin-type="mobile" >
     	<div id="wc-product-slider-<?php echo $unique_id; ?>" class="wc-product-slider"
         	data-cycle-fx="<?php echo $fx; ?>"
             data-cycle-paused=true
             data-cycle-auto-height=container
-            
+
             data-cycle-center-horz=true
-            
+
             data-cycle-swipe=true
-            
+
             data-cycle-caption="> .cycle-caption-container .cycle-caption"
             data-cycle-caption-template="{{slideNum}} / {{slideCount}}"
             data-cycle-caption-plugin="caption2"
-            
+
             data-cycle-loader=true
         >
 
@@ -67,25 +61,25 @@ class WC_Product_Slider_Mobile_Display
                 	<div class="cycle-caption"></div>
                 </div>
             </div>
-            
+
         </div>
     	<div class="wc-product-slider-bg"></div>
     </div>
-    
+
     </div>
-    
+
     <?php
 		$slider_output = ob_get_clean();
-		
+
 		return $slider_output;
-		
+
 	}
-	
+
 	public static function get_caption_mobile_template( $unique_id = 1 ) {
 	?>
 		<div id="cycle-mobile-skin-overlay-<?php echo $unique_id; ?>" class="cycle-mobile-skin-overlay"></div>
-    <?php	
+    <?php
 	}
-	
+
 }
 ?>
