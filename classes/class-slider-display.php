@@ -74,10 +74,19 @@ class WC_Product_Slider_Display
 	?>
     <div style="clear:both;"></div>
     <div class="wc-product-slider-widget-skin-container">
+    <?php
+    $lazy_load = '';
+    $lazy_hidden = '';
+    if ( !is_admin() && function_exists( 'a3_lazy_load_enable' ) ) {
+        $lazy_load = 'wc-product-slider-lazyload';
+        $lazy_hidden = '<div class="a3-cycle-lazy-hidden lazy-hidden"></div>';
+    }
+    ?>
+    <?php echo $lazy_hidden;?>
     <?php if ( $title_position == 'above' ) self::get_title_widget_skin( $unique_id ); ?>
 
     <div id="wc-product-slider-container-<?php echo $unique_id; ?>" class="wc-product-slider-container wc-product-slider-widget-skin" data-slider-id="<?php echo $slider_id; ?>" data-slider-settings="<?php echo esc_attr( json_encode( $slider_settings ) ); ?>" data-slider-skin-type="widget" >
-    	<div style=" <?php if ( $is_slider_tall_dynamic == 0 ) { echo 'height:'.$slider_height_fixed. 'px'; } ?>" id="wc-product-slider-<?php echo $unique_id; ?>" class="wc-product-slider <?php if ( $is_slider_tall_dynamic == 1 ) { ?>wc-product-slider-dynamic-tall<?php } ?>"
+    	<div style=" <?php if ( $is_slider_tall_dynamic == 0 ) { echo 'height:'.$slider_height_fixed. 'px'; } ?>" id="wc-product-slider-<?php echo $unique_id; ?>" class="wc-product-slider <?php echo $lazy_load; ?> <?php if ( $is_slider_tall_dynamic == 1 ) { ?>wc-product-slider-dynamic-tall<?php } ?>"
         	data-cycle-fx="<?php echo $fx; ?>"
             <?php echo $transition_attributes; ?>
 
@@ -146,7 +155,7 @@ class WC_Product_Slider_Display
     <?php
 		$slider_output = ob_get_clean();
 
-		return $slider_output;
+		return str_replace( array("\r\n", "\r", "\n"), '', $slider_output );
 
 	}
 

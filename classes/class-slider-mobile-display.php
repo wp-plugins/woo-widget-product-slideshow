@@ -37,9 +37,17 @@ class WC_Product_Slider_Mobile_Display
 	?>
     <div style="clear:both;"></div>
     <div class="wc-product-slider-mobile-skin-container wc-product-slider-basic-mobile-skin-container">
-
+	<?php
+    $lazy_load = '';
+    $lazy_hidden = '';
+    if ( !is_admin() && function_exists( 'a3_lazy_load_enable' ) ) {
+        $lazy_load = 'wc-product-slider-lazyload';
+        $lazy_hidden = '<div class="a3-cycle-lazy-hidden lazy-hidden"></div>';
+    }
+    ?>
+    <?php echo $lazy_hidden;?>
     <div id="wc-product-slider-container-<?php echo $unique_id; ?>" class="wc-product-slider-container wc-product-slider-mobile-skin" data-slider-id="<?php echo $slider_id; ?>" data-slider-settings="<?php echo esc_attr( json_encode( $slider_settings ) ); ?>" data-slider-skin-type="mobile" >
-    	<div id="wc-product-slider-<?php echo $unique_id; ?>" class="wc-product-slider"
+    	<div id="wc-product-slider-<?php echo $unique_id; ?>" class="wc-product-slider <?php echo $lazy_load; ?>"
         	data-cycle-fx="<?php echo $fx; ?>"
             data-cycle-paused=true
             data-cycle-auto-height=container
@@ -71,7 +79,7 @@ class WC_Product_Slider_Mobile_Display
     <?php
 		$slider_output = ob_get_clean();
 
-		return $slider_output;
+		return str_replace( array("\r\n", "\r", "\n"), '', $slider_output );
 
 	}
 

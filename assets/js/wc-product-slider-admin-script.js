@@ -1,6 +1,6 @@
 (function($) {
 $(function(){
-	
+
 	$(document).on( 'change', 'select.wc_product_slider_show_type', function() {
 		var show_type_id = $(this).attr('id');
 		var show_type_value = $(this).val();
@@ -15,7 +15,7 @@ $(function(){
 			$( '#' + show_type_id + '_tag').slideUp();
 		}
 	});
-	
+
 	$(document).on( 'change', 'input.wc_product_slider_skin_type', function() {
 		var skin_type_id = $(this).attr('data-id');
 		var skin_type_value = $( this ).val();
@@ -25,7 +25,7 @@ $(function(){
 			$( '#' + skin_type_id + '_card').slideDown();
 		}
 	});
-	
+
 	$(document).on( 'change', 'input.wc_product_slider_slider_auto_scroll', function() {
 		var slider_auto_scroll_id = $(this).attr('data-id');
 		var slider_auto_scroll_value = $( this ).val();
@@ -35,6 +35,6 @@ $(function(){
 			$( '#' + slider_auto_scroll_id + '_auto').slideUp();
 		}
 	});
-				
+
 });
 })(jQuery);

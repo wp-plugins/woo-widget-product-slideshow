@@ -38,7 +38,7 @@ class WC_Product_Slider_Hook_Backbone
 
 		global $wc_product_slider_a3_mobile_skin_title_settings;
 		global $wc_product_slider_a3_mobile_skin_category_tag_link_settings;
-		
+
 		$suffix = defined('SCRIPT_DEBUG') && SCRIPT_DEBUG ? '' : '.min';
 	?>
     <!-- Slider Template -->
@@ -55,15 +55,16 @@ class WC_Product_Slider_Hook_Backbone
 		<?php if ( $wc_product_slider_a3_widget_skin_product_link_settings['enable_product_link'] == 1 ) { ?>
 		{{ var cycle_desc = '<a class="cycle-product-linked" href="' + item_link + '"><?php echo trim( $wc_product_slider_a3_widget_skin_product_link_settings['product_link_text'] ) ; ?></a>'; }}
 		<?php } ?>
-		<img
+		<?php echo apply_filters( 'a3_lazy_load_images', str_replace( array("\r\n", "\r", "\n"), '', '<img class="cycle-wc-product-image"
 			data-cycle-number="{{= index_product }}"
 			src="{{= img_url }}"
 			name="{{- item_title_html }}"
 			title=""
-			data-cycle-desc="{{ if ( item_link != '' ) { }} {{- cycle_desc }}{{ } }}"
-            style=" {{ if ( index_product > 1 ) { }} display:none; {{ } }} "
-            {{ if ( typeof extra_attributes !== 'undefined' && extra_attributes != '' ) { }} {{= extra_attributes }} {{ } }}
-		/>
+			data-cycle-desc="{{ if ( item_link != "" ) { }} {{- cycle_desc }}{{ } }}"
+            style="position:absolute; top:0; left:0; {{ if ( index_product > 1 ) { }} visibility:hidden; {{ } }} "
+            {{ if ( typeof extra_attributes !== "undefined" && extra_attributes != "" ) { }} {{= extra_attributes }} {{ } }}
+        />' ), false ); ?>
+
 	</script>
 
     <script type="text/template" id="wc_product_slider_mobile_item_tpl">
@@ -88,19 +89,20 @@ class WC_Product_Slider_Hook_Backbone
 		{{ } }}
 		<?php } ?>
 		{{ if ( is_used_mobile_skin == 'true' ) { }}
-			<img
+			<?php echo apply_filters( 'a3_lazy_load_images', str_replace( array("\r\n", "\r", "\n"), '', '<img class="cycle-wc-product-image"
 				src="{{= img_url }}"
 				title="{{- item_title_html }}"
 				data-cycle-desc="{{- category_tag_link }}"
-				style=" {{ if ( index_product > 1 ) { }} display:none; {{ } }} "
-			/>
+				style="position:absolute; top:0; left:0; {{ if ( index_product > 1 ) { }} visibility:hidden; {{ } }} "
+			/>' ), false ); ?>
+
 		{{ } else { }}
-			<img
+			<?php echo apply_filters( 'a3_lazy_load_images', str_replace( array("\r\n", "\r", "\n"), '', '<img class="cycle-wc-product-image"
 				src="{{= img_url }}"
 				title="{{- item_title_html }}"
 				alt=""
-				style=" {{ if ( index_product > 1 ) { }} display:none; {{ } }} "
-			/>
+				style="position:absolute; top:0; left:0; {{ if ( index_product > 1 ) { }} visibility:hidden; {{ } }} "
+			/>' ), false ); ?>
 		{{ } }}
 	</script>
     

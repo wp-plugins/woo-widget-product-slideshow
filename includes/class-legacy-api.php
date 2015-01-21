@@ -21,7 +21,7 @@ class WC_Product_Slider_Legacy_API {
 	}
 	
 	public function get_legacy_api_url() {
-		$legacy_api_url = str_replace( 'https:', '', str_replace( 'http:', '', get_option('siteurl') ) );
+		$legacy_api_url = str_replace( 'https:', '', str_replace( 'http:', '', home_url( '/' ) ) );
 		if ( substr( $legacy_api_url, -1 ) != '/' ) $legacy_api_url .= '/';
 		
 		if ( get_option('permalink_structure') == '' ) {

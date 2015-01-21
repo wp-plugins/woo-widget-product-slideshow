@@ -1,8 +1,8 @@
 (function($) {
 $(function(){
-	
+
 	WC_Product_Slider_Frontend = {
-		
+
 		clickPauseResumEvent: function () {
 			$(document).on( 'cycle-paused', '.wc-product-slider-container', function( event, opts ) {
 				$(this).find( '.cycle-pause' ).hide();
@@ -14,9 +14,9 @@ $(function(){
 			});
 		}
 	}
-	
-	
+
+
 	WC_Product_Slider_Frontend.clickPauseResumEvent();
-				
+
 });
 })(jQuery);

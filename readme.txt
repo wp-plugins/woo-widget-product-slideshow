@@ -4,7 +4,7 @@ Contributors: a3rev, A3 Revolution Software Development team
 Tags: WooCommerce widgets, WooCommerce, WooCommerce widget product slideshow, WooCommerce Product images, woothemes, wordpress ecommerce
 Requires at least: 3.8
 Tested up to: 4.1
-Stable tag: 1.1.3
+Stable tag: 1.1.4
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -168,6 +168,16 @@ You can use this plugin only when you have installed the WooCommerce plugin.
 
 == Changelog ==
 
+= 1.1.4 - 2015/01/21 =
+* Tweak - Fix Slider skins first load UI when Dynamic height is activated for a skin
+* Tweak - Slider container load at 250px high and then expand or contract to height of items loaded when loaded - improved UI.
+* Tweak - SliderSkin .css only loads on urls where slider is in a widget - like js assets
+* Tweak - Edit for full compatibility with a3 Lazy Load. Only load skin when it comes into the view port like content
+* Dev - Convert Sass Global .less to simplify compiling style sheet edits.
+* Fix - Show pager on mobile skin when viewing on mobile
+* Fix - Update legacy api so that use home_url( '/' ) instead of get_option('siteurl') to solve the problem can't get data when site has WordPress Settings > General,  configured WordPress Address different from Site Address
+* Fix - Sass compile path not saving on windows xampp.
+
 = 1.1.3 - 2015/01/12 =
 * Tweak - Audit, test and tweak for 100% compatibility with WooCommerce 2.2.10
 * Tweak - Audit, test and tweak for 100% compatibility with WordPress Version 4.1
@@ -266,6 +276,9 @@ You can use this plugin only when you have installed the WooCommerce plugin.
 * Initial release.
 
 == Upgrade Notice ==
+
+= 1.1.4 =
+Upgrade now for 3 Code Tweaks that greatly enhance slider first load, plus full compatibility with a3 Lazy Load and 3 bug fixes.
 
 = 1.1.3 =
 Upgrade now for full compatibility with WooCommerce 2.2.10 and WordPress version 4.1. Upgrade has 6 performance related code tweaks and 1 bug fix.
