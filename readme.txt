@@ -4,7 +4,7 @@ Contributors: a3rev, A3 Revolution Software Development team
 Tags: WooCommerce widgets, WooCommerce, WooCommerce widget product slideshow, WooCommerce Product images, woothemes, wordpress ecommerce
 Requires at least: 3.8
 Tested up to: 4.1
-Stable tag: 1.1.4
+Stable tag: 1.1.5
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -168,6 +168,11 @@ You can use this plugin only when you have installed the WooCommerce plugin.
 
 == Changelog ==
 
+= 1.1.5 - 2015/02/13 =
+* Tweak - Maintenance update for full compatibility with WooCommerce major version release 2.3.0 with backward compatibility to WC 2.2.0
+* Tweak - Tested fully compatible with WooCommerce just released version 2.3.3
+* Tweak - Changed WP_CONTENT_DIR to WP_PLUGIN_DIR. When an admin sets a custom WordPress file structure then it can get the correct path of plugin
+
 = 1.1.4 - 2015/01/21 =
 * Tweak - Fix Slider skins first load UI when Dynamic height is activated for a skin
 * Tweak - Slider container load at 250px high and then expand or contract to height of items loaded when loaded - improved UI.
@@ -276,6 +281,9 @@ You can use this plugin only when you have installed the WooCommerce plugin.
 * Initial release.
 
 == Upgrade Notice ==
+
+= 1.1.5 =
+Upgrade now for full compatibility with WooCommerce major version release 2.3.0 with backward compatibility to WooCommerce v 2.2.0
 
 = 1.1.4 =
 Upgrade now for 3 Code Tweaks that greatly enhance slider first load, plus full compatibility with a3 Lazy Load and 3 bug fixes.
