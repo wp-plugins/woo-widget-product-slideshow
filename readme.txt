@@ -3,8 +3,8 @@
 Contributors: a3rev, A3 Revolution Software Development team
 Tags: WooCommerce widgets, WooCommerce, WooCommerce widget product slideshow, WooCommerce Product images, woothemes, wordpress ecommerce
 Requires at least: 3.8
-Tested up to: 4.1.1
-Stable tag: 1.1.6
+Tested up to: 4.2.0
+Stable tag: 1.1.7
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -168,6 +168,11 @@ You can use this plugin only when you have installed the WooCommerce plugin.
 
 == Changelog ==
 
+= 1.1.7 - 2015/04/21 =
+* Tweak - Tested and Tweaked for full compatibility with WordPress Version 4.2.0
+* Tweak - Tested and Tweaked for full compatibility with WooCommerce Version 2.3.8
+* Tweak - Update style of plugin framework. Removed the [data-icon] selector to prevent conflict with other plugins that have font awesome icons
+
 = 1.1.6 - 2015/03/19 =
 * Tweak - Tested and Tweaked for full compatibility with WooCommerce Version 2.3.7
 * Tweak - Tested and Tweaked for full compatibility with WordPress Version 4.1.1
@@ -285,6 +290,9 @@ You can use this plugin only when you have installed the WooCommerce plugin.
 * Initial release.
 
 == Upgrade Notice ==
+
+= 1.1.7 =
+Maintenance upgrade. Code tweaks for full compatibility with WordPress 4.2.0 and WooCommerce 2.3.8
 
 = 1.1.6 =
 Upgrade now for full compatibility with WooCommerce Version 2.3.7 and WordPress version 4.1.1
