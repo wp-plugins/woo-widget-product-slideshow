@@ -61,6 +61,15 @@ class WC_Product_Slider_Shortcode
                 	<?php wp_dropdown_categories( array('orderby' => 'name', 'name' => 'wc_product_slider_tag_id', 'id' => 'wc_product_slider_tag_id', 'class' => 'wc_product_slider_tag_id', 'depth' => true, 'taxonomy' => 'product_tag') ); ?>
                 </p>
 
+                <p id="wc_product_slider_filter_type_container">
+                    <label for="wc_product_slider_filter_type"><strong><?php _e('Filter:', 'wc_product_slider'); ?></strong></label>
+                    <select id="wc_product_slider_filter_type" name="wc_product_slider_filter_type" >
+                        <option value="" selected="selected"><?php _e( 'Recent', 'wc_product_slider' ); ?></option>
+                        <option value="featured"><?php _e( 'Featured', 'wc_product_slider' ); ?></option>
+                        <option value="onsale"><?php _e( 'On Sale', 'wc_product_slider' ); ?></option>
+                    </select>
+                </p>
+
                 <p><label for="wc_product_slider_number_products"><?php _e('Number of products:', 'wc_product_slider'); ?></label> <input id="wc_product_slider_number_products" name="wc_product_slider_number_products" type="text" value="6" size="2" /><br />
                 <span class="description"><?php _e('Important! Set -1 to show all products. Warning - Setting large numbers (unlimited) could / will have an  impact on page load speed on some sites.', 'wc_product_slider'); ?></span>
                 </p>
@@ -184,12 +193,15 @@ class WC_Product_Slider_Shortcode
 				if ( $("select.wc_product_slider_show_type").val() == 'category') {
 					$("#wc_product_slider_show_type_category").slideDown();
 					$("#wc_product_slider_show_type_tag").slideUp();
+                    $("#wc_product_slider_filter_type_container").slideDown();
 				} else if ( $("select.wc_product_slider_show_type").val() == 'tag') {
 					$("#wc_product_slider_show_type_category").slideUp();
 					$("#wc_product_slider_show_type_tag").slideDown();
+                    $("#wc_product_slider_filter_type_container").slideDown();
 				} else {
 					$("#wc_product_slider_show_type_category").slideUp();
 					$("#wc_product_slider_show_type_tag").slideUp();
+                    $("#wc_product_slider_filter_type_container").slideUp();
 				}
 			});
 

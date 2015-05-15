@@ -3,8 +3,8 @@
 Contributors: a3rev, A3 Revolution Software Development team
 Tags: WooCommerce widgets, WooCommerce, WooCommerce widget product slideshow, WooCommerce Product images, woothemes, wordpress ecommerce
 Requires at least: 3.8
-Tested up to: 4.2.0
-Stable tag: 1.1.7
+Tested up to: 4.2.2
+Stable tag: 1.2.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -168,6 +168,12 @@ You can use this plugin only when you have installed the WooCommerce plugin.
 
 == Changelog ==
 
+= 1.2.0 - 2015/05/15 =
+* Feature - Added ability to Filter the products displayed from selected WooCommerce Product category by Recent (existing), Featured or On-Sale
+* Tweak - On widget added new Filter dropdown selector.
+* Tweak - Tested and Tweaked for full compatibility with WordPress Version 4.2.2
+* Tweak - Update cycle2 script to latest version 2.1.6
+
 = 1.1.7 - 2015/04/21 =
 * Tweak - Tested and Tweaked for full compatibility with WordPress Version 4.2.0
 * Tweak - Tested and Tweaked for full compatibility with WooCommerce Version 2.3.8
@@ -290,6 +296,9 @@ You can use this plugin only when you have installed the WooCommerce plugin.
 * Initial release.
 
 == Upgrade Notice ==
+
+= 1.2.0 =
+Feature Upgrade. New Product display Filter, show Recent, Featured or On Sale products from selected Product Category in Slider. Plus Tweaks for compatibility with WordPress 4.2.2
 
 = 1.1.7 =
 Maintenance upgrade. Code tweaks for full compatibility with WordPress 4.2.0 and WooCommerce 2.3.8

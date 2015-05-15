@@ -7,12 +7,15 @@ $(function(){
 		if ( show_type_value == 'category' ) {
 			$( '#' + show_type_id + '_category').slideDown();
 			$( '#' + show_type_id + '_tag').slideUp();
+			$( '#' + show_type_id + '_filter').slideDown();
 		} else if ( show_type_value == 'tag' ) {
 			$( '#' + show_type_id + '_category').slideUp();
 			$( '#' + show_type_id + '_tag').slideDown();
+			$( '#' + show_type_id + '_filter').slideDown();
 		} else {
 			$( '#' + show_type_id + '_category').slideUp();
 			$( '#' + show_type_id + '_tag').slideUp();
+			$( '#' + show_type_id + '_filter').slideUp();
 		}
 	});
 

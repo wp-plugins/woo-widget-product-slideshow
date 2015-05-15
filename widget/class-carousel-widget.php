@@ -40,6 +40,7 @@ class WC_Product_Slider_Carousel_Widget extends WP_Widget
 			'show_type' 			=> 'category', 
 			'category_id' 			=> 0, 
 			'tag_id' 				=> 0,
+			'filter_type'			=> '',
 			'carousel_type'			=> 'horizontal',
 			'carousel_visible'		=> 4,
 			'slider_auto_scroll'	=> 'no',
@@ -72,7 +73,7 @@ class WC_Product_Slider_Carousel_Widget extends WP_Widget
 	</select>
 </p>
 
-<p id="<?php echo $this->get_field_id('show_type'); ?>_category" <?php if ( in_array( $show_type, array( 'tag', 'onsale' ) ) ) { echo 'style="display:none"'; } ?> >
+<p id="<?php echo $this->get_field_id('show_type'); ?>_category" <?php if ( $show_type != 'category' ) { echo 'style="display:none"'; } ?> >
 <label for="<?php echo $this->get_field_id('category_id'); ?>"><?php _e('Category:', 'wc_product_slider'); ?></label> 
 <?php wp_dropdown_categories( array('orderby' => 'name', 'selected' => $category_id, 'name' => $this->get_field_name('category_id'), 'id' => $this->get_field_id('category_id'), 'class' => 'widefat', 'depth' => true, 'taxonomy' => 'product_cat') ); ?>
 </p>
@@ -80,6 +81,15 @@ class WC_Product_Slider_Carousel_Widget extends WP_Widget
 <p id="<?php echo $this->get_field_id('show_type'); ?>_tag" <?php if ( $show_type != 'tag' ) { echo 'style="display:none"'; } ?> >
 <label for="<?php echo $this->get_field_id('tag_id'); ?>"><?php _e('Tag:', 'wc_product_slider'); ?></label> 
 <?php wp_dropdown_categories( array('orderby' => 'name', 'selected' => $tag_id, 'name' => $this->get_field_name('tag_id'), 'id' => $this->get_field_id('tag_id'), 'class' => 'widefat', 'depth' => true, 'taxonomy' => 'product_tag') ); ?>
+</p>
+
+<p id="<?php echo $this->get_field_id('show_type'); ?>_filter" <?php if ( ! in_array( $show_type, array( 'category', 'tag' ) ) ) { echo 'style="display:none"'; } ?> >
+	<label for="<?php echo $this->get_field_id('filter_type'); ?>"><strong><?php _e('Filter:', 'wc_product_slider'); ?></strong></label>
+	<select id="<?php echo $this->get_field_id('filter_type'); ?>" name="<?php echo $this->get_field_name('filter_type'); ?>" >
+		<option value="" selected="selected"><?php _e( 'Recent', 'wc_product_slider' ); ?></option>
+        <option value="featured" <?php selected( $filter_type, 'featured' ); ?>><?php _e( 'Featured', 'wc_product_slider' ); ?></option>
+        <option value="onsale" <?php selected( $filter_type, 'onsale' ); ?>><?php _e( 'On Sale', 'wc_product_slider' ); ?></option>
+	</select>
 </p>
 
 <p><label><?php _e('Number of products to show:', 'wc_product_slider'); ?> <input class="" name="<?php echo $this->get_field_name('number_products'); ?>" type="text" value="<?php echo $number_products; ?>" size="2" /></label><br />

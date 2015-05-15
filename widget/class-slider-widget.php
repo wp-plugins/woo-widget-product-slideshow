@@ -22,7 +22,8 @@ class WC_Product_Slider_Widget extends WP_Widget
 		
 		$instance = wp_parse_args( (array) $instance, array( 
 			'title' 				=> '', 
-			'category_id' 			=> 0, 
+			'category_id' 			=> 0,
+			'filter_type'			=> '',
 			'widget_effect'			=> 'fade',
 			'slider_auto_scroll'	=> 'no',
 			
@@ -53,6 +54,7 @@ class WC_Product_Slider_Widget extends WP_Widget
 		
 		
 		$category_id 		= $slider_settings['category_id'];
+		$filter_type 		= $slider_settings['filter_type'];
 		
 		$widget_effect 		= $slider_settings['widget_effect'];
 		
@@ -63,6 +65,7 @@ class WC_Product_Slider_Widget extends WP_Widget
 		
 		if ( $category_id < 1) return;
 		$slider_id .= '&category_id='.$category_id;
+		$slider_id .= '&filter_type='.$filter_type;
 		$category_link = get_term_link( (int) $category_id, 'product_cat');
 		
 		$slider_id .= '&skin_type=widget';
@@ -89,7 +92,8 @@ class WC_Product_Slider_Widget extends WP_Widget
 	function form( $instance ) {
 		$instance = wp_parse_args( (array) $instance, array( 
 			'title' 				=> '', 
-			'category_id' 			=> 0, 
+			'category_id' 			=> 0,
+			'filter_type'			=> '',
 			'widget_effect'			=> 'fade',
 			'slider_auto_scroll'	=> 'no',
 		) );
@@ -120,6 +124,15 @@ class WC_Product_Slider_Widget extends WP_Widget
 <?php wp_dropdown_categories( array('orderby' => 'name', 'name' => $this->get_field_name('tag_id'), 'id' => $this->get_field_id('tag_id'), 'class' => 'widefat', 'depth' => true, 'taxonomy' => 'product_tag') ); ?>
 </p>
 
+<p id="<?php echo $this->get_field_id('show_type'); ?>_filter" >
+	<label for="<?php echo $this->get_field_id('filter_type'); ?>_pro"><strong><?php _e('Filter:', 'wc_product_slider'); ?></strong></label>
+	<select id="<?php echo $this->get_field_id('filter_type'); ?>_pro" name="<?php echo $this->get_field_name('filter_type'); ?>_pro" >
+		<option value="" selected="selected"><?php _e( 'Recent', 'wc_product_slider' ); ?></option>
+        <option value="featured" <?php selected( $filter_type, 'featured' ); ?>><?php _e( 'Featured', 'wc_product_slider' ); ?></option>
+        <option value="onsale" <?php selected( $filter_type, 'onsale' ); ?>><?php _e( 'On Sale', 'wc_product_slider' ); ?></option>
+	</select>
+</p>
+
 <p><label><?php _e('Number of products to show:', 'wc_product_slider'); ?> <input class="" name="<?php echo $this->get_field_name('number_products'); ?>" type="text" value="6" size="2" /></label><br />
 <span class="description"><?php _e('Important! Set -1 to show all products. Warning - Setting large numbers (unlimited) could / will have an  impact on page load speed on some sites.', 'wc_product_slider'); ?></span>
 </p>
@@ -128,6 +141,15 @@ class WC_Product_Slider_Widget extends WP_Widget
 <p>
 <label for="<?php echo $this->get_field_id('category_id'); ?>"><?php _e('Category:', 'wc_product_slider'); ?></label> 
 <?php wp_dropdown_categories( array('orderby' => 'name', 'selected' => $category_id, 'name' => $this->get_field_name('category_id'), 'id' => $this->get_field_id('category_id'), 'class' => 'widefat', 'depth' => true, 'taxonomy' => 'product_cat') ); ?>
+</p>
+
+<p>
+	<label for="<?php echo $this->get_field_id('filter_type'); ?>"><strong><?php _e('Filter:', 'wc_product_slider'); ?></strong></label>
+	<select id="<?php echo $this->get_field_id('filter_type'); ?>" name="<?php echo $this->get_field_name('filter_type'); ?>" >
+		<option value="" selected="selected"><?php _e( 'Recent', 'wc_product_slider' ); ?></option>
+        <option value="featured" <?php selected( $filter_type, 'featured' ); ?>><?php _e( 'Featured', 'wc_product_slider' ); ?></option>
+        <option value="onsale" <?php selected( $filter_type, 'onsale' ); ?>><?php _e( 'On Sale', 'wc_product_slider' ); ?></option>
+	</select>
 </p>
 
 <fieldset id="wc_product_slider_upgrade_area">
