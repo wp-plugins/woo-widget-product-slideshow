@@ -4,7 +4,7 @@
  * Install Database, settings option
  */
 function wc_product_slider_activated(){
-	update_option('woo_gallery_widget_lite_version', '1.2.0');
+	update_option('woo_gallery_widget_lite_version', '1.2.1');
 
 	// Set Settings Default from Admin Init
 	global $wc_product_slider_admin_init;
@@ -65,14 +65,14 @@ if ( in_array( basename( $_SERVER['PHP_SELF'] ), array( 'widgets.php' ) ) ) {
 // Check upgrade functions
 add_action( 'init', 'wc_product_slider_lite_upgrade_plugin' );
 function wc_product_slider_lite_upgrade_plugin () {
-	if( version_compare(get_option('woo_gallery_widget_lite_version'), '1.1.0') === -1 ){
+	if( version_compare(get_option('woo_gallery_widget_lite_version'), '1.2.1') === -1 ){
 		// Build sass
 		global $wc_product_slider_less;
 		$wc_product_slider_less->plugin_build_sass();
-		update_option('woo_gallery_widget_lite_version', '1.1.0');
+		update_option('woo_gallery_widget_lite_version', '1.2.1');
 	}
 
-	update_option('woo_gallery_widget_lite_version', '1.2.0');
+	update_option('woo_gallery_widget_lite_version', '1.2.1');
 }
 
 ?>

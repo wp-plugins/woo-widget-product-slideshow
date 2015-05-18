@@ -25,8 +25,8 @@ global $wc_product_slider_a3_widget_skin_control_settings;
 extract( $wc_product_slider_a3_widget_skin_control_settings ); 
 ?>
 .wc-product-slider-widget-skin-container .a3-cycle-controls {
-<?php if ( $enable_slider_control == 0 ) { ?>
-	display: none !important;
+<?php if ( $enable_slider_control != 0 ) { ?>
+	display: inline !important;
 <?php } ?>
 <?php if ( $slider_control_transition == 'alway' ) { ?>
 	opacity:1;
@@ -64,8 +64,8 @@ global $wc_product_slider_a3_widget_skin_pager_settings;
 extract( $wc_product_slider_a3_widget_skin_pager_settings ); 
 ?>
 .wc-product-slider-widget-skin-container .cycle-pager-container {
-<?php if ( $enable_slider_pager == 0 ) { ?>
-	display: none !important;
+<?php if ( $enable_slider_pager != 0 ) { ?>
+	display: inline !important;
 <?php } ?>
 <?php if ( $slider_pager_transition == 'alway' ) { ?>
 	opacity:1;

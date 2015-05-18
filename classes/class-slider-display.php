@@ -120,14 +120,14 @@ class WC_Product_Slider_Display
             data-cycle-loader=true
         >
 
-        	<div class="a3-cycle-controls">
+        	<div class="a3-cycle-controls" style="display: none;">
             	<span><a href="#" class="cycle-prev"><?php _e( 'Prev', 'wc_product_slider' ); ?></a></span>
                 <span><a href="#" class="cycle-next"><?php _e( 'Next', 'wc_product_slider' ); ?></a></span>
                 <span><a href="#" data-cycle-cmd="pause" data-cycle-context="#wc-product-slider-<?php echo $unique_id; ?>" onclick="return false;" class="cycle-pause" style=" <?php if ( $slider_settings['slider_auto_scroll'] == 'no' ) { echo 'display:none'; } ?>"><?php _e( 'Pause', 'wc_product_slider' ); ?></a></span>
                 <span><a href="#" data-cycle-cmd="resume" data-cycle-context="#wc-product-slider-<?php echo $unique_id; ?>" onclick="return false;" class="cycle-play"  style=" <?php if ( $slider_settings['slider_auto_scroll'] != 'no' ) { echo 'display:none'; } ?>"><?php _e( 'Play', 'wc_product_slider' ); ?></a></span>
             </div>
 
-        	<div class="cycle-pager-container">
+        	<div class="cycle-pager-container" style="display: none;">
             	<div class="cycle-pager-inside">
             		<div class="cycle-pager-overlay"></div>
                 	<div class="cycle-pager"></div>

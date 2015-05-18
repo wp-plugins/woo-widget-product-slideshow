@@ -4,7 +4,7 @@ Contributors: a3rev, A3 Revolution Software Development team
 Tags: WooCommerce widgets, WooCommerce, WooCommerce widget product slideshow, WooCommerce Product images, woothemes, wordpress ecommerce
 Requires at least: 3.8
 Tested up to: 4.2.2
-Stable tag: 1.2.0
+Stable tag: 1.2.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -168,6 +168,10 @@ You can use this plugin only when you have installed the WooCommerce plugin.
 
 == Changelog ==
 
+= 1.2.1 - 2015/05/18 =
+* Tweak - Change Slider Skins Control and Pager setting default to OFF
+* Tweak - Control and pager CSS only loads from the footer when those settings are switched ON
+
 = 1.2.0 - 2015/05/15 =
 * Feature - Added ability to Filter the products displayed from selected WooCommerce Product category by Recent (existing), Featured or On-Sale
 * Tweak - On widget added new Filter dropdown selector.
@@ -296,6 +300,9 @@ You can use this plugin only when you have installed the WooCommerce plugin.
 * Initial release.
 
 == Upgrade Notice ==
+
+= 1.2.1 =
+Maintenance Upgrade. 2 Code Tweaks for improved loading and display of Slider Skin Controls and Pager.
 
 = 1.2.0 =
 Feature Upgrade. New Product display Filter, show Recent, Featured or On Sale products from selected Product Category in Slider. Plus Tweaks for compatibility with WordPress 4.2.2
