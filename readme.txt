@@ -4,7 +4,7 @@ Contributors: a3rev, A3 Revolution Software Development team
 Tags: WooCommerce widgets, WooCommerce, WooCommerce widget product slideshow, WooCommerce Product images, woothemes, wordpress ecommerce
 Requires at least: 3.8
 Tested up to: 4.2.2
-Stable tag: 1.2.1
+Stable tag: 1.2.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -168,6 +168,12 @@ You can use this plugin only when you have installed the WooCommerce plugin.
 
 == Changelog ==
 
+= 1.2.2 - 2015/06/04 =
+* Tweak - Tested for full compatibility with WooCommerce Version 2.3.10
+* Tweak - Security Hardening. Removed all php file_put_contents functions in the plugin framework and replace with the WP_Filesystem API
+* Tweak - Security Hardening. Removed all php file_get_contents functions in the plugin framework and replace with the WP_Filesystem API
+* Fix - Update dynamic stylesheet url in uploads folder to the format <code>//domain.com/</code> so it's always is correct when loaded as http or https
+
 = 1.2.1 - 2015/05/18 =
 * Tweak - Change Slider Skins Control and Pager setting default to OFF
 * Tweak - Control and pager CSS only loads from the footer when those settings are switched ON
@@ -300,6 +306,9 @@ You can use this plugin only when you have installed the WooCommerce plugin.
 * Initial release.
 
 == Upgrade Notice ==
+
+= 1.2.2 =
+Important Maintenance Upgrade. 2 x major a3rev Plugin Framework Security Hardening Tweaks plus 1 https bug fix and full compatibility with WooCommerce 2.3.10
 
 = 1.2.1 =
 Maintenance Upgrade. 2 Code Tweaks for improved loading and display of Slider Skin Controls and Pager.

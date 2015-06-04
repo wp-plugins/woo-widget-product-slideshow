@@ -4,7 +4,7 @@
  * Install Database, settings option
  */
 function wc_product_slider_activated(){
-	update_option('woo_gallery_widget_lite_version', '1.2.1');
+	update_option('woo_gallery_widget_lite_version', '1.2.2');
 
 	// Set Settings Default from Admin Init
 	global $wc_product_slider_admin_init;
@@ -72,7 +72,7 @@ function wc_product_slider_lite_upgrade_plugin () {
 		update_option('woo_gallery_widget_lite_version', '1.2.1');
 	}
 
-	update_option('woo_gallery_widget_lite_version', '1.2.1');
+	update_option('woo_gallery_widget_lite_version', '1.2.2');
 }
 
 ?>

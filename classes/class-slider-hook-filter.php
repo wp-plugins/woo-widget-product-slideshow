@@ -29,7 +29,7 @@ class WC_Product_Slider_Hook_Filter
 		wp_register_style( 'wc-product-slider-styles', WC_PRODUCT_SLIDER_CSS_URL . '/wc-product-slider'.$suffix.'.css' );
 
         if ( file_exists( $_upload_dir['basedir'] . '/sass/wc_widget_product_slider_lite'.$suffix.'.css' ) )
-		wp_register_style( 'wc_widget_product_slider_lite', $_upload_dir['baseurl'] . '/sass/wc_widget_product_slider_lite'.$suffix.'.css' );
+		wp_register_style( 'wc_widget_product_slider_lite', str_replace(array('http:','https:'), '', $_upload_dir['baseurl'] ) . '/sass/wc_widget_product_slider_lite'.$suffix.'.css' );
 
 		wp_register_script( 'a3-cycle2-script', WC_PRODUCT_SLIDER_JS_URL . '/jquery.cycle2'. $suffix .'.js', array('jquery'), '2.1.2' );
 		wp_register_script( 'a3-cycle2-center-script', WC_PRODUCT_SLIDER_EXTENSION_JS_URL . '/jquery.cycle2.center'. $suffix .'.js', array('jquery'), '2.1.2' );
