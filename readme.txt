@@ -4,7 +4,7 @@ Contributors: a3rev, A3 Revolution Software Development team
 Tags: WooCommerce widgets, WooCommerce, WooCommerce widget product slideshow, WooCommerce Product images, woothemes, wordpress ecommerce
 Requires at least: 3.8
 Tested up to: 4.2.2
-Stable tag: 1.2.2
+Stable tag: 1.2.3
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -168,6 +168,9 @@ You can use this plugin only when you have installed the WooCommerce plugin.
 
 == Changelog ==
 
+= 1.2.3 - 2015/06/10 =
+* Fix - Check 'request_filesystem_credentials' function, if it does not exists then require the core php lib file from WP where it is defined
+
 = 1.2.2 - 2015/06/04 =
 * Tweak - Tested for full compatibility with WooCommerce Version 2.3.10
 * Tweak - Security Hardening. Removed all php file_put_contents functions in the plugin framework and replace with the WP_Filesystem API
@@ -306,6 +309,9 @@ You can use this plugin only when you have installed the WooCommerce plugin.
 * Initial release.
 
 == Upgrade Notice ==
+
+= 1.2.3 =
+Maintenance Upgrade. Fix for PHP Fatal Error when upgrading from older versions of the plugin to version 1.2.2 on some servers
 
 = 1.2.2 =
 Important Maintenance Upgrade. 2 x major a3rev Plugin Framework Security Hardening Tweaks plus 1 https bug fix and full compatibility with WooCommerce 2.3.10
