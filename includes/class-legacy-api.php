@@ -21,15 +21,9 @@ class WC_Product_Slider_Legacy_API {
 	}
 	
 	public function get_legacy_api_url() {
-		$legacy_api_url = str_replace( 'https:', '', str_replace( 'http:', '', home_url( '/' ) ) );
-		if ( substr( $legacy_api_url, -1 ) != '/' ) $legacy_api_url .= '/';
-		
-		if ( get_option('permalink_structure') == '' ) {
-			$legacy_api_url .= '?wc-api=' . $this->base_tag;
-		} else {
-			$legacy_api_url .= 'wc-api' . $this->base;
-		}
-		
+		$legacy_api_url = WC()->api_request_url( $this->base_tag );
+		$legacy_api_url = str_replace( array( 'https:', 'http:' ), '', $legacy_api_url );
+
 		return $legacy_api_url;
 	}
 	

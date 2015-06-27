@@ -8,7 +8,7 @@
 if( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) 
 	exit();
 
-global $wpdb;
+if ( get_option('wc_widget_product_slider_lite_clean_on_deletion') == 1) {
 
 delete_option( 'wc_product_slider_a3_widget_skin_global_settings' );
 delete_option( 'wc_product_slider_a3_widget_skin_title_settings' );
@@ -39,3 +39,5 @@ delete_option( 'wc_product_slider_a3_carousel_global_settings' );
 delete_option( 'wc_product_slider_a3_carousel_container_settings' );
 delete_option( 'wc_product_slider_a3_carousel_control_settings' );
 delete_option( 'wc_product_slider_a3_carousel_pager_settings' );
+
+}
