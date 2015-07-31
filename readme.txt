@@ -1,6 +1,6 @@
 === WooCommerce Widget Product Slider ===
 
-Contributors: a3rev, A3 Revolution Software Development team
+Contributors: a3rev, nguyencongtuan, A3 Revolution Software Development team
 Tags: WooCommerce widgets, WooCommerce, WooCommerce widget product slideshow, WooCommerce Product images, woothemes, wordpress ecommerce
 Requires at least: 3.8
 Tested up to: 4.2.2
