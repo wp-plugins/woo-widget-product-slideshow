@@ -9,12 +9,14 @@
  * update()
  * form()
  */
-class WC_Product_Slider_Carousel_Widget extends WP_Widget 
+class WC_Product_Slider_Carousel_Widget extends WP_Widget
 {
-	function WC_Product_Slider_Carousel_Widget() {
-		$widget_ops = array( 'classname' => 'wc_product_slider_carousel', 'description' => __( 'Use this widget to add WooCommerce Products Carousel as a widget.', 'wc_product_slider') );
-		$this->WP_Widget( 'wc_product_slider_carousel', __( 'Woo Products Carousel', 'wc_product_slider' ), $widget_ops );
-
+	function __construct() {
+		$widget_ops = array(
+			'classname'   => 'wc_product_slider_carousel',
+			'description' => __( 'Use this widget to add WooCommerce Products Carousel as a widget.', 'wc_product_slider' ),
+		);
+		parent::__construct('wc_product_slider_carousel', __('Woo Products Carousel', 'wc_product_slider'), $widget_ops);
 	}
 
 	function widget( $args, $instance ) {				
@@ -42,7 +44,7 @@ class WC_Product_Slider_Carousel_Widget extends WP_Widget
 			'tag_id' 				=> 0,
 			'filter_type'			=> '',
 			'carousel_type'			=> 'horizontal',
-			'carousel_visible'		=> 4,
+			'carousel_visible'		=> 1,
 			'slider_auto_scroll'	=> 'no',
 			'effect_delay'			=> 1,
 			'effect_timeout'		=> 4,

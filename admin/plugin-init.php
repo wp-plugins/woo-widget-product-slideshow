@@ -4,7 +4,7 @@
  * Install Database, settings option
  */
 function wc_product_slider_activated(){
-	update_option('woo_gallery_widget_lite_version', '1.2.4');
+	update_option('woo_gallery_widget_lite_version', '1.2.5');
 
 	// Set Settings Default from Admin Init
 	global $wc_product_slider_admin_init;
@@ -48,6 +48,9 @@ $wc_product_slider_admin_init->init();
 // Add upgrade notice to Dashboard pages
 add_filter( $wc_product_slider_admin_init->plugin_name . '_plugin_extension', array( 'WC_Product_Slider_Hook_Filter', 'plugin_extension' ) );
 
+// Add extra link on left of Deactivate link on Plugin manager page
+add_action('plugin_action_links_' . WC_PRODUCT_SLIDER_NAME, array( 'WC_Product_Slider_Hook_Filter', 'settings_plugin_links' ) );
+
 add_action( 'wp_head', array( 'WC_Product_Slider_Hook_Filter', 'frontend_scripts_register' ), 20 );
 
 // Include google fonts into header
@@ -75,7 +78,7 @@ function wc_product_slider_lite_upgrade_plugin () {
 		$wc_product_slider_less->plugin_build_sass();
 	}
 
-	update_option('woo_gallery_widget_lite_version', '1.2.4');
+	update_option('woo_gallery_widget_lite_version', '1.2.5');
 }
 
 ?>

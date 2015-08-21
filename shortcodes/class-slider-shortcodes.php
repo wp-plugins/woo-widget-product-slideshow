@@ -14,7 +14,7 @@
 class WC_Product_Slider_Shortcode
 {
 
-	public function WC_Product_Slider_Shortcode () {
+	public function __construct () {
 		$this->init();
 	}
 

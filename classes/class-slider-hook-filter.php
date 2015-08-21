@@ -205,5 +205,11 @@ class WC_Product_Slider_Hook_Filter
 		$links[] = '<a href="http://wordpress.org/support/plugin/woo-widget-product-slideshow/" target="_blank">'.__('Support', 'wc_product_slider').'</a>';
 		return $links;
 	}
+
+	public static function settings_plugin_links($actions) {
+		$actions = array_merge( array( 'settings' => '<a href="admin.php?page=wc-product-slider-widget-skin-page">' . __( 'Skins', 'wc_product_slider' ) . '</a>' ), $actions );
+
+		return $actions;
+	}
 }
 ?>

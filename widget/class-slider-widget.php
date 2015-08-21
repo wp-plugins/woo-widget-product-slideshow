@@ -9,12 +9,14 @@
  * update()
  * form()
  */
-class WC_Product_Slider_Widget extends WP_Widget 
+class WC_Product_Slider_Widget extends WP_Widget
 {
-	function WC_Product_Slider_Widget() {
-		$widget_ops = array('classname' => 'widget_product_cycle', 'description' => __( 'Use this widget to add Woocommerce Products slider as a widget.', 'wc_product_slider') );
-		$this->WP_Widget('widget_product_cycle', __( 'Woo Products Slider', 'wc_product_slider' ), $widget_ops );
-
+	function __construct() {
+		$widget_ops = array(
+			'classname'   => 'widget_product_cycle',
+			'description' => __( 'Use this widget to add Woocommerce Products slider as a widget.', 'wc_product_slider' ),
+		);
+		parent::__construct('widget_product_cycle', __('Woo Products Slider', 'wc_product_slider'), $widget_ops);
 	}
 
 	function widget( $args, $instance ) {

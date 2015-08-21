@@ -3,8 +3,8 @@
 Contributors: a3rev, nguyencongtuan, A3 Revolution Software Development team
 Tags: WooCommerce widgets, WooCommerce, WooCommerce widget product slideshow, WooCommerce Product images, woothemes, wordpress ecommerce
 Requires at least: 3.8
-Tested up to: 4.2.2
-Stable tag: 1.2.4
+Tested up to: 4.3
+Stable tag: 1.2.5
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -168,6 +168,16 @@ You can use this plugin only when you have installed the WooCommerce plugin.
 
 == Changelog ==
 
+= 1.2.5 - 2015/08/21 =
+* Tweak - include new CSSMin lib from https://github.com/tubalmartin/YUI-CSS-compressor-PHP-port into plugin framework instead of old CSSMin lib from http://code.google.com/p/cssmin/ , to avoid conflict with plugins or themes that have CSSMin lib
+* Tweak - make __construct() function for 'Compile_Less_Sass' class instead of using a method with the same name as the class for compatibility on WP 4.3 and is deprecated on PHP4
+* Tweak - change class name from 'lessc' to 'a3_lessc' so that it does not conflict with plugins or themes that have another Lessc lib
+* Tweak - Tested for full compatibility with WooCommerce Version 2.4.5
+* Tweak - Tested for full compatibility with WordPress major version 4.3.0
+* Fix - Make __construct() function for 'WC_Product_Slider_Carousel_Widget' class instead of using a method with the same name as the class for compatibility on WP 4.3 and is deprecated on PHP4
+* Fix - Make __construct() function for 'WC_Product_Slider_Widget' class instead of using a method with the same name as the class for compatibility on WP 4.3 and is deprecated on PHP4
+* Fix - Make __construct() function for 'WC_Product_Slider_Shortcode' class instead of using a method with the same name as the class for compatibility on WP 4.3 and is deprecated on PHP4
+
 = 1.2.4 - 2015/06/27 =
 * Tweak - Tested for full compatibility with WooCommerce Version 2.3.11
 * Tweak - Updated legacy API url for when a site admin has set index.php permalinks
@@ -313,6 +323,9 @@ You can use this plugin only when you have installed the WooCommerce plugin.
 * Initial release.
 
 == Upgrade Notice ==
+
+= 1.2.5 =
+Major Maintenance Upgrade. 5 Code Tweaks plus 3 bug fixes for full compatibility with WordPress v 4.3.0 and WooCommerce v 2.4.5
 
 = 1.2.4 =
 Maintenance Upgrade. One custom permalinks tweak plus and full compatibility with WooCommerce 2.3.11
